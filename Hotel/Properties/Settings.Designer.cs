@@ -25,7 +25,9 @@ namespace Hotel.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("grwgrgr")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4T69RUB;Initial Catalog =ReservaHotelera;User ID=sa;Password=" +
+            "rubbertape;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrit" +
+            "e;MultiSubnetFailover=False")]
         public string ConnectionSource {
             get {
                 return ((string)(this["ConnectionSource"]));

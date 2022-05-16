@@ -16,5 +16,25 @@ namespace Hotel.UI
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            this.Close();   
+
+
+
+
+
+
+
+
+
+        }
+
+        private void btnovisible_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

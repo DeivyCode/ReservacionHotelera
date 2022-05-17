@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,5 +27,7 @@ namespace Hotel.Data.Models
         public virtual ICollection<Habitacion> Habitacion { get; set; }
 
         public virtual Hotel Hotel { get; set; }
-    }
+
+        public Reserva Reserva { get; set; }
+}
 }

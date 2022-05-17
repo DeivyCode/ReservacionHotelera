@@ -32,9 +32,8 @@ namespace Hotel.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TipoHabitacion>()
-                .HasKey(e => new { e.IdHotel , e.IdHabitacion});
-            
-            //modelBuilder.Entity<TipoHabitacion>().HasOne(e => e.IdHotel).WithOne( i => i.IdHotel);
+                .HasKey(e => new { e.IdHotel, e.IdHabitacion });
+
         }
     }
 }

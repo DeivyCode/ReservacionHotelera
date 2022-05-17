@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hotel.Data.Models
 {
@@ -11,6 +7,10 @@ namespace Hotel.Data.Models
     {
         [Key]
         public int IdReserva { get; set; }
+
+        public int IdHotel { get; set; }
+
+        public int IdHabitacion { get; set; }
 
         [Required]
         public DateTime FechaInicio { get; set; }
@@ -30,14 +30,10 @@ namespace Hotel.Data.Models
         [Required]
         public int Cantidad { get; set; }
 
+        [ForeignKey("ClientId")]
         public virtual Usuarios ClienteId { get; set; }
 
-        public  int IdHotel { get; set; }
-
-        public  int IdHabitacion { get; set; }
-
-        // Propieda de Navegacion
-        public virtual ICollection<TipoHabitacion> TipoHabitacion { get; set; }
+        public virtual ICollection<TipoHabitacion> Habitaciones { get; set; }
 
     }
 }

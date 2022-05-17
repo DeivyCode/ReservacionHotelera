@@ -3,6 +3,7 @@ using Hotel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    partial class HotelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220517143459_Agregando_nuevas_Tablas")]
+    partial class Agregando_nuevas_Tablas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +41,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("IdAdministrador");
 
-                    b.ToTable("Administradores", (string)null);
+                    b.ToTable("Administradores");
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Habitacion", b =>
@@ -60,7 +62,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("IdHabitacion");
 
-                    b.ToTable("Habitaciones", (string)null);
+                    b.ToTable("Habitaciones");
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Hotel", b =>
@@ -106,7 +108,7 @@ namespace Hotel.Migrations
 
                     b.HasIndex("AdministradorIdIdAdministrador");
 
-                    b.ToTable("Hotel", (string)null);
+                    b.ToTable("Hotel");
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Usuarios", b =>
@@ -145,7 +147,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("IdUsuario");
 
-                    b.ToTable("Usuarios", (string)null);
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Hotel", b =>

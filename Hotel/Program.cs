@@ -1,3 +1,5 @@
+using Hotel.Data;
+
 namespace Hotel
 {
     internal static class Program
@@ -12,6 +14,11 @@ namespace Hotel
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new UI.MainMenu());
+            using (var hotelContext = new HotelDbContext())
+            {   
+                Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions
+                         .MigrateAsync(hotelContext.Database).Wait();
+            }
         }
     }
 }

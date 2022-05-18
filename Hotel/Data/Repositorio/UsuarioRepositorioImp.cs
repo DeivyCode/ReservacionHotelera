@@ -28,7 +28,30 @@ namespace Hotel.Data.Repositorio
 
         public bool BorrarUsuario(int id)
         {
-            throw new NotImplementedException();
+            if (id == 0) return false;
+
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                var userExits = context.Usuarios.Where(x => x.IdUsuario == id).FirstOrDefault();
+
+                if (userExits == null) return false;
+
+                try
+                {
+                    context.Usuarios.Attach(userExits);
+                    context.Usuarios.Remove(userExits);
+                    context.SaveChanges();
+
+                    transaction.Commit();
+
+                    return true;
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    return false;
+                }
+            }
         }
 
         public bool CrearUsuario(Usuarios user)
@@ -40,6 +63,7 @@ namespace Hotel.Data.Repositorio
                 try
                 {
                     context.Usuarios.Add(user);
+                    context.SaveChanges();
                     transaction.Commit();
                     return true;
                 }
@@ -59,7 +83,7 @@ namespace Hotel.Data.Repositorio
 
         public ICollection<Usuarios> GetUsuarios()
         {
-            throw new NotImplementedException();
+            return context.Usuarios.ToList();
         }
     }
 }

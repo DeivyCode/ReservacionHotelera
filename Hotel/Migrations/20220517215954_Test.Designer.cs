@@ -4,6 +4,7 @@ using Hotel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    partial class HotelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220517215954_Test")]
+    partial class Test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -181,9 +183,12 @@ namespace Hotel.Migrations
                     b.Property<double>("Precio")
                         .HasColumnType("float");
 
+                    b.Property<int?>("ReservaIdReserva")
+                        .HasColumnType("int");
+
                     b.HasKey("IdHotel", "IdHabitacion");
 
-                    b.HasIndex("IdHabitacion");
+                    b.HasIndex("ReservaIdReserva");
 
                     b.ToTable("TipoHabitacion");
                 });
@@ -258,17 +263,15 @@ namespace Hotel.Migrations
 
             modelBuilder.Entity("Hotel.Data.Models.TipoHabitacion", b =>
                 {
-                    b.HasOne("Hotel.Data.Models.Reserva", "Reserva")
-                        .WithMany("Habitaciones")
-                        .HasForeignKey("IdHabitacion")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Hotel.Data.Models.Hotel", "Hotel")
                         .WithMany()
                         .HasForeignKey("IdHotel")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Hotel.Data.Models.Reserva", "Reserva")
+                        .WithMany("Habitaciones")
+                        .HasForeignKey("ReservaIdReserva");
 
                     b.Navigation("Hotel");
 

@@ -1,6 +1,6 @@
 ﻿namespace Hotel.UI
 {
-    partial class MainMenu
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.

@@ -13,7 +13,7 @@ namespace Hotel
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new UI.MainMenu());
+            Application.Run(new UI.MenuPrincipal());
             using (var hotelContext = new HotelDbContext())
             {   
                 Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions

@@ -10,7 +10,11 @@ namespace Hotel.Data
 {
     public class HotelDbContext : DbContext
     {
-        public HotelDbContext() : base()
+        public HotelDbContext()
+        {
+
+        }
+        public HotelDbContext(DbContextOptions options) : base(options)
         {
 
         }
@@ -34,6 +38,10 @@ namespace Hotel.Data
             modelBuilder.Entity<TipoHabitacion>()
                 .HasKey(e => new { e.IdHotel, e.IdHabitacion });
 
+            modelBuilder.Entity<Reserva>()
+                .HasMany(x => x.Habitaciones)
+                .WithOne(x => x.Reserva)
+                .HasForeignKey(x => x.IdHotel);
         }
     }
 }

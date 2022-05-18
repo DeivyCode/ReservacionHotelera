@@ -33,6 +33,12 @@ namespace Hotel.Data.Models
         [ForeignKey("ClientId")]
         public virtual Usuarios ClienteId { get; set; }
 
+        //[ForeignKey("IdHotel")]
+        //public virtual TipoHabitacion IdHotel { get; set; }
+
+        //[ForeignKey("IdHabitacion")]
+        //public virtual TipoHabitacion IdHabitacion  { get; set; }
+
         public virtual ICollection<TipoHabitacion> Habitaciones { get; set; }
 
     }

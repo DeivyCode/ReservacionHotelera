@@ -30,6 +30,8 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnovisible = new System.Windows.Forms.Button();
+            this.btvisible = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@
             this.username = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.btvisible = new System.Windows.Forms.Button();
-            this.btnovisible = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Control de acceso";
             // 
+            // btnovisible
+            // 
+            this.btnovisible.BackgroundImage = global::Hotel.Properties.Resources.visibilidad;
+            this.btnovisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnovisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnovisible.Location = new System.Drawing.Point(231, 89);
+            this.btnovisible.Name = "btnovisible";
+            this.btnovisible.Size = new System.Drawing.Size(23, 23);
+            this.btnovisible.TabIndex = 4;
+            this.btnovisible.UseVisualStyleBackColor = true;
+            this.btnovisible.Visible = false;
+            this.btnovisible.Click += new System.EventHandler(this.btnovisible_Click);
+            // 
+            // btvisible
+            // 
+            this.btvisible.BackgroundImage = global::Hotel.Properties.Resources.ver;
+            this.btvisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btvisible.Enabled = false;
+            this.btvisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btvisible.Location = new System.Drawing.Point(231, 89);
+            this.btvisible.Name = "btvisible";
+            this.btvisible.Size = new System.Drawing.Size(23, 23);
+            this.btvisible.TabIndex = 3;
+            this.btvisible.UseVisualStyleBackColor = true;
+            this.btvisible.Visible = false;
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -91,6 +117,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Iniciar Session";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -148,32 +175,6 @@
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btvisible
-            // 
-            this.btvisible.BackgroundImage = global::Hotel.Properties.Resources.ver;
-            this.btvisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btvisible.Enabled = false;
-            this.btvisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btvisible.Location = new System.Drawing.Point(231, 89);
-            this.btvisible.Name = "btvisible";
-            this.btvisible.Size = new System.Drawing.Size(23, 23);
-            this.btvisible.TabIndex = 3;
-            this.btvisible.UseVisualStyleBackColor = true;
-            this.btvisible.Visible = false;
-            // 
-            // btnovisible
-            // 
-            this.btnovisible.BackgroundImage = global::Hotel.Properties.Resources.visibilidad;
-            this.btnovisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnovisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnovisible.Location = new System.Drawing.Point(231, 89);
-            this.btnovisible.Name = "btnovisible";
-            this.btnovisible.Size = new System.Drawing.Size(23, 23);
-            this.btnovisible.TabIndex = 4;
-            this.btnovisible.UseVisualStyleBackColor = true;
-            this.btnovisible.Visible = false;
-            this.btnovisible.Click += new System.EventHandler(this.btnovisible_Click);
             // 
             // MainMenu
             // 

@@ -14,9 +14,9 @@ namespace Hotel.UI
 {
     public partial class Login : Form
     {
-        private readonly IUsuarioRepositorio usuarioRepositorio;
+        private readonly IAdministracionRepositorio usuarioRepositorio;
 
-        public Login(IUsuarioRepositorio usuarioRepositorio)
+        public Login(IAdministracionRepositorio usuarioRepositorio)
         {
             InitializeComponent();
             this.usuarioRepositorio = usuarioRepositorio;
@@ -48,14 +48,18 @@ namespace Hotel.UI
             {
                 Clave = claveTxt.Text.ToLower(),
                 Usuario = userTxt.Text.ToLower(),
+                Apellidos ="for testing",
+                Nombres = "Standard User",
+                Correo ="stard.test@mail.com",
+                IsAdmin = false,
             };
 
-            if (usuarioRepositorio.AutentificarUsuario(user))
+            if (usuarioRepositorio.CrearUsuario(user))
             {
-                MessageBox.Show("Authenticated");
+                MessageBox.Show("User Created");
                 return;
             }
-            MessageBox.Show("Not Authenticated");
+            MessageBox.Show("Error Creating User");
         }
     }
 }

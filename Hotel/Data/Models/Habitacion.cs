@@ -14,6 +14,5 @@ namespace Hotel.Data.Models
         [Required]
         public Int16 Capacidad { get; set; }
 
-        public TipoHabitacion TipoHabitacion { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotel.Data.Interfaces
 {
-    public interface IUsuarioRepositorio
+    public interface IAdministracionRepositorio
     {
         bool CrearUsuario(Usuarios user);
 
@@ -18,5 +18,6 @@ namespace Hotel.Data.Interfaces
         bool BorrarUsuario(int id);
 
         bool AutentificarUsuario(Usuarios user);
+
     }
 }

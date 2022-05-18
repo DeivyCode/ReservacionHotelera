@@ -8,9 +8,9 @@ namespace Hotel.Data.Models
         [Key]
         public int IdReserva { get; set; }
 
-        public int IdHotel { get; set; }
+        //public int IdHotel { get; set; }
 
-        public int IdHabitacion { get; set; }
+        //public int IdHabitacion { get; set; }
 
         [Required]
         public DateTime FechaInicio { get; set; }
@@ -33,11 +33,11 @@ namespace Hotel.Data.Models
         [ForeignKey("ClientId")]
         public virtual Usuarios ClienteId { get; set; }
 
-        //[ForeignKey("IdHotel")]
-        //public virtual TipoHabitacion IdHotel { get; set; }
+        [ForeignKey("HotelId")]
+        public virtual Hotel IdHotel { get; set; }
 
-        //[ForeignKey("IdHabitacion")]
-        //public virtual TipoHabitacion IdHabitacion  { get; set; }
+        [ForeignKey("HabitacionId")]
+        public virtual Habitacion IdHabitacion { get; set; }
 
         public virtual ICollection<TipoHabitacion> Habitaciones { get; set; }
 

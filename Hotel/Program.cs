@@ -30,7 +30,7 @@ namespace Hotel
         {
             var servicios = new ServiceCollection();
             servicios.AddSingleton<HotelDbContext>();
-            servicios.AddScoped<IUsuarioRepositorio, UsuarioRepositorioImp>();
+            servicios.AddScoped<IAdministracionRepositorio, AdministracionRepositorioImp>();
             servicios.AddTransient<Login>();
             ServiceProvider = servicios.BuildServiceProvider();
         }

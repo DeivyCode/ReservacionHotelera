@@ -11,11 +11,9 @@ using System.Windows.Forms;
 
 namespace Hotel.UI
 {
-    public partial class MainMenu : Form
+    public partial class Login : Form
     {
-        private readonly IUsuarioRepositorio usuarioRepositorio;
-
-        public MainMenu(IUsuarioRepositorio usuarioRepositorio)
+        public MainMenu()
         {
             InitializeComponent();
             this.usuarioRepositorio = usuarioRepositorio;

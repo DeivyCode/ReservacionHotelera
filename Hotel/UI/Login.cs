@@ -1,4 +1,5 @@
 ﻿using Hotel.Data.Interfaces;
+using Hotel.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,9 @@ namespace Hotel.UI
 {
     public partial class Login : Form
     {
-        public MainMenu()
+        private readonly IUsuarioRepositorio usuarioRepositorio;
+
+        public Login(IUsuarioRepositorio usuarioRepositorio)
         {
             InitializeComponent();
             this.usuarioRepositorio = usuarioRepositorio;
@@ -41,11 +44,18 @@ namespace Hotel.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(usuarioRepositorio.AutentificarUsuario("a", "e"))
+            var user = new Usuarios
             {
-                MessageBox.Show("work");
+                Clave = claveTxt.Text.ToLower(),
+                Usuario = userTxt.Text.ToLower(),
+            };
+
+            if (usuarioRepositorio.AutentificarUsuario(user))
+            {
+                MessageBox.Show("Authenticated");
+                return;
             }
-            
+            MessageBox.Show("Not Authenticated");
         }
     }
 }

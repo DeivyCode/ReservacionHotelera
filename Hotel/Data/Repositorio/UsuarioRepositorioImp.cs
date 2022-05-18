@@ -17,8 +17,12 @@ namespace Hotel.Data.Repositorio
             this.context = context;
         }
 
-        public bool AutentificarUsuario(string password, string email)
+        public bool AutentificarUsuario(Usuarios usuario)
         {
+            var user = context.Usuarios.
+                Where(x => x.Clave == usuario.Clave.Trim().ToLower() && x.Usuario == usuario.Usuario.Trim().ToLower())
+                .FirstOrDefault();
+            if (user == null) return false;
             return true;
         }
 
@@ -29,7 +33,23 @@ namespace Hotel.Data.Repositorio
 
         public bool CrearUsuario(Usuarios user)
         {
-            throw new NotImplementedException();
+            if (user == null) return false;
+
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.Usuarios.Add(user);
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    return false;
+                }
+
+            }
         }
 
         public bool EditarUsuario(int id)

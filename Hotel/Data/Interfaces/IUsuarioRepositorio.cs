@@ -17,6 +17,6 @@ namespace Hotel.Data.Interfaces
 
         bool BorrarUsuario(int id);
 
-        bool AutentificarUsuario(string password, string email);
+        bool AutentificarUsuario(Usuarios user);
     }
 }

@@ -34,8 +34,8 @@
             this.btvisible = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.userTxt = new System.Windows.Forms.TextBox();
+            this.claveTxt = new System.Windows.Forms.TextBox();
             this.userpasswd = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,8 +59,8 @@
             this.groupBox2.Controls.Add(this.btvisible);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.userTxt);
+            this.groupBox2.Controls.Add(this.claveTxt);
             this.groupBox2.Controls.Add(this.userpasswd);
             this.groupBox2.Controls.Add(this.username);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(110)))), ((int)(((byte)(182)))));
@@ -119,19 +119,19 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // userTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 23);
-            this.textBox2.TabIndex = 3;
+            this.userTxt.Location = new System.Drawing.Point(125, 46);
+            this.userTxt.Name = "userTxt";
+            this.userTxt.Size = new System.Drawing.Size(129, 23);
+            this.userTxt.TabIndex = 3;
             // 
-            // textBox1
+            // claveTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 23);
-            this.textBox1.TabIndex = 2;
+            this.claveTxt.Location = new System.Drawing.Point(125, 89);
+            this.claveTxt.Name = "claveTxt";
+            this.claveTxt.Size = new System.Drawing.Size(129, 23);
+            this.claveTxt.TabIndex = 2;
             // 
             // userpasswd
             // 
@@ -176,7 +176,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // MainMenu
+            // Login
             // 
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(343, 290);
@@ -184,7 +184,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainMenu";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -197,8 +197,8 @@
 
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox userTxt;
+        private TextBox claveTxt;
         private Label userpasswd;
         private Label username;
         private PictureBox pictureBox1;

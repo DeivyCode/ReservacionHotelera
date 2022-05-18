@@ -18,7 +18,7 @@ namespace Hotel
 
             ConfigurarServicios();
             ApplicationConfiguration.Initialize();
-            Application.Run(ServiceProvider.GetRequiredService<MainMenu>());
+            Application.Run(ServiceProvider.GetRequiredService<Login>());
             using (var hotelContext = new HotelDbContext())
             {
                 Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions
@@ -31,7 +31,7 @@ namespace Hotel
             var servicios = new ServiceCollection();
             servicios.AddSingleton<HotelDbContext>();
             servicios.AddScoped<IUsuarioRepositorio, UsuarioRepositorioImp>();
-            servicios.AddTransient<MainMenu>();
+            servicios.AddTransient<Login>();
             ServiceProvider = servicios.BuildServiceProvider();
         }
     }

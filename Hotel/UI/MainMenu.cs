@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel.Data.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,18 @@ namespace Hotel.UI
 {
     public partial class MainMenu : Form
     {
-        public MainMenu()
+        private readonly IUsuarioRepositorio usuarioRepositorio;
+
+        public MainMenu(IUsuarioRepositorio usuarioRepositorio)
         {
             InitializeComponent();
+            this.usuarioRepositorio = usuarioRepositorio;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            this.Close();   
+            this.Close();
 
 
 
@@ -35,6 +39,15 @@ namespace Hotel.UI
         private void btnovisible_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(usuarioRepositorio.AutentificarUsuario("a", "e"))
+            {
+                MessageBox.Show("work");
+            }
+            
         }
     }
 }

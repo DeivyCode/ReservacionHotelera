@@ -19,7 +19,7 @@ namespace Hotel
 
             ConfigurarServicios();
             ApplicationConfiguration.Initialize();
-            Application.Run(ServiceProvider.GetRequiredService<ViewUsuarios>());
+            Application.Run(ServiceProvider.GetRequiredService<MenuPrincipal>());
 
             using (var hotelContext = new HotelDbContext())
             {
@@ -36,7 +36,9 @@ namespace Hotel
             servicios.AddScoped<IHotelRepository, HotelRepositoryImp>();
             servicios.AddTransient<Login>();
             servicios.AddTransient<ViewUsuarios>();
+            servicios.AddTransient<MenuPrincipal>();
             ServiceProvider = servicios.BuildServiceProvider();
+
         }
     }
 }

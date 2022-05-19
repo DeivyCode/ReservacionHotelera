@@ -6,11 +6,12 @@ namespace Hotel.Data.Models
     public class Reserva
     {
         [Key]
+        [Column(Order = 0)]
         public int IdReserva { get; set; }
-
-        //public int IdHotel { get; set; }
-
-        //public int IdHabitacion { get; set; }
+        [Column(Order = 1)]
+        public int IdHotel { get; set; }
+        [Column(Order = 2)]
+        public int IdHabitacion { get; set; }
 
         [Required]
         public DateTime FechaInicio { get; set; }
@@ -19,7 +20,7 @@ namespace Hotel.Data.Models
         public DateTime FechaFin { get; set; }
 
         [Required, DataType(DataType.Currency)]
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
 
         [Required]
         public Int16 Ocupacion { get; set; }
@@ -30,16 +31,14 @@ namespace Hotel.Data.Models
         [Required]
         public int Cantidad { get; set; }
 
+        [Required]
+        public int ClientId { get; set; }
+
         [ForeignKey("ClientId")]
-        public virtual Usuarios ClienteId { get; set; }
+        public virtual Usuarios Usuarios { get; set; }
 
-        [ForeignKey("HotelId")]
-        public virtual Hotel IdHotel { get; set; }
-
-        [ForeignKey("HabitacionId")]
-        public virtual Habitacion IdHabitacion { get; set; }
-
-        public virtual ICollection<TipoHabitacion> Habitaciones { get; set; }
+        [ForeignKey("IdHotel,IdHabitacion")]
+        public virtual TipoHabitacion Habitaciones { get; set; }
 
     }
 }

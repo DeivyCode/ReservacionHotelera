@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hotel.Data.Models
 {
@@ -15,8 +16,6 @@ namespace Hotel.Data.Models
         [MaxLength(100)]
         public string Descripcion { get; set; }
 
-        public Int16 Categoria { get; set; }
-
         [Required, MaxLength(100)]
         public string Domicilio { get; set; }
 
@@ -26,7 +25,17 @@ namespace Hotel.Data.Models
         [Required, MaxLength(100)]
         public string Provincia { get; set; }
 
+        public int IdCategoria { get; set; }
+
+        public int IdAdministrador { get; set; }
+
         [Required]
-        public virtual Administrador AdministradorId { get; set; }
+        [ForeignKey("IdAdministrador")]
+        public virtual Administrador Administrador{ get; set; }
+
+
+        [ForeignKey("IdCategoria")]
+        [Required]
+        public Categorias Categoria { get; set; }
     }
 }

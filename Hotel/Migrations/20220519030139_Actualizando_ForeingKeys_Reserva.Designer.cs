@@ -4,6 +4,7 @@ using Hotel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    partial class HotelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220519030139_Actualizando_ForeingKeys_Reserva")]
+    partial class Actualizando_ForeingKeys_Reserva
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -170,9 +172,8 @@ namespace Hotel.Migrations
                     b.Property<short>("Ocupacion")
                         .HasColumnType("smallint");
 
-                    b.Property<decimal>("Precio")
-                        .HasPrecision(18, 6)
-                        .HasColumnType("decimal(18,6)");
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
 
                     b.HasKey("IdReserva");
 
@@ -200,9 +201,8 @@ namespace Hotel.Migrations
                     b.Property<short>("NumHabitaciones")
                         .HasColumnType("smallint");
 
-                    b.Property<decimal>("Precio")
-                        .HasPrecision(18, 6)
-                        .HasColumnType("decimal(18,6)");
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
 
                     b.HasKey("IdHotel", "IdHabitacion");
 

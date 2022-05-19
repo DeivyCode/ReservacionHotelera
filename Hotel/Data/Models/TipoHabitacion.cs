@@ -19,7 +19,7 @@ namespace Hotel.Data.Models
         public string Descripcion { get; set; }
 
         [Required, DataType(DataType.Currency)]
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
 
         [Required]
         public Int16 NumHabitaciones { get; set; }
@@ -30,5 +30,5 @@ namespace Hotel.Data.Models
         public virtual Hotel Hotel { get; set; }
 
         public Reserva Reserva { get; set; }
-}
+    }
 }

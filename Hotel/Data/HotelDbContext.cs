@@ -25,23 +25,26 @@ namespace Hotel.Data
         public DbSet<TipoHabitacion> TipoHabitacion { get; set; }
         public DbSet<Reserva> Reservaciones { get; set; }
         public DbSet<Models.Hotel> Hotel { get; set; }
+        public DbSet<Categorias> Categorias { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(Properties.Settings.Default.ConnectionSource);
+                optionsBuilder.UseSqlServer(Properties.Settings.Default.ConnectionSource)
+                    .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             }
+        }
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder.Properties<decimal>()
+                .HavePrecision(18, 6);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Llave primaria Compuesta
             modelBuilder.Entity<TipoHabitacion>()
                 .HasKey(e => new { e.IdHotel, e.IdHabitacion });
-
-            modelBuilder.Entity<Reserva>()
-                .HasMany(x => x.Habitaciones)
-                .WithOne(x => x.Reserva)
-                .HasForeignKey(x => x.IdHotel);
         }
     }
 }

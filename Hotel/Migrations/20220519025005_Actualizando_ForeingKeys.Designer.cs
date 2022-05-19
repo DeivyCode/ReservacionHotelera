@@ -4,6 +4,7 @@ using Hotel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    partial class HotelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220519025005_Actualizando_ForeingKeys")]
+    partial class Actualizando_ForeingKeys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -145,7 +147,7 @@ namespace Hotel.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
-                    b.Property<int>("ClientId")
+                    b.Property<int?>("ClientId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("FechaFin")
@@ -170,9 +172,8 @@ namespace Hotel.Migrations
                     b.Property<short>("Ocupacion")
                         .HasColumnType("smallint");
 
-                    b.Property<decimal>("Precio")
-                        .HasPrecision(18, 6)
-                        .HasColumnType("decimal(18,6)");
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
 
                     b.HasKey("IdReserva");
 
@@ -200,9 +201,8 @@ namespace Hotel.Migrations
                     b.Property<short>("NumHabitaciones")
                         .HasColumnType("smallint");
 
-                    b.Property<decimal>("Precio")
-                        .HasPrecision(18, 6)
-                        .HasColumnType("decimal(18,6)");
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
 
                     b.HasKey("IdHotel", "IdHabitacion");
 
@@ -269,11 +269,9 @@ namespace Hotel.Migrations
 
             modelBuilder.Entity("Hotel.Data.Models.Reserva", b =>
                 {
-                    b.HasOne("Hotel.Data.Models.Usuarios", "Usuarios")
+                    b.HasOne("Hotel.Data.Models.Usuarios", "ClienteId")
                         .WithMany()
-                        .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClientId");
 
                     b.HasOne("Hotel.Data.Models.TipoHabitacion", "Habitaciones")
                         .WithOne("Reserva")
@@ -281,9 +279,9 @@ namespace Hotel.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Habitaciones");
+                    b.Navigation("ClienteId");
 
-                    b.Navigation("Usuarios");
+                    b.Navigation("Habitaciones");
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.TipoHabitacion", b =>

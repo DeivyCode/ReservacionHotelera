@@ -36,10 +36,25 @@ namespace Hotel.Data.Repositorio
 
                 if (acciones == Acciones.Editar)
                 {
-                    context.Entry(model).State = EntityState.Detached;
-                    context.Update(model);
-                    if (context.SaveChanges() > 0) return true;
+                    //Verificar Id
+                    if (model.IdHabitacion == 0)
+                    {
+                        throw new Exception($"Habitacion con Id {model?.IdHabitacion}, no se puede actualizar");
+                    }
 
+                    var entry = context.ChangeTracker.Entries<Habitacion>()
+                                                     .FirstOrDefault(x => x.Entity.IdHabitacion == model.IdHabitacion);
+
+                    if (entry == null)
+                    {
+                        context.Update(model);
+                    }
+                    else
+                    {
+                        entry.CurrentValues.SetValues(model);
+                    }
+
+                    if (context.SaveChanges() > 0) return true;
 
                     return false;
                 }
@@ -65,7 +80,20 @@ namespace Hotel.Data.Repositorio
 
                 if (acciones == Acciones.Editar)
                 {
-                    context.Entry(model).State = EntityState.Modified;
+                    if (model.IdHotel == 0)
+                        throw new Exception($"Hotel con id {model.IdHotel} no se puede actualizar.");
+
+                    var entry = context.ChangeTracker.Entries<Models.Hotel>()
+                                    .FirstOrDefault(x => x.Entity.IdHotel == model.IdHotel);
+
+                    if (entry == null)
+                    {
+                        context.Update(model);
+                    }
+                    else
+                    {
+                        entry.CurrentValues.SetValues(model);
+                    }
 
                     if (context.SaveChanges() > 0) return true;
 
@@ -94,7 +122,21 @@ namespace Hotel.Data.Repositorio
 
                 if (acciones == Acciones.Editar)
                 {
-                    context.Entry(model).State = EntityState.Modified;
+                    if (model.IdHotel == 0 || model.IdHabitacion == 0)
+                        throw new Exception($"Tipo de habitacion el Id Hotel {model.IdHotel} y Id Habitacion {model.IdHabitacion} no se puede actualizar");
+
+                    var entry = context.ChangeTracker.Entries<TipoHabitacion>()
+                                   .FirstOrDefault(x => x.Entity.IdHotel == model.IdHotel && x.Entity.IdHabitacion == model.IdHabitacion);
+
+                    if (entry == null)
+                    {
+                        context.Update(model);
+                    }
+                    else
+                    {
+                        entry.CurrentValues.SetValues(model);
+                    }
+
                     if (context.SaveChanges() > 0) return true;
 
                     return false;
@@ -115,7 +157,29 @@ namespace Hotel.Data.Repositorio
 
         public bool CrearReservacion(Reserva model)
         {
-            throw new NotImplementedException();
+            using var transaction = context.Database.BeginTransaction();
+
+            try
+            {
+                if (model == null) return false;
+
+                context.Reservaciones.Add(model);
+
+                if (context.SaveChanges() > 0)
+                {
+                    transaction.Commit();
+                    return true;
+                }
+
+                transaction.Rollback();
+                return false;
+            }
+            catch (Exception e)
+            {
+                messageError = $"{e?.Message} {e?.InnerException}";
+                transaction.Rollback();
+                return false;
+            }
         }
     }
 }

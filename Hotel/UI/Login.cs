@@ -50,21 +50,22 @@ namespace Hotel.UI
                 Capacidad = 3,
                 Nombre = "HABITACION 102"
             };
-               var objEdit = new Data.Models.Habitacion
+            var objEdit = new Data.Models.Habitacion
             {
-                Capacidad = 6,
-                Nombre = "HABITACION 102",
-               IdHabitacion = 3
+                Capacidad = 3,
+                Nombre = "HABITACION 103",
+                IdHabitacion = 1
             };
             var obj1 = new Data.Models.Hotel
             {
-                Nombre = "HOTEL PRAVIA",
+                Nombre = "HOTEL PRAVIA # 4",
                 Descripcion = "HOTEL DE LUJO",
                 Domicilio = "AVE MAXIMO GOMEZ #12",
                 Localidad = "APT 1-B",
                 Provincia = "PERAVIA, BANI",
                 IdCategoria = 1,
-                IdAdministrador = 1
+                IdAdministrador = 1,
+                IdHotel = 4
 
             };
             var obj2 = new Data.Models.TipoHabitacion
@@ -72,11 +73,23 @@ namespace Hotel.UI
                 IdHabitacion = 1,
                 IdHotel = 1,
                 Descripcion = "EJECUTIVA",
-                Precio = 1650,
-                NumHabitaciones = 2,
+                Precio = 1800,
+                NumHabitaciones = 3,
+            };
+            var reservacion = new Data.Models.Reserva
+            {
+                IdHotel = 31,
+                IdHabitacion = 1,
+                Cantidad = 1,
+                FechaInicio = DateTime.Now,
+                FechaFin = DateTime.Parse("2022-05-22"),
+                ClientId = 4,
+                NombreTomador = "David",
+                Precio = 1800,
+                Ocupacion = 1,
             };
 
-            if (hotelRepository.CrearEditarHabitacion(model: objEdit, acciones: Comunes.Acciones.Editar))
+            if (hotelRepository.CrearReservacion(model: reservacion))
             {
                 MessageBox.Show("Work");
                 return;

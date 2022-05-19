@@ -39,6 +39,8 @@ namespace Hotel.Data
         {
             configurationBuilder.Properties<decimal>()
                 .HavePrecision(18, 6);
+
+
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

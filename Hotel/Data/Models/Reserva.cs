@@ -14,9 +14,11 @@ namespace Hotel.Data.Models
         public int IdHabitacion { get; set; }
 
         [Required]
+        [Column(TypeName = "datetime")]
         public DateTime FechaInicio { get; set; }
 
         [Required]
+        [Column(TypeName = "datetime")]
         public DateTime FechaFin { get; set; }
 
         [Required, DataType(DataType.Currency)]

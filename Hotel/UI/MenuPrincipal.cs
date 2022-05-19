@@ -8,19 +8,96 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
+
 
 namespace Hotel.UI
+
 {
     public partial class MenuPrincipal : Form
     {
+        //declaraciones 
+
+        private IconButton currentBtn;
+
+        private Panel leftborderBtn;
+
+
+
+
         private IconButton[] MyIconButton = new IconButton[5];
+
+        
 
         public MenuPrincipal()
         {
 
             InitializeComponent();
+            leftborderBtn = new Panel();
+            leftborderBtn.Size = new Size(7, 60);
+            PanelMenu.Controls.Add(leftborderBtn);
+            
 
         }
+
+        private struct RGBcolors
+        {
+            public static Color color1 = Color.FromArgb(172, 126, 241);
+            public static Color color2 = Color.FromArgb(249, 118, 176);
+            public static Color color3 = Color.FromArgb(253, 138, 114);
+            public static Color color4 = Color.FromArgb(95,   77, 221);
+          
+
+        }
+
+        //metodos
+        private void ActivateButton(object senderBtn, Color color)
+        {
+            if (senderBtn != null)
+            {
+                disableButton();
+
+                //boton
+
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = color;
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.IconColor = color;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+
+                //border
+
+                leftborderBtn.BackColor = color;    
+                leftborderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftborderBtn.Visible = true;
+                leftborderBtn.BringToFront();  
+
+
+            }
+
+        }
+        private void disableButton()
+        {
+          if (currentBtn != null)
+            {
+                currentBtn.BackColor = Color.FromArgb(2, 121, 186);
+                currentBtn.ForeColor = Color.Black;
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.IconColor = Color.Black;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+
+
+
+            }
+
+        }
+
+
+
+
 
         private void CustomComponentes()
         {
@@ -48,11 +125,13 @@ namespace Hotel.UI
                 item.TabIndex = 0;
                 item.Text = $"Home";
                 item.UseVisualStyleBackColor = true;
-                PanelLateral.Controls.Add(item);
+                PanelMenu.Controls.Add(item);
                 x++;
             }
 
         }
+
+
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
@@ -62,6 +141,27 @@ namespace Hotel.UI
         private void iconButton1_Click(object sender, EventArgs e)
         {
             CustomComponentes();
+        }
+
+        private void BtHotel_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBcolors.color1 );
+
+        }
+
+        private void BtAdministracion_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBcolors.color2);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBcolors.color3);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBcolors.color4);
         }
     }
 }

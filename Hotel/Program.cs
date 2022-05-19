@@ -19,7 +19,15 @@ namespace Hotel
 
             ConfigurarServicios();
             ApplicationConfiguration.Initialize();
-            Application.Run(ServiceProvider.GetRequiredService<ViewUsuarios>());
+
+            // Verficar Autentificacion del usuario
+            var loginForm = ServiceProvider.GetRequiredService<Login>();
+
+            if (loginForm.ShowDialog() == DialogResult.OK)
+                Application.Run(ServiceProvider.GetRequiredService<ViewUsuarios>());
+            else
+                Application.Exit();
+
 
             using (var hotelContext = new HotelDbContext())
             {

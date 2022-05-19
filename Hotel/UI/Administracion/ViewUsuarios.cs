@@ -1,4 +1,5 @@
-﻿using MetroSet_UI.Forms;
+﻿using Hotel.Data.Interfaces;
+using MetroSet_UI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,19 +14,15 @@ namespace Hotel.UI.Administracion
 {
     public partial class ViewUsuarios : MetroSetForm
     {
-        public ViewUsuarios()
+        private IAdministracionRepositorio administracion;
+
+        public ViewUsuarios(IAdministracionRepositorio administracion)
         {
             InitializeComponent();
+            this.administracion = administracion;
         }
 
-        private void metroSetTabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

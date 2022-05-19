@@ -1,4 +1,5 @@
 ﻿using Hotel.Data.Interfaces;
+using Hotel.UI.Administracion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,7 @@ namespace Hotel.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
 
             var obj = new Data.Models.Habitacion
             {
@@ -89,12 +91,6 @@ namespace Hotel.UI
                 Ocupacion = 1,
             };
 
-            if (hotelRepository.CrearReservacion(model: reservacion))
-            {
-                MessageBox.Show("Work");
-                return;
-            }
-            MessageBox.Show($"DON'T WORK {hotelRepository.MessageError}");
         }
     }
 }

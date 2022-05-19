@@ -2,6 +2,7 @@ using Hotel.Data;
 using Hotel.Data.Interfaces;
 using Hotel.Data.Repositorio;
 using Hotel.UI;
+using Hotel.UI.Administracion;
 using Microsoft.Extensions.DependencyInjection;
 namespace Hotel
 {
@@ -18,7 +19,7 @@ namespace Hotel
 
             ConfigurarServicios();
             ApplicationConfiguration.Initialize();
-            Application.Run(ServiceProvider.GetRequiredService<Login>());
+            Application.Run(ServiceProvider.GetRequiredService<ViewUsuarios>());
 
             using (var hotelContext = new HotelDbContext())
             {
@@ -34,6 +35,7 @@ namespace Hotel
             servicios.AddScoped<IAdministracionRepositorio, AdministracionRepositorioImp>();
             servicios.AddScoped<IHotelRepository, HotelRepositoryImp>();
             servicios.AddTransient<Login>();
+            servicios.AddTransient<ViewUsuarios>();
             ServiceProvider = servicios.BuildServiceProvider();
         }
     }

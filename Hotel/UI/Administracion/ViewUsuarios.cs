@@ -17,5 +17,15 @@ namespace Hotel.UI.Administracion
         {
             InitializeComponent();
         }
+
+        private void metroSetTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,7 +32,8 @@ namespace Hotel
             using (var hotelContext = new HotelDbContext())
             {
                 Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions
-                         .MigrateAsync(hotelContext.Database).Wait();
+                         .Migrate(hotelContext.Database);
+
             }
         }
 

@@ -32,12 +32,12 @@
             this.metroSetTabControl1 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.metroSetTabControl2 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtConfirmarClave = new System.Windows.Forms.TextBox();
-            this.txtClave = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtConfirmarClave = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.metroSetLabel8 = new MetroSet_UI.Controls.MetroSetLabel();
             this.btCancelar = new FontAwesome.Sharp.IconButton();
             this.btAceptar = new FontAwesome.Sharp.IconButton();
@@ -129,12 +129,12 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.txtApellido);
-            this.tabPage1.Controls.Add(this.txtNombre);
-            this.tabPage1.Controls.Add(this.txtConfirmarClave);
-            this.tabPage1.Controls.Add(this.txtClave);
-            this.tabPage1.Controls.Add(this.txtCorreo);
             this.tabPage1.Controls.Add(this.txtCodigo);
+            this.tabPage1.Controls.Add(this.txtCorreo);
+            this.tabPage1.Controls.Add(this.txtClave);
+            this.tabPage1.Controls.Add(this.txtConfirmarClave);
+            this.tabPage1.Controls.Add(this.txtNombre);
+            this.tabPage1.Controls.Add(this.txtApellido);
             this.tabPage1.Controls.Add(this.metroSetLabel8);
             this.tabPage1.Controls.Add(this.btCancelar);
             this.tabPage1.Controls.Add(this.btAceptar);
@@ -158,53 +158,61 @@
             this.tabPage1.ToolTipText = "Datos generales";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // txtApellido
+            // txtCodigo
             // 
-            this.txtApellido.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtApellido.Location = new System.Drawing.Point(466, 115);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(263, 33);
-            this.txtApellido.TabIndex = 29;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(466, 50);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(263, 33);
-            this.txtNombre.TabIndex = 28;
-            // 
-            // txtConfirmarClave
-            // 
-            this.txtConfirmarClave.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtConfirmarClave.Location = new System.Drawing.Point(17, 271);
-            this.txtConfirmarClave.Name = "txtConfirmarClave";
-            this.txtConfirmarClave.Size = new System.Drawing.Size(263, 33);
-            this.txtConfirmarClave.TabIndex = 27;
-            // 
-            // txtClave
-            // 
-            this.txtClave.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtClave.Location = new System.Drawing.Point(17, 189);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(263, 33);
-            this.txtClave.TabIndex = 26;
+            this.txtCodigo.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigo.Location = new System.Drawing.Point(17, 50);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(263, 29);
+            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.Tag = "Codigo";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCorreo.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCorreo.Location = new System.Drawing.Point(17, 112);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(263, 33);
-            this.txtCorreo.TabIndex = 25;
+            this.txtCorreo.Size = new System.Drawing.Size(263, 29);
+            this.txtCorreo.TabIndex = 1;
+            this.txtCorreo.Tag = "Correo";
             // 
-            // txtCodigo
+            // txtClave
             // 
-            this.txtCodigo.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCodigo.Location = new System.Drawing.Point(17, 50);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(263, 33);
-            this.txtCodigo.TabIndex = 24;
+            this.txtClave.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtClave.Location = new System.Drawing.Point(17, 189);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(263, 29);
+            this.txtClave.TabIndex = 2;
+            this.txtClave.Tag = "Clave";
+            this.txtClave.UseSystemPasswordChar = true;
+            // 
+            // txtConfirmarClave
+            // 
+            this.txtConfirmarClave.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtConfirmarClave.Location = new System.Drawing.Point(17, 271);
+            this.txtConfirmarClave.Name = "txtConfirmarClave";
+            this.txtConfirmarClave.Size = new System.Drawing.Size(263, 29);
+            this.txtConfirmarClave.TabIndex = 3;
+            this.txtConfirmarClave.Tag = "Confirmar Clave";
+            this.txtConfirmarClave.UseSystemPasswordChar = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNombre.Location = new System.Drawing.Point(466, 50);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(263, 29);
+            this.txtNombre.TabIndex = 4;
+            this.txtNombre.Tag = "Nombre";
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtApellido.Location = new System.Drawing.Point(466, 115);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(263, 29);
+            this.txtApellido.TabIndex = 5;
+            this.txtApellido.Tag = "Apellido";
             // 
             // metroSetLabel8
             // 
@@ -257,6 +265,7 @@
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAceptar.UseVisualStyleBackColor = false;
+            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // metroSetLabel5
             // 
@@ -304,7 +313,7 @@
             this.SwitchAdm.StyleManager = null;
             this.SwitchAdm.Switched = false;
             this.SwitchAdm.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.SwitchAdm.TabIndex = 18;
+            this.SwitchAdm.TabIndex = 6;
             this.SwitchAdm.Text = "metroSetSwitch2";
             this.SwitchAdm.ThemeAuthor = "Narwin";
             this.SwitchAdm.ThemeName = "MetroLite";
@@ -356,7 +365,7 @@
             this.SwitchEstado.StyleManager = null;
             this.SwitchEstado.Switched = true;
             this.SwitchEstado.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.SwitchEstado.TabIndex = 16;
+            this.SwitchEstado.TabIndex = 7;
             this.SwitchEstado.Text = "metroSetSwitch1";
             this.SwitchEstado.ThemeAuthor = "Narwin";
             this.SwitchEstado.ThemeName = "MetroLite";
@@ -438,6 +447,7 @@
             this.ClientSize = new System.Drawing.Size(776, 488);
             this.Controls.Add(this.metroSetControlBox2);
             this.Controls.Add(this.metroSetTabControl2);
+            this.Font = new System.Drawing.Font("Ebrima", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "ViewUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Usuarios";

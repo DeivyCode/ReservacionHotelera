@@ -1,6 +1,6 @@
 ﻿namespace Hotel.UI.Administracion
 {
-    partial class ViewUsuarios
+    partial class CrearUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -230,7 +230,7 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.BackColor = System.Drawing.Color.Red;
+            this.btCancelar.BackColor = System.Drawing.Color.DarkRed;
             this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancelar.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btCancelar.ForeColor = System.Drawing.Color.White;
@@ -248,7 +248,7 @@
             // 
             this.btAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.btAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(255)))));
+            this.btAceptar.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAceptar.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btAceptar.ForeColor = System.Drawing.Color.White;
@@ -314,6 +314,7 @@
             this.SwitchAdm.Switched = false;
             this.SwitchAdm.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.SwitchAdm.TabIndex = 6;
+            this.SwitchAdm.Tag = "IsAdmin";
             this.SwitchAdm.Text = "metroSetSwitch2";
             this.SwitchAdm.ThemeAuthor = "Narwin";
             this.SwitchAdm.ThemeName = "MetroLite";
@@ -366,6 +367,7 @@
             this.SwitchEstado.Switched = true;
             this.SwitchEstado.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.SwitchEstado.TabIndex = 7;
+            this.SwitchEstado.Tag = "IsActive";
             this.SwitchEstado.Text = "metroSetSwitch1";
             this.SwitchEstado.ThemeAuthor = "Narwin";
             this.SwitchEstado.ThemeName = "MetroLite";
@@ -441,16 +443,21 @@
             this.metroSetControlBox2.ThemeAuthor = "Narwin";
             this.metroSetControlBox2.ThemeName = "MetroLite";
             // 
-            // ViewUsuarios
+            // CrearUsuarios
             // 
             this.AllowResize = false;
+            this.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(776, 488);
             this.Controls.Add(this.metroSetControlBox2);
             this.Controls.Add(this.metroSetTabControl2);
             this.Font = new System.Drawing.Font("Ebrima", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Name = "ViewUsuarios";
+            this.HeaderColor = System.Drawing.SystemColors.HotTrack;
+            this.Name = "CrearUsuarios";
+            this.SmallLineColor1 = System.Drawing.SystemColors.HotTrack;
+            this.SmallLineColor2 = System.Drawing.SystemColors.HotTrack;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Usuarios";
+            this.Load += new System.EventHandler(this.CrearUsuarios_Load);
             this.metroSetTabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

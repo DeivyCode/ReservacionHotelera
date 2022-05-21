@@ -13,11 +13,13 @@ namespace Hotel.Data.Interfaces
 
         ICollection<Usuarios> GetUsuarios();
 
-        bool EditarUsuario(int id);
+        bool EditarUsuario(Usuarios model);
 
         bool BorrarUsuario(int id);
 
         bool AutentificarUsuario(Usuarios user);
+
+        ICollection<Usuarios> GetUsuariosByCriteria(Func<Usuarios,bool> filtro);
 
     }
 }

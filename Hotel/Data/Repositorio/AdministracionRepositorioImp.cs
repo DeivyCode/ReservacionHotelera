@@ -77,14 +77,34 @@ namespace Hotel.Data.Repositorio
             }
         }
 
-        public bool EditarUsuario(int id)
+        public bool EditarUsuario(Usuarios model)
         {
+            var entry = context.ChangeTracker.Entries<Usuarios>()
+                                                    .FirstOrDefault(x => x.Entity.IdUsuario == model.IdUsuario);
+
+            if (entry == null)
+            {
+                context.Update(model);
+            }
+            else
+            {
+                entry.CurrentValues.SetValues(model);
+            }
+
+            if (context.SaveChanges() > 0) return true;
+
             return false;
         }
 
         public ICollection<Usuarios> GetUsuarios()
         {
+
             return context.Usuarios.ToList();
+        }
+
+        public ICollection<Usuarios> GetUsuariosByCriteria(Func<Usuarios, bool> filtro)
+        {
+            return context.Usuarios.Where(filtro).ToList();
         }
     }
 }

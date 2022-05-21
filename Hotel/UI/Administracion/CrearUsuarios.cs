@@ -1,4 +1,5 @@
-﻿using Hotel.Data.Interfaces;
+﻿using Hotel.Comunes;
+using Hotel.Data.Interfaces;
 using Hotel.Data.Models;
 using MetroSet_UI.Forms;
 using System;
@@ -13,18 +14,20 @@ using System.Windows.Forms;
 
 namespace Hotel.UI.Administracion
 {
-    public partial class ViewUsuarios : MetroSetForm
+    public partial class CrearUsuarios : MetroSetForm
     {
         private IAdministracionRepositorio administracion;
-
-        public ViewUsuarios(IAdministracionRepositorio administracion)
+        public Acciones acciones;
+        public int idUsuario;
+        public CrearUsuarios(IAdministracionRepositorio administracion)
         {
             InitializeComponent();
             this.administracion = administracion;
+            this.acciones = Acciones.Crear;
         }
 
 
-        private bool GuardarUsuarios()
+        private bool GuardarEditarUsuarios(Acciones accion)
         {
             try
             {
@@ -32,7 +35,8 @@ namespace Hotel.UI.Administracion
 
 
                 if (txtClave.Text.Trim().ToLower() != txtConfirmarClave.Text.Trim().ToLower())
-                {   txtClave.Focus();
+                {
+                    txtClave.Focus();
                     MessageBox.Show("Las contraseñas no cooindicen, porfavor verifica tu contraseña");
                     return false;
                 }
@@ -45,9 +49,17 @@ namespace Hotel.UI.Administracion
                     Correo = txtCorreo.Text,
                     IsActive = SwitchEstado.Switched,
                     IsAdmin = SwitchAdm.Switched,
+                    IdUsuario = accion == Acciones.Editar ? idUsuario : 0
 
                 };
-                if (!administracion.CrearUsuario(usuario)) return false;
+                if (accion == Acciones.Crear)
+                {
+                    if (!administracion.CrearUsuario(usuario)) return false;
+                }
+                else
+                {
+                    if (!administracion.EditarUsuario(usuario)) return false;
+                }
 
                 return true;
             }
@@ -91,10 +103,43 @@ namespace Hotel.UI.Administracion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if (GuardarUsuarios())
+            if (acciones == Acciones.Editar)
+            {
+                if (!GuardarEditarUsuarios(accion: Acciones.Editar))
+                {
+                    MessageBox.Show("Error Guardando Usuario");
+                    return;
+                }
+                MessageBox.Show("!!!Usuario editado Satisfactoriamente!!!");
+                DialogResult = DialogResult.OK;
+                return;
+            }
+
+            if (GuardarEditarUsuarios(accion: Acciones.Crear))
             {
                 MessageBox.Show("!!!Usuario creado Satisfactoriamente!!!");
                 ValidarLimpiarCampos(limpiarCampos: true);
+            }
+        }
+
+        private void CrearUsuarios_Load(object sender, EventArgs e)
+        {
+            if (acciones == Acciones.Editar)
+            {
+                var users = administracion.GetUsuariosByCriteria(x => x.IdUsuario == idUsuario);
+                foreach (var user in users)
+                {
+                    txtCodigo.Text = user.Usuario;
+                    txtApellido.Text = user.Apellidos;
+                    txtNombre.Text = user.Nombres;
+                    txtCorreo.Text = user.Correo;
+                    txtClave.Text = user.Clave;
+                    txtConfirmarClave.Text = user.Clave;
+                    SwitchAdm.Switched = user.IsAdmin;
+                    SwitchEstado.Switched = user.IsActive;
+                }
+
+                //DialogResult = DialogResult.OK;
             }
         }
     }

@@ -16,15 +16,15 @@ namespace Hotel
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            ApplicationConfiguration.Initialize();
 
             ConfigurarServicios();
-            ApplicationConfiguration.Initialize();
 
             // Verficar Autentificacion del usuario
             var loginForm = ServiceProvider.GetRequiredService<Login>();
 
             if (loginForm.ShowDialog() == DialogResult.OK)
-                Application.Run(ServiceProvider.GetRequiredService<ViewUsuarios>());
+                Application.Run(ServiceProvider.GetRequiredService<ListadoUsuarios>());
             else
                 Application.Exit();
 
@@ -44,8 +44,9 @@ namespace Hotel
             servicios.AddScoped<IAdministracionRepositorio, AdministracionRepositorioImp>();
             servicios.AddScoped<IHotelRepository, HotelRepositoryImp>();
             servicios.AddTransient<Login>();
-            servicios.AddTransient<ViewUsuarios>();
+            servicios.AddTransient<CrearUsuarios>();
             servicios.AddTransient<MenuPrincipal>();
+            servicios.AddTransient<ListadoUsuarios>();
             ServiceProvider = servicios.BuildServiceProvider();
 
         }

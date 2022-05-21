@@ -63,6 +63,26 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7314900488_2c122f10_84b1_45b1_89fb_bfccaac706cd_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("7314900488_2c122f10-84b1-45b1-89fb-bfccaac706cd-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logohotel {
+            get {
+                object obj = ResourceManager.GetObject("logohotel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ver {
             get {
                 object obj = ResourceManager.GetObject("ver", resourceCulture);

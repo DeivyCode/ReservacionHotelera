@@ -24,7 +24,7 @@ namespace Hotel
             var loginForm = ServiceProvider.GetRequiredService<Login>();
 
             if (loginForm.ShowDialog() == DialogResult.OK)
-                Application.Run(ServiceProvider.GetRequiredService<ListadoUsuarios>());
+                Application.Run(ServiceProvider.GetRequiredService<MenuPrincipal>());
             else
                 Application.Exit();
 
@@ -44,6 +44,7 @@ namespace Hotel
             servicios.AddScoped<IAdministracionRepositorio, AdministracionRepositorioImp>();
             servicios.AddScoped<IHotelRepository, HotelRepositoryImp>();
             servicios.AddTransient<Login>();
+            servicios.AddTransient<MenuPrincipal>();
             servicios.AddTransient<CrearUsuarios>();
             servicios.AddTransient<MenuPrincipal>();
             servicios.AddTransient<ListadoUsuarios>();

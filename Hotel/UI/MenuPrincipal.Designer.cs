@@ -34,7 +34,10 @@
             this.BtAdministracion = new FontAwesome.Sharp.IconButton();
             this.BtHotel = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.BtInicio = new System.Windows.Forms.PictureBox();
             this.PanelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -137,11 +140,24 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.BtInicio);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 140);
             this.panelLogo.TabIndex = 2;
+            // 
+            // BtInicio
+            // 
+            this.BtInicio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtInicio.Image = global::Hotel.Properties.Resources.logohotel;
+            this.BtInicio.Location = new System.Drawing.Point(0, 0);
+            this.BtInicio.Name = "BtInicio";
+            this.BtInicio.Size = new System.Drawing.Size(220, 140);
+            this.BtInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtInicio.TabIndex = 2;
+            this.BtInicio.TabStop = false;
+            this.BtInicio.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MenuPrincipal
             // 
@@ -156,6 +172,8 @@
             this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.PanelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BtInicio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +185,6 @@
         private FontAwesome.Sharp.IconButton BtAdministracion;
         private FontAwesome.Sharp.IconButton BtHotel;
         private Panel panelLogo;
+        private PictureBox BtInicio;
     }
 }

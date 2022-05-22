@@ -9,6 +9,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
+
+
+
 
 
 
@@ -22,7 +26,7 @@ namespace Hotel.UI
         private IconButton currentBtn;
         private Panel leftborderBtn;
         private IconButton[] MyIconButton = new IconButton[5];
-        private Form currentchilform;
+        private Form currentChildform;
 
 
         public MenuPrincipal()
@@ -50,8 +54,6 @@ namespace Hotel.UI
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(95,   77, 221);
-          
-
         }
 
         //metodos
@@ -96,14 +98,16 @@ namespace Hotel.UI
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-        private void AbrrirFormularioHijos(Form childform)
+        private void OpenChildForm(Form childform)
         {
-           if(iconhome != null)
+            //abrir un solo formulario
+           if(currentChildform != null)
             {
-                currentchilform.Close();
+                currentChildform.Close();
 
             }
-           currentchilform = childform;
+            currentChildform = childform;
+
             childform.TopLevel = false;
             childform.FormBorderStyle = FormBorderStyle.None;
             childform.Dock= DockStyle.Fill;
@@ -114,7 +118,6 @@ namespace Hotel.UI
             lbTitulo.Text = childform.Text;
 
         }
-
 
         private void CustomComponentes()
         {
@@ -157,6 +160,7 @@ namespace Hotel.UI
         private void BtHotel_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBcolors.color1 );
+            
         }
         private void BtAdministracion_Click(object sender, EventArgs e)
         {
@@ -169,6 +173,7 @@ namespace Hotel.UI
         private void iconButton4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBcolors.color4);
+
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         { 
@@ -178,6 +183,10 @@ namespace Hotel.UI
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
+            if (currentChildform != null)
+            {
+                currentChildform.Close();
+            }    
             reset();
         }
         private void reset()
@@ -185,7 +194,9 @@ namespace Hotel.UI
             disableButton();
             leftborderBtn.Visible = false;
             iconhome.IconChar = iconreseticonhome.IconChar;
-            iconhome.IconColor = Color.AliceBlue;   
+            iconhome.IconColor = Color.AliceBlue;
+            lbTitulo.Text = "HOME";
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -202,6 +213,27 @@ namespace Hotel.UI
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+
+        }
+
+        private void iconMaximizarformulario_Click(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+
+        }
+
+        private void iconMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+
         }
     }
 }

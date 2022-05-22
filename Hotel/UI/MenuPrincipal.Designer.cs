@@ -36,12 +36,16 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.PtInicio = new System.Windows.Forms.PictureBox();
             this.PNSuperior = new System.Windows.Forms.Panel();
+            this.iconreseticonhome = new FontAwesome.Sharp.IconPictureBox();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.iconhome = new FontAwesome.Sharp.IconPictureBox();
+            this.PnSombra = new System.Windows.Forms.Panel();
+            this.PnContenedor = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).BeginInit();
             this.PNSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconreseticonhome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconhome)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,9 +164,9 @@
             // PtInicio
             // 
             this.PtInicio.Image = global::Hotel.Properties.Resources.Wyndham_Hotels;
-            this.PtInicio.Location = new System.Drawing.Point(0, 31);
+            this.PtInicio.Location = new System.Drawing.Point(5, 31);
             this.PtInicio.Name = "PtInicio";
-            this.PtInicio.Size = new System.Drawing.Size(220, 68);
+            this.PtInicio.Size = new System.Drawing.Size(211, 68);
             this.PtInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PtInicio.TabIndex = 2;
             this.PtInicio.TabStop = false;
@@ -171,6 +175,7 @@
             // PNSuperior
             // 
             this.PNSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.PNSuperior.Controls.Add(this.iconreseticonhome);
             this.PNSuperior.Controls.Add(this.lbTitulo);
             this.PNSuperior.Controls.Add(this.iconhome);
             this.PNSuperior.Dock = System.Windows.Forms.DockStyle.Top;
@@ -178,7 +183,21 @@
             this.PNSuperior.Name = "PNSuperior";
             this.PNSuperior.Size = new System.Drawing.Size(918, 75);
             this.PNSuperior.TabIndex = 2;
-            
+            this.PNSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PNSuperior_MouseDown);
+            // 
+            // iconreseticonhome
+            // 
+            this.iconreseticonhome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.iconreseticonhome.ForeColor = System.Drawing.Color.AliceBlue;
+            this.iconreseticonhome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconreseticonhome.IconColor = System.Drawing.Color.AliceBlue;
+            this.iconreseticonhome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconreseticonhome.Location = new System.Drawing.Point(674, 38);
+            this.iconreseticonhome.Name = "iconreseticonhome";
+            this.iconreseticonhome.Size = new System.Drawing.Size(32, 32);
+            this.iconreseticonhome.TabIndex = 2;
+            this.iconreseticonhome.TabStop = false;
+            this.iconreseticonhome.Visible = false;
             // 
             // lbTitulo
             // 
@@ -203,24 +222,45 @@
             this.iconhome.TabIndex = 0;
             this.iconhome.TabStop = false;
             // 
+            // PnSombra
+            // 
+            this.PnSombra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.PnSombra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnSombra.Location = new System.Drawing.Point(220, 75);
+            this.PnSombra.Name = "PnSombra";
+            this.PnSombra.Size = new System.Drawing.Size(918, 9);
+            this.PnSombra.TabIndex = 3;
+            // 
+            // PnContenedor
+            // 
+            this.PnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.PnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnContenedor.Location = new System.Drawing.Point(220, 84);
+            this.PnContenedor.Name = "PnContenedor";
+            this.PnContenedor.Size = new System.Drawing.Size(918, 482);
+            this.PnContenedor.TabIndex = 4;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1138, 566);
+            this.Controls.Add(this.PnContenedor);
+            this.Controls.Add(this.PnSombra);
             this.Controls.Add(this.PNSuperior);
             this.Controls.Add(this.PanelMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.PanelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).EndInit();
             this.PNSuperior.ResumeLayout(false);
             this.PNSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconreseticonhome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconhome)).EndInit();
             this.ResumeLayout(false);
 
@@ -238,5 +278,8 @@
         private FontAwesome.Sharp.IconPictureBox iconhome;
         private Label label1;
         private Label lbTitulo;
+        private FontAwesome.Sharp.IconPictureBox iconreseticonhome;
+        private Panel PnSombra;
+        private Panel PnContenedor;
     }
 }

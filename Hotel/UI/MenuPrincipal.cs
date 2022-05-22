@@ -5,10 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
+
+
 
 
 namespace Hotel.UI
@@ -17,17 +19,11 @@ namespace Hotel.UI
     public partial class MenuPrincipal : Form
     {
         //declaraciones 
-
         private IconButton currentBtn;
-
         private Panel leftborderBtn;
-
-
-
-
         private IconButton[] MyIconButton = new IconButton[5];
+        private Form currentchilform;
 
-        
 
         public MenuPrincipal()
         {
@@ -36,8 +32,13 @@ namespace Hotel.UI
             leftborderBtn = new Panel();
             leftborderBtn.Size = new Size(7, 60);
             PanelMenu.Controls.Add(leftborderBtn);
+
+            //bordes
+            this.Text = String.Empty;
+            this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
 
             
 
@@ -95,6 +96,25 @@ namespace Hotel.UI
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
+        private void AbrrirFormularioHijos(Form childform)
+        {
+           if(iconhome != null)
+            {
+                currentchilform.Close();
+
+            }
+           currentchilform = childform;
+            childform.TopLevel = false;
+            childform.FormBorderStyle = FormBorderStyle.None;
+            childform.Dock= DockStyle.Fill;
+            PnContenedor.Controls.Add(childform);
+            PnContenedor.Tag = childform;
+            childform.BringToFront();
+            childform.Show();
+            lbTitulo.Text = childform.Text;
+
+        }
+
 
         private void CustomComponentes()
         {
@@ -164,20 +184,24 @@ namespace Hotel.UI
         {
             disableButton();
             leftborderBtn.Visible = false;
-            iconhome.IconChar = currentBtn.IconChar;
+            iconhome.IconChar = iconreseticonhome.IconChar;
             iconhome.IconColor = Color.AliceBlue;   
         }
 
-       
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
 
         private void PNSuperior_Paint(object sender, MouseEventArgs e)
 
         {
-           
-
-
-
+        }
+        private void PNSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

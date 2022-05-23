@@ -5,10 +5,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+
+
+
+
+
 
 
 namespace Hotel.UI
@@ -17,17 +23,11 @@ namespace Hotel.UI
     public partial class MenuPrincipal : Form
     {
         //declaraciones 
-
         private IconButton currentBtn;
-
         private Panel leftborderBtn;
-
-
-
-
         private IconButton[] MyIconButton = new IconButton[5];
+        private Form currentChildform;
 
-        
 
         public MenuPrincipal()
         {
@@ -36,8 +36,13 @@ namespace Hotel.UI
             leftborderBtn = new Panel();
             leftborderBtn.Size = new Size(7, 60);
             PanelMenu.Controls.Add(leftborderBtn);
+
+            //bordes
+            this.Text = String.Empty;
+            this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
 
             
 
@@ -49,8 +54,6 @@ namespace Hotel.UI
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(95,   77, 221);
-          
-
         }
 
         //metodos
@@ -95,6 +98,26 @@ namespace Hotel.UI
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
+        private void OpenChildForm(Form childform)
+        {
+            //abrir un solo formulario
+           if(currentChildform != null)
+            {
+                currentChildform.Close();
+
+            }
+            currentChildform = childform;
+
+            childform.TopLevel = false;
+            childform.FormBorderStyle = FormBorderStyle.None;
+            childform.Dock= DockStyle.Fill;
+            PnContenedor.Controls.Add(childform);
+            PnContenedor.Tag = childform;
+            childform.BringToFront();
+            childform.Show();
+            lbTitulo.Text = childform.Text;
+
+        }
 
         private void CustomComponentes()
         {
@@ -137,6 +160,7 @@ namespace Hotel.UI
         private void BtHotel_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBcolors.color1 );
+            
         }
         private void BtAdministracion_Click(object sender, EventArgs e)
         {
@@ -149,6 +173,7 @@ namespace Hotel.UI
         private void iconButton4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBcolors.color4);
+
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         { 
@@ -158,25 +183,56 @@ namespace Hotel.UI
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
+            if (currentChildform != null)
+            {
+                currentChildform.Close();
+            }    
             reset();
         }
         private void reset()
         {
             disableButton();
             leftborderBtn.Visible = false;
-            iconhome.IconChar = currentBtn.IconChar;
-            iconhome.IconColor = Color.AliceBlue;   
+            iconhome.IconChar = iconreseticonhome.IconChar;
+            iconhome.IconColor = Color.AliceBlue;
+            lbTitulo.Text = "HOME";
+
         }
 
-       
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
 
         private void PNSuperior_Paint(object sender, MouseEventArgs e)
 
         {
-           
+        }
+        private void PNSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
 
+        }
+
+        private void iconMaximizarformulario_Click(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+
+        }
+
+        private void iconMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
 
         }
     }

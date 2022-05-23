@@ -26,6 +26,11 @@ namespace Hotel.Data.Repositorio
                 .ToList();
         }
 
+        public ICollection<Habitacion> ObtenerHabitaciones()
+        {
+            return context.Habitaciones.ToList();
+        }
+
         public HotelRepositoryImp(HotelDbContext context)
         {
             this.context = context;
@@ -123,13 +128,13 @@ namespace Hotel.Data.Repositorio
             {
                 if (model == null) return false;
 
+                var entry = context.ChangeTracker.Entries<TipoHabitacion>()
+                    .FirstOrDefault(x => x.Entity.IdHotel == model.IdHotel && x.Entity.IdHabitacion == model.IdHabitacion);
+
                 if (acciones == Acciones.Editar)
                 {
                     if (model.IdHotel == 0 || model.IdHabitacion == 0)
                         throw new Exception($"Tipo de habitacion el Id Hotel {model.IdHotel} y Id Habitacion {model.IdHabitacion} no se puede actualizar");
-
-                    var entry = context.ChangeTracker.Entries<TipoHabitacion>()
-                                   .FirstOrDefault(x => x.Entity.IdHotel == model.IdHotel && x.Entity.IdHabitacion == model.IdHabitacion);
 
                     if (entry == null)
                     {
@@ -140,16 +145,24 @@ namespace Hotel.Data.Repositorio
                         entry.CurrentValues.SetValues(model);
                     }
 
-                    if (context.SaveChanges() > 0) return true;
+                    return context.SaveChanges() > 0;
+                }
 
+                // Verificar si ya existe un tipo de reservacion para esta habitacion y hotel
+                var tipoHabitacion = context.TipoHabitacion.FirstOrDefault(x =>
+                    x.IdHotel == model.IdHotel && x.IdHabitacion == model.IdHabitacion);
+
+                if (tipoHabitacion != null)
+                {
+                    MessageError = $@"Ya existe un tipo de habitacion para el hotel{model?.Hotel?.Nombre} y la habitacion con ID {model.IdHabitacion}";
                     return false;
                 }
 
+                context.ChangeTracker.Clear();
+
                 context.TipoHabitacion.Add(model);
 
-                if (context.SaveChanges() > 0) return true;
-
-                return false;
+                return context.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -166,6 +179,7 @@ namespace Hotel.Data.Repositorio
             {
                 if (model == null) return false;
 
+                context.ChangeTracker.Clear();
                 context.Reservaciones.Add(model);
 
                 if (context.SaveChanges() > 0)

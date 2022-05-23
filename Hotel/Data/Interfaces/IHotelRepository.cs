@@ -22,5 +22,7 @@ namespace Hotel.Data.Interfaces
 
         ICollection<Models.Hotel> ObtenerHoteles();
 
+        ICollection<Habitacion> ObtenerHabitaciones();
+
     }
 }

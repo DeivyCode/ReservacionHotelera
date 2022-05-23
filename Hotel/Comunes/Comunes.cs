@@ -17,13 +17,13 @@ namespace Hotel.Comunes
         /// <returns>bool</returns>
         public static bool ValidarCampos(Form form)
         {
-            for (int i = 0; i < form.Controls.Count; i++)
+            for (var i = 0; i < form.Controls.Count; i++)
             {
                 if (form.Controls[i].GetType() != typeof(KryptonTextBox)) continue;
 
                 if (!string.IsNullOrEmpty(form.Controls[i].Text)) continue;
                 form.Controls[i].Focus();
-                MessageBox.Show(@"Este campo requiere la entrada de un valor");
+                MessageBox.Show($@"Este campo requiere la entrada de un valor {form.Controls[i].Name}");
                 return false;
             }
 

@@ -30,24 +30,33 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtDescripcion = new Krypton.Toolkit.KryptonTextBox();
-            this.txtNumeroHabitaciones = new Krypton.Toolkit.KryptonTextBox();
-            this.txtPrecio = new Krypton.Toolkit.KryptonTextBox();
-            this.kryptonComboBox1 = new Krypton.Toolkit.KryptonComboBox();
+            this.CbHoteles = new Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             this.btCreate = new Krypton.Toolkit.KryptonButton();
-            this.kryptonComboBox2 = new Krypton.Toolkit.KryptonComboBox();
+            this.CbHabitaciones = new Krypton.Toolkit.KryptonComboBox();
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
+            this.txtPrecio = new Krypton.Toolkit.KryptonTextBox();
+            this.txtNumeroHabitaciones = new Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.CbHoteles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CbHabitaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcion.CueHint.Color1 = System.Drawing.Color.Black;
             this.txtDescripcion.CueHint.CueHintText = "Descripcion";
             this.txtDescripcion.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.txtDescripcion.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.txtDescripcion.Location = new System.Drawing.Point(2, 118);
+            this.txtDescripcion.Location = new System.Drawing.Point(2, 150);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.MultilineStringEditor = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -70,85 +79,31 @@
             this.txtDescripcion.StateNormal.Border.Width = 1;
             this.txtDescripcion.TabIndex = 1;
             // 
-            // txtNumeroHabitaciones
+            // CbHoteles
             // 
-            this.txtNumeroHabitaciones.CueHint.Color1 = System.Drawing.Color.Black;
-            this.txtNumeroHabitaciones.CueHint.CueHintText = "Numero de habitaciones";
-            this.txtNumeroHabitaciones.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.txtNumeroHabitaciones.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.txtNumeroHabitaciones.Location = new System.Drawing.Point(316, 12);
-            this.txtNumeroHabitaciones.Name = "txtNumeroHabitaciones";
-            this.txtNumeroHabitaciones.Size = new System.Drawing.Size(295, 35);
-            this.txtNumeroHabitaciones.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.CbHoteles.CueHint.Color1 = System.Drawing.Color.Black;
+            this.CbHoteles.CueHint.CueHintText = "Hoteles";
+            this.CbHoteles.CueHint.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.CbHoteles.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CbHoteles.DropDownWidth = 270;
+            this.CbHoteles.IntegralHeight = false;
+            this.CbHoteles.Location = new System.Drawing.Point(2, 99);
+            this.CbHoteles.Name = "CbHoteles";
+            this.CbHoteles.Size = new System.Drawing.Size(291, 34);
+            this.CbHoteles.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNumeroHabitaciones.StateActive.Border.Rounding = 20F;
-            this.txtNumeroHabitaciones.StateActive.Border.Width = 1;
-            this.txtNumeroHabitaciones.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtNumeroHabitaciones.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNumeroHabitaciones.StateCommon.Border.Rounding = 20F;
-            this.txtNumeroHabitaciones.StateCommon.Border.Width = 1;
-            this.txtNumeroHabitaciones.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNumeroHabitaciones.StateNormal.Border.Rounding = 20F;
-            this.txtNumeroHabitaciones.StateNormal.Border.Width = 1;
-            this.txtNumeroHabitaciones.TabIndex = 2;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.CueHint.Color1 = System.Drawing.Color.Black;
-            this.txtPrecio.CueHint.CueHintText = "Precio";
-            this.txtPrecio.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.txtPrecio.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.txtPrecio.Location = new System.Drawing.Point(-1, 12);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(295, 35);
-            this.txtPrecio.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPrecio.StateActive.Border.Rounding = 20F;
-            this.txtPrecio.StateActive.Border.Width = 1;
-            this.txtPrecio.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtPrecio.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPrecio.StateCommon.Border.Rounding = 20F;
-            this.txtPrecio.StateCommon.Border.Width = 1;
-            this.txtPrecio.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPrecio.StateNormal.Border.Rounding = 20F;
-            this.txtPrecio.StateNormal.Border.Width = 1;
-            this.txtPrecio.TabIndex = 3;
-            // 
-            // kryptonComboBox1
-            // 
-            this.kryptonComboBox1.CueHint.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBox1.CueHint.CueHintText = "Hoteles";
-            this.kryptonComboBox1.CueHint.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.kryptonComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.kryptonComboBox1.DropDownWidth = 270;
-            this.kryptonComboBox1.IntegralHeight = false;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(-1, 68);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(291, 34);
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 20F;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 1;
-            this.kryptonComboBox1.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonComboBox1.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.kryptonComboBox1.TabIndex = 6;
-            this.kryptonComboBox1.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBox1_SelectedIndexChanged);
+            this.CbHoteles.StateCommon.ComboBox.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.CbHoteles.StateCommon.ComboBox.Border.Rounding = 20F;
+            this.CbHoteles.StateCommon.ComboBox.Border.Width = 1;
+            this.CbHoteles.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.CbHoteles.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.CbHoteles.TabIndex = 6;
+            this.CbHoteles.SelectedIndexChanged += new System.EventHandler(this.CbHoteles_SelectedIndexChanged);
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(493, 239);
+            this.kryptonButton1.Location = new System.Drawing.Point(489, 266);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.SystemColors.ActiveCaption;
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.SystemColors.ActiveCaption;
@@ -209,10 +164,11 @@
             this.kryptonButton1.StateTracking.Border.Width = 1;
             this.kryptonButton1.TabIndex = 14;
             this.kryptonButton1.Values.Text = "Cancelar";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // btCreate
             // 
-            this.btCreate.Location = new System.Drawing.Point(369, 239);
+            this.btCreate.Location = new System.Drawing.Point(365, 266);
             this.btCreate.Name = "btCreate";
             this.btCreate.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
             this.btCreate.OverrideDefault.Back.Color2 = System.Drawing.Color.Green;
@@ -271,27 +227,29 @@
             this.btCreate.StateTracking.Border.Width = 1;
             this.btCreate.TabIndex = 13;
             this.btCreate.Values.Text = "Guardar";
+            this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
-            // kryptonComboBox2
+            // CbHabitaciones
             // 
-            this.kryptonComboBox2.CueHint.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBox2.CueHint.CueHintText = "Habitaciones";
-            this.kryptonComboBox2.CueHint.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.kryptonComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.kryptonComboBox2.DropDownWidth = 270;
-            this.kryptonComboBox2.IntegralHeight = false;
-            this.kryptonComboBox2.Location = new System.Drawing.Point(316, 68);
-            this.kryptonComboBox2.Name = "kryptonComboBox2";
-            this.kryptonComboBox2.Size = new System.Drawing.Size(295, 34);
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.CbHabitaciones.CueHint.Color1 = System.Drawing.Color.Black;
+            this.CbHabitaciones.CueHint.CueHintText = "Habitaciones";
+            this.CbHabitaciones.CueHint.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.CbHabitaciones.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CbHabitaciones.DropDownWidth = 270;
+            this.CbHabitaciones.IntegralHeight = false;
+            this.CbHabitaciones.Location = new System.Drawing.Point(319, 99);
+            this.CbHabitaciones.Name = "CbHabitaciones";
+            this.CbHabitaciones.Size = new System.Drawing.Size(295, 34);
+            this.CbHabitaciones.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Rounding = 20F;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Width = 1;
-            this.kryptonComboBox2.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonComboBox2.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.kryptonComboBox2.TabIndex = 15;
+            this.CbHabitaciones.StateCommon.ComboBox.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.CbHabitaciones.StateCommon.ComboBox.Border.Rounding = 20F;
+            this.CbHabitaciones.StateCommon.ComboBox.Border.Width = 1;
+            this.CbHabitaciones.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.CbHabitaciones.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.CbHabitaciones.TabIndex = 15;
+            this.CbHabitaciones.SelectedIndexChanged += new System.EventHandler(this.CbHabitaciones_SelectedIndexChanged);
             // 
             // kryptonPalette1
             // 
@@ -326,19 +284,135 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 10, -1, -1);
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.CueHint.CueHintText = "Precio de habitacion";
+            this.txtPrecio.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.txtPrecio.Location = new System.Drawing.Point(2, 32);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(295, 35);
+            this.txtPrecio.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPrecio.StateCommon.Border.Rounding = 20F;
+            this.txtPrecio.StateCommon.Border.Width = 1;
+            this.txtPrecio.TabIndex = 22;
+            // 
+            // txtNumeroHabitaciones
+            // 
+            this.txtNumeroHabitaciones.CueHint.CueHintText = "Numero habitaciones";
+            this.txtNumeroHabitaciones.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.txtNumeroHabitaciones.Location = new System.Drawing.Point(319, 32);
+            this.txtNumeroHabitaciones.Name = "txtNumeroHabitaciones";
+            this.txtNumeroHabitaciones.Size = new System.Drawing.Size(295, 35);
+            this.txtNumeroHabitaciones.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtNumeroHabitaciones.StateCommon.Border.Rounding = 20F;
+            this.txtNumeroHabitaciones.StateCommon.Border.Width = 1;
+            this.txtNumeroHabitaciones.TabIndex = 23;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(11, 7);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(47, 21);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel1.TabIndex = 24;
+            this.kryptonLabel1.Values.Text = "Precio";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(61, 7);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(16, 21);
+            this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kryptonLabel2.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel2.TabIndex = 25;
+            this.kryptonLabel2.Values.Text = "*";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(472, 5);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(16, 21);
+            this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kryptonLabel3.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel3.TabIndex = 27;
+            this.kryptonLabel3.Values.Text = "*";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(319, 5);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(156, 21);
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel4.TabIndex = 26;
+            this.kryptonLabel4.Values.Text = "Numero de habitaciones";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(392, 71);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(16, 21);
+            this.kryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kryptonLabel5.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
+            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel5.TabIndex = 31;
+            this.kryptonLabel5.Values.Text = "*";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(319, 73);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(74, 21);
+            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel6.TabIndex = 30;
+            this.kryptonLabel6.Values.Text = "Habitacion";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(51, 71);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(16, 21);
+            this.kryptonLabel7.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kryptonLabel7.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
+            this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel7.TabIndex = 29;
+            this.kryptonLabel7.Values.Text = "*";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(11, 73);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(43, 21);
+            this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel8.TabIndex = 28;
+            this.kryptonLabel8.Values.Text = "Hotel";
+            // 
             // CrearTipoHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(621, 275);
-            this.Controls.Add(this.kryptonComboBox2);
+            this.ClientSize = new System.Drawing.Size(621, 302);
+            this.Controls.Add(this.kryptonLabel5);
+            this.Controls.Add(this.kryptonLabel6);
+            this.Controls.Add(this.kryptonLabel7);
+            this.Controls.Add(this.kryptonLabel8);
+            this.Controls.Add(this.kryptonLabel3);
+            this.Controls.Add(this.kryptonLabel4);
+            this.Controls.Add(this.kryptonLabel2);
+            this.Controls.Add(this.kryptonLabel1);
+            this.Controls.Add(this.txtNumeroHabitaciones);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.CbHoteles);
+            this.Controls.Add(this.CbHabitaciones);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.btCreate);
-            this.Controls.Add(this.kryptonComboBox1);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtNumeroHabitaciones);
-            this.Controls.Add(this.txtDescripcion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HeaderStyle = Krypton.Toolkit.HeaderStyle.Calendar;
             this.MaximizeBox = false;
@@ -349,8 +423,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.StateCommon.Header.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Text = "Crear Tipos de habitacion";
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
+            this.Load += new System.EventHandler(this.CrearTipoHabitacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CbHoteles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CbHabitaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,12 +434,20 @@
         #endregion
 
         private Krypton.Toolkit.KryptonTextBox txtDescripcion;
-        private Krypton.Toolkit.KryptonTextBox txtNumeroHabitaciones;
-        private Krypton.Toolkit.KryptonTextBox txtPrecio;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
+        private Krypton.Toolkit.KryptonComboBox CbHoteles;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton btCreate;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
+        private Krypton.Toolkit.KryptonComboBox CbHabitaciones;
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private Krypton.Toolkit.KryptonTextBox txtPrecio;
+        private Krypton.Toolkit.KryptonTextBox txtNumeroHabitaciones;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
     }
 }

@@ -9,13 +9,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
-
-
-
-
-
-
+using Hotel.Comunes;
+using Hotel.Data.Interfaces;
+using Krypton.Toolkit;
+using Hotel.UI.Administracion;
 
 namespace Hotel.UI
 
@@ -27,6 +24,8 @@ namespace Hotel.UI
         private Panel leftborderBtn;
         private IconButton[] MyIconButton = new IconButton[5];
         private Form currentChildform;
+
+
 
 
         public MenuPrincipal()
@@ -89,7 +88,10 @@ namespace Hotel.UI
         private void disableButton()
         {
           if (currentBtn != null)
+
             {
+
+
                 currentBtn.BackColor = Color.FromArgb(2, 121, 186);
                 currentBtn.ForeColor = Color.White;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
@@ -100,13 +102,8 @@ namespace Hotel.UI
         }
         private void OpenChildForm(Form childform)
         {
-            //abrir un solo formulario
-           if(currentChildform != null)
-            {
-                currentChildform.Close();
-
-            }
-            currentChildform = childform;
+          
+            if 
 
             childform.TopLevel = false;
             childform.FormBorderStyle = FormBorderStyle.None;
@@ -152,6 +149,7 @@ namespace Hotel.UI
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
+
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -171,8 +169,20 @@ namespace Hotel.UI
             ActivateButton(sender, RGBcolors.color3);
         }
         private void iconButton4_Click(object sender, EventArgs e)
+
+
         {
+            var form =  (Program.ServiceProvider.GetService(typeof(CrearUsuarios)) as CrearUsuarios);
+            form.MdiParent = this;
+            form.Show();
+            OpenChildForm(form);
+
+
+            
             ActivateButton(sender, RGBcolors.color4);
+
+      
+
 
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -183,10 +193,7 @@ namespace Hotel.UI
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            if (currentChildform != null)
-            {
-                currentChildform.Close();
-            }    
+         
             reset();
         }
         private void reset()
@@ -233,6 +240,11 @@ namespace Hotel.UI
         private void iconMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void BtAdministracion_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

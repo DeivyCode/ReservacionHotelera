@@ -23,7 +23,7 @@ namespace Hotel
             ConfigurarServicios();
 
             // Verficar Autentificacion del usuario
-            var loginForm = ServiceProvider.GetRequiredService<CrearReservaciones>();
+            var loginForm = ServiceProvider.GetRequiredService<MenuPrincipal>();
 
             if (loginForm.ShowDialog() == DialogResult.OK)
                 Application.Run(ServiceProvider.GetRequiredService<ListadoHoteles>());

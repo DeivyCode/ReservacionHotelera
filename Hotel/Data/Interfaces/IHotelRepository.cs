@@ -19,5 +19,8 @@ namespace Hotel.Data.Interfaces
         bool CrearReservacion(Reserva model);
 
         public string MessageError { get; }
+
+        ICollection<Models.Hotel> ObtenerHoteles();
+
     }
 }

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Dataflow;
 
 namespace Hotel.Data.Repositorio
 {
@@ -14,15 +15,17 @@ namespace Hotel.Data.Repositorio
     {
 
         private readonly HotelDbContext context;
-        private string messageError;
 
-        public string MessageError
+        public string MessageError { get; private set; }
+
+        public ICollection<Models.Hotel> ObtenerHoteles()
         {
-            get
-            {
-                return messageError;
-            }
+            return context.Hotel
+                .Include(c => c.Categoria)
+                .Include(a => a.Administrador)
+                .ToList();
         }
+
         public HotelRepositoryImp(HotelDbContext context)
         {
             this.context = context;
@@ -67,7 +70,7 @@ namespace Hotel.Data.Repositorio
             }
             catch (Exception ex)
             {
-                messageError = $"{ex.Message} - INNER  {ex.InnerException?.Message}";
+                MessageError = $"{ex.Message} - INNER  {ex.InnerException?.Message}";
                 return false;
             }
         }
@@ -99,7 +102,7 @@ namespace Hotel.Data.Repositorio
 
                     return false;
                 }
-
+                context.ChangeTracker.Clear();
                 context.Hotel.Add(model);
 
                 if (context.SaveChanges() > 0) return true;
@@ -109,7 +112,7 @@ namespace Hotel.Data.Repositorio
             }
             catch (Exception ex)
             {
-                messageError = $"{ex.Message} - INNER  {ex.InnerException?.Message}";
+                MessageError = $"{ex.Message} - INNER  {ex.InnerException?.Message}";
                 return false;
             }
         }
@@ -150,7 +153,7 @@ namespace Hotel.Data.Repositorio
             }
             catch (Exception ex)
             {
-                messageError = $"{ex.Message} - INNER  {ex.InnerException?.Message}";
+                MessageError = $"{ex.Message} - INNER  {ex.InnerException?.Message}";
                 return false;
             }
         }
@@ -176,7 +179,7 @@ namespace Hotel.Data.Repositorio
             }
             catch (Exception e)
             {
-                messageError = $"{e?.Message} {e?.InnerException}";
+                MessageError = $"{e?.Message} {e?.InnerException}";
                 transaction.Rollback();
                 return false;
             }

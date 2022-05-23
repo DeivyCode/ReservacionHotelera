@@ -9,7 +9,7 @@ namespace Hotel.Data.Models
 
         [Required]
         [MaxLength(100, ErrorMessage = "Nombre no valido maximo caracteres {0}")]
-        public string Nombre { get; set; }
+        public string NombreAdministrador { get; set; }
 
         [Required]
         public bool IsActive { get; set; } = true;

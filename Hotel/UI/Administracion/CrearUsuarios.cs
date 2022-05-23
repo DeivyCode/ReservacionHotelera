@@ -65,7 +65,7 @@ namespace Hotel.UI.Administracion
             }
             catch (Exception e)
             {
-                MessageBox.Show($"{e?.Message} {e?.InnerException}");
+                MessageBox.Show($@"{e?.Message} {e?.InnerException}");
                 return false;
             }
         }
@@ -76,7 +76,7 @@ namespace Hotel.UI.Administracion
         {
             try
             {
-                for (int i = 0; i < tabPage1.Controls.Count; i++)
+                for (var i = 0; i < tabPage1.Controls.Count; i++)
                 {
                     if (tabPage1.Controls[i].GetType() == typeof(TextBox))
                     {
@@ -87,7 +87,7 @@ namespace Hotel.UI.Administracion
                         }
                         else if (String.IsNullOrEmpty(tabPage1.Controls[i].Text))
                         {
-                            MessageBox.Show($"El campo {tabPage1.Controls[i].Tag} require la entra de un valor");
+                            MessageBox.Show($@"El campo {tabPage1.Controls[i].Tag} require la entrada de un valor");
                             tabPage1.Controls[i].Focus();
                             return false;
                         }
@@ -119,28 +119,28 @@ namespace Hotel.UI.Administracion
             {
                 MessageBox.Show("!!!Usuario creado Satisfactoriamente!!!");
                 ValidarLimpiarCampos(limpiarCampos: true);
+                DialogResult = DialogResult.OK;
+                return;
             }
         }
 
         private void CrearUsuarios_Load(object sender, EventArgs e)
         {
-            if (acciones == Acciones.Editar)
+            if (acciones != Acciones.Editar) return;
+            var users = administracion.ObtenerUsuariosByCriteria(x => x.IdUsuario == idUsuario);
+            foreach (var user in users)
             {
-                var users = administracion.GetUsuariosByCriteria(x => x.IdUsuario == idUsuario);
-                foreach (var user in users)
-                {
-                    txtCodigo.Text = user.Usuario;
-                    txtApellido.Text = user.Apellidos;
-                    txtNombre.Text = user.Nombres;
-                    txtCorreo.Text = user.Correo;
-                    txtClave.Text = user.Clave;
-                    txtConfirmarClave.Text = user.Clave;
-                    SwitchAdm.Switched = user.IsAdmin;
-                    SwitchEstado.Switched = user.IsActive;
-                }
-
-                //DialogResult = DialogResult.OK;
+                txtCodigo.Text = user.Usuario;
+                txtApellido.Text = user.Apellidos;
+                txtNombre.Text = user.Nombres;
+                txtCorreo.Text = user.Correo;
+                txtClave.Text = user.Clave;
+                txtConfirmarClave.Text = user.Clave;
+                SwitchAdm.Switched = user.IsAdmin;
+                SwitchEstado.Switched = user.IsActive;
             }
+
+            //DialogResult = DialogResult.OK;
         }
     }
 }

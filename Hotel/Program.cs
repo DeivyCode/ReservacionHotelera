@@ -1,8 +1,10 @@
+
 using Hotel.Data;
 using Hotel.Data.Interfaces;
 using Hotel.Data.Repositorio;
 using Hotel.UI;
 using Hotel.UI.Administracion;
+using Hotel.UI.Hotel;
 using Microsoft.Extensions.DependencyInjection;
 namespace Hotel
 {
@@ -21,20 +23,17 @@ namespace Hotel
             ConfigurarServicios();
 
             // Verficar Autentificacion del usuario
-            var loginForm = ServiceProvider.GetRequiredService<Login>();
+            var loginForm = ServiceProvider.GetRequiredService<CrearTipoHabitacion>();
 
             if (loginForm.ShowDialog() == DialogResult.OK)
-                Application.Run(ServiceProvider.GetRequiredService<MenuPrincipal>());
+                Application.Run(ServiceProvider.GetRequiredService<ListadoHoteles>());
             else
                 Application.Exit();
 
 
-            using (var hotelContext = new HotelDbContext())
-            {
-                Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions
-                         .Migrate(hotelContext.Database);
-
-            }
+            using var hotelContext = new HotelDbContext();
+            Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions
+                .Migrate(hotelContext.Database);
         }
 
         static void ConfigurarServicios()
@@ -48,6 +47,10 @@ namespace Hotel
             servicios.AddTransient<CrearUsuarios>();
             servicios.AddTransient<MenuPrincipal>();
             servicios.AddTransient<ListadoUsuarios>();
+            servicios.AddTransient<ListadoHoteles>();
+            servicios.AddTransient<CrearHoteles>();
+            servicios.AddTransient<CrearHabitaciones>();
+            servicios.AddTransient<CrearTipoHabitacion>();
             ServiceProvider = servicios.BuildServiceProvider();
 
         }

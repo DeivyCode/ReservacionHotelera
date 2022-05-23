@@ -29,13 +29,11 @@ namespace Hotel.Data.Models
 
         public int IdAdministrador { get; set; }
 
-        [Required]
         [ForeignKey("IdAdministrador")]
         public virtual Administrador Administrador{ get; set; }
 
 
         [ForeignKey("IdCategoria")]
-        [Required]
         public Categorias Categoria { get; set; }
     }
 }

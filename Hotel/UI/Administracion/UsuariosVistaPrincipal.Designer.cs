@@ -31,9 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.metroSetDivider1 = new MetroSet_UI.Controls.MetroSetDivider();
-            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.btEditar = new FontAwesome.Sharp.IconButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +39,10 @@
             this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroSetDivider1 = new MetroSet_UI.Controls.MetroSetDivider();
+            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.btEditar = new FontAwesome.Sharp.IconButton();
+            this.btCrearUsuarios = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,56 +102,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(980, 52);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
-            // 
-            // metroSetDivider1
-            // 
-            this.metroSetDivider1.IsDerivedStyle = true;
-            this.metroSetDivider1.Location = new System.Drawing.Point(-10, 89);
-            this.metroSetDivider1.Name = "metroSetDivider1";
-            this.metroSetDivider1.Orientation = MetroSet_UI.Enums.DividerStyle.Horizontal;
-            this.metroSetDivider1.Size = new System.Drawing.Size(995, 4);
-            this.metroSetDivider1.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetDivider1.StyleManager = null;
-            this.metroSetDivider1.TabIndex = 2;
-            this.metroSetDivider1.Text = "metroSetDivider1";
-            this.metroSetDivider1.ThemeAuthor = "Narwin";
-            this.metroSetDivider1.ThemeName = "MetroLite";
-            this.metroSetDivider1.Thickness = 3;
-            // 
-            // metroSetLabel1
-            // 
-            this.metroSetLabel1.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.metroSetLabel1.IsDerivedStyle = true;
-            this.metroSetLabel1.Location = new System.Drawing.Point(390, 40);
-            this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(223, 28);
-            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetLabel1.StyleManager = null;
-            this.metroSetLabel1.TabIndex = 3;
-            this.metroSetLabel1.Text = "Listado de Usuarios";
-            this.metroSetLabel1.ThemeAuthor = "Narwin";
-            this.metroSetLabel1.ThemeName = "MetroLite";
-            // 
-            // btEditar
-            // 
-            this.btEditar.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEditar.Font = new System.Drawing.Font("Ebrima", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btEditar.ForeColor = System.Drawing.Color.White;
-            this.btEditar.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.btEditar.IconColor = System.Drawing.Color.White;
-            this.btEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btEditar.IconSize = 26;
-            this.btEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditar.Location = new System.Drawing.Point(829, 105);
-            this.btEditar.Name = "btEditar";
-            this.btEditar.Padding = new System.Windows.Forms.Padding(15, 0, 40, 0);
-            this.btEditar.Size = new System.Drawing.Size(148, 33);
-            this.btEditar.TabIndex = 4;
-            this.btEditar.Text = "Editar";
-            this.btEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btEditar.UseVisualStyleBackColor = false;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // Column1
             // 
@@ -226,6 +177,77 @@
             this.Clave.ReadOnly = true;
             this.Clave.Visible = false;
             // 
+            // metroSetDivider1
+            // 
+            this.metroSetDivider1.IsDerivedStyle = true;
+            this.metroSetDivider1.Location = new System.Drawing.Point(-10, 89);
+            this.metroSetDivider1.Name = "metroSetDivider1";
+            this.metroSetDivider1.Orientation = MetroSet_UI.Enums.DividerStyle.Horizontal;
+            this.metroSetDivider1.Size = new System.Drawing.Size(995, 4);
+            this.metroSetDivider1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetDivider1.StyleManager = null;
+            this.metroSetDivider1.TabIndex = 2;
+            this.metroSetDivider1.Text = "metroSetDivider1";
+            this.metroSetDivider1.ThemeAuthor = "Narwin";
+            this.metroSetDivider1.ThemeName = "MetroLite";
+            this.metroSetDivider1.Thickness = 3;
+            // 
+            // metroSetLabel1
+            // 
+            this.metroSetLabel1.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroSetLabel1.IsDerivedStyle = true;
+            this.metroSetLabel1.Location = new System.Drawing.Point(390, 40);
+            this.metroSetLabel1.Name = "metroSetLabel1";
+            this.metroSetLabel1.Size = new System.Drawing.Size(223, 28);
+            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel1.StyleManager = null;
+            this.metroSetLabel1.TabIndex = 3;
+            this.metroSetLabel1.Text = "Listado de Usuarios";
+            this.metroSetLabel1.ThemeAuthor = "Narwin";
+            this.metroSetLabel1.ThemeName = "MetroLite";
+            // 
+            // btEditar
+            // 
+            this.btEditar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEditar.Font = new System.Drawing.Font("Ebrima", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btEditar.ForeColor = System.Drawing.Color.White;
+            this.btEditar.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            this.btEditar.IconColor = System.Drawing.Color.White;
+            this.btEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btEditar.IconSize = 26;
+            this.btEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEditar.Location = new System.Drawing.Point(681, 105);
+            this.btEditar.Name = "btEditar";
+            this.btEditar.Padding = new System.Windows.Forms.Padding(15, 0, 40, 0);
+            this.btEditar.Size = new System.Drawing.Size(148, 33);
+            this.btEditar.TabIndex = 4;
+            this.btEditar.Text = "Editar";
+            this.btEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btEditar.UseVisualStyleBackColor = false;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
+            // 
+            // btCrearUsuarios
+            // 
+            this.btCrearUsuarios.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btCrearUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCrearUsuarios.Font = new System.Drawing.Font("Ebrima", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btCrearUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btCrearUsuarios.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btCrearUsuarios.IconColor = System.Drawing.Color.White;
+            this.btCrearUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btCrearUsuarios.IconSize = 26;
+            this.btCrearUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btCrearUsuarios.Location = new System.Drawing.Point(837, 105);
+            this.btCrearUsuarios.Name = "btCrearUsuarios";
+            this.btCrearUsuarios.Padding = new System.Windows.Forms.Padding(15, 0, 40, 0);
+            this.btCrearUsuarios.Size = new System.Drawing.Size(148, 33);
+            this.btCrearUsuarios.TabIndex = 5;
+            this.btCrearUsuarios.Text = "Crear";
+            this.btCrearUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btCrearUsuarios.UseVisualStyleBackColor = false;
+            this.btCrearUsuarios.Click += new System.EventHandler(this.btCrearUsuarios_Click);
+            // 
             // ListadoUsuarios
             // 
             this.AllowResize = false;
@@ -233,6 +255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(992, 515);
+            this.Controls.Add(this.btCrearUsuarios);
             this.Controls.Add(this.btEditar);
             this.Controls.Add(this.metroSetLabel1);
             this.Controls.Add(this.metroSetDivider1);
@@ -264,5 +287,6 @@
         private DataGridViewCheckBoxColumn Column5;
         private DataGridViewTextBoxColumn IdUsuario;
         private DataGridViewTextBoxColumn Clave;
+        private FontAwesome.Sharp.IconButton btCrearUsuarios;
     }
 }

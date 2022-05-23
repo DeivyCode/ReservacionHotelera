@@ -12,7 +12,7 @@ namespace Hotel.Data.Models
         [Key]
         public int Id { get; set; }
         [Required, MaxLength(100)]
-        public string Name { get; set; }
+        public string  CategoriaNombre{ get; set; }
         public bool IsActive { get; set; } = true;
     }
 }

@@ -62,7 +62,7 @@ namespace Hotel.Data.Repositorio
                 if (user.IsAdmin)
                     context.Administradores.Add(new Administrador
                     {
-                        Nombre = user.Nombres,
+                        NombreAdministrador = user.Nombres,
                     });
 
                 context.Usuarios.Add(user);
@@ -102,9 +102,19 @@ namespace Hotel.Data.Repositorio
             return context.Usuarios.ToList();
         }
 
-        public ICollection<Usuarios> GetUsuariosByCriteria(Func<Usuarios, bool> filtro)
+        public ICollection<Usuarios> ObtenerUsuariosByCriteria(Func<Usuarios, bool> filtro)
         {
             return context.Usuarios.Where(filtro).ToList();
+        }
+
+        public ICollection<Categorias> ObtenerCategorias(Func<Categorias, bool> filtro)
+        {
+            return context.Categorias.Where(filtro).ToList();
+        }
+
+        public ICollection<Administrador> ObtenerAdministradores(Func<Administrador, bool> filtro)
+        {
+            return context.Administradores.Where(filtro).ToList();
         }
     }
 }

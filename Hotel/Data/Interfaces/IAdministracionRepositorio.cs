@@ -19,7 +19,11 @@ namespace Hotel.Data.Interfaces
 
         bool AutentificarUsuario(Usuarios user);
 
-        ICollection<Usuarios> GetUsuariosByCriteria(Func<Usuarios,bool> filtro);
+        ICollection<Usuarios> ObtenerUsuariosByCriteria(Func<Usuarios, bool> filtro);
+
+        ICollection<Categorias> ObtenerCategorias(Func<Categorias, bool> filtro);
+
+        ICollection<Administrador> ObtenerAdministradores(Func<Administrador, bool> filtro);
 
     }
 }

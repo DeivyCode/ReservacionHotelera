@@ -181,6 +181,7 @@ namespace Hotel.UI
 
 
         {
+            CerrarFormulariosHijos();
             disableButton();
             var form = (Program.ServiceProvider.GetService(typeof(CrearUsuarios)) as CrearUsuarios);
             form.MdiParent = this;
@@ -196,11 +197,15 @@ namespace Hotel.UI
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-
+            CerrarFormulariosHijos();
+            HideSubMenu();
             reset();
         }
         private void reset()
+
         {
+          
+
             disableButton();
             leftborderBtn.Visible = false;
             iconhome.IconChar = iconreseticonhome.IconChar;
@@ -281,7 +286,9 @@ namespace Hotel.UI
         }
 
         private void BTcrearHoteles_Click(object sender, EventArgs e)
+            
         {
+            CerrarFormulariosHijos();
             disableButton();
             var form = (Program.ServiceProvider.GetService(typeof(ListadoHoteles)) as ListadoHoteles);
             form.MdiParent = this;
@@ -293,6 +300,7 @@ namespace Hotel.UI
 
         private void BTtipodehabitaciones_Click_1(object sender, EventArgs e)
         {
+            CerrarFormulariosHijos();
             disableButton();
             var form = (Program.ServiceProvider.GetService(typeof(CrearTipoHabitacion)) as CrearTipoHabitacion);
             form.MdiParent = this;
@@ -305,6 +313,14 @@ namespace Hotel.UI
         {
             disableButton();
             HideSubMenu();
+        }
+
+        private void CerrarFormulariosHijos ()
+        {
+          
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+
         }
     }
 }

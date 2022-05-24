@@ -17,28 +17,22 @@ namespace Hotel.UI.Administracion
 
         private void ListadoUsuarios_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = _administracion.GetUsuarios();
-        }
-
-        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            var height = 35 + dataGridView1.Rows.Cast<DataGridViewRow>().Sum(dr => dr.Height);
-            dataGridView1.Height = height;
+            dgvUsuarios.DataSource = _administracion.GetUsuarios();
         }
 
         private void btEditar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0) return;
-            var rows = dataGridView1.SelectedRows[0];
+            if (dgvUsuarios.SelectedRows.Count == 0) return;
+            var rows = dgvUsuarios.SelectedRows[0];
 
 
             _crearUsuario.acciones = Comunes.Acciones.Editar;
             _crearUsuario.idUsuario = (int)rows.Cells["IdUsuario"].Value;
             _crearUsuario.ShowDialog();
             if (_crearUsuario.DialogResult != DialogResult.OK) return;
-            dataGridView1.DataSource = _administracion.GetUsuarios();
-            dataGridView1.Update();
-            dataGridView1.Refresh();
+            dgvUsuarios.DataSource = _administracion.GetUsuarios();
+            dgvUsuarios.Update();
+            dgvUsuarios.Refresh();
         }
 
         private void btCrearUsuarios_Click(object sender, EventArgs e)
@@ -46,14 +40,16 @@ namespace Hotel.UI.Administracion
             _crearUsuario.acciones = Acciones.Crear;
             _crearUsuario.ShowDialog();
             if (_crearUsuario.DialogResult != DialogResult.OK) return;
-            dataGridView1.DataSource = _administracion.GetUsuarios();
-            dataGridView1.Update();
-            dataGridView1.Refresh();
+            dgvUsuarios.DataSource = _administracion.GetUsuarios();
+            dgvUsuarios.Update();
+            dgvUsuarios.Refresh();
 
         }
 
-       
-
-    
+        private void dgvUsuarios_DataBindingComplete_1(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            var height = 35 + dgvUsuarios.Rows.Cast<DataGridViewRow>().Sum(dr => dr.Height);
+            dgvUsuarios.Height = height;
+        }
     }
 }

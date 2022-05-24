@@ -29,8 +29,16 @@
         private void InitializeComponent()
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.BtUsuarios = new FontAwesome.Sharp.IconButton();
             this.BtREPORTE = new FontAwesome.Sharp.IconButton();
+            this.PanelDesplegableAdministracion = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BTbackup = new FontAwesome.Sharp.IconButton();
+            this.BtUsuarios = new FontAwesome.Sharp.IconButton();
+            this.BtAdministracion = new FontAwesome.Sharp.IconButton();
+            this.panelDesplegableHotel = new System.Windows.Forms.Panel();
+            this.BTtipodehabitaciones = new FontAwesome.Sharp.IconButton();
+            this.BTcrearHoteles = new FontAwesome.Sharp.IconButton();
+            this.BTregistrodeHabitaciones = new FontAwesome.Sharp.IconButton();
             this.BtHotel = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.PtInicio = new System.Windows.Forms.PictureBox();
@@ -85,11 +93,75 @@
             this.PanelMenu.TabIndex = 1;
             this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
             // 
+            // BtREPORTE
+            // 
+            this.BtREPORTE.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtREPORTE.FlatAppearance.BorderSize = 0;
+            this.BtREPORTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtREPORTE.ForeColor = System.Drawing.Color.White;
+            this.BtREPORTE.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.BtREPORTE.IconColor = System.Drawing.Color.White;
+            this.BtREPORTE.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtREPORTE.IconSize = 45;
+            this.BtREPORTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtREPORTE.Location = new System.Drawing.Point(0, 600);
+            this.BtREPORTE.Name = "BtREPORTE";
+            this.BtREPORTE.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.BtREPORTE.Size = new System.Drawing.Size(203, 62);
+            this.BtREPORTE.TabIndex = 4;
+            this.BtREPORTE.Text = "REPORTE";
+            this.BtREPORTE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtREPORTE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtREPORTE.UseVisualStyleBackColor = true;
+            this.BtREPORTE.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // PanelDesplegableAdministracion
+            // 
+            this.PanelDesplegableAdministracion.BackColor = System.Drawing.Color.SteelBlue;
+            this.PanelDesplegableAdministracion.Controls.Add(this.panel1);
+            this.PanelDesplegableAdministracion.Controls.Add(this.BTbackup);
+            this.PanelDesplegableAdministracion.Controls.Add(this.BtUsuarios);
+            this.PanelDesplegableAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelDesplegableAdministracion.Location = new System.Drawing.Point(0, 458);
+            this.PanelDesplegableAdministracion.Name = "PanelDesplegableAdministracion";
+            this.PanelDesplegableAdministracion.Size = new System.Drawing.Size(203, 142);
+            this.PanelDesplegableAdministracion.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(208, 205);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 4;
+            // 
+            // BTbackup
+            // 
+            this.BTbackup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BTbackup.FlatAppearance.BorderSize = 0;
+            this.BTbackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTbackup.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BTbackup.ForeColor = System.Drawing.Color.White;
+            this.BTbackup.IconChar = FontAwesome.Sharp.IconChar.CloudUploadAlt;
+            this.BTbackup.IconColor = System.Drawing.Color.White;
+            this.BTbackup.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BTbackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTbackup.Location = new System.Drawing.Point(0, 67);
+            this.BTbackup.Name = "BTbackup";
+            this.BTbackup.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.BTbackup.Size = new System.Drawing.Size(203, 67);
+            this.BTbackup.TabIndex = 6;
+            this.BTbackup.Text = "Backup";
+            this.BTbackup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTbackup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BTbackup.UseVisualStyleBackColor = true;
+            this.BTbackup.Click += new System.EventHandler(this.iconButton4_Click_1);
+            // 
             // BtUsuarios
             // 
             this.BtUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtUsuarios.FlatAppearance.BorderSize = 0;
             this.BtUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtUsuarios.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtUsuarios.ForeColor = System.Drawing.Color.White;
             this.BtUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
             this.BtUsuarios.IconColor = System.Drawing.Color.White;
@@ -106,27 +178,108 @@
             this.BtUsuarios.UseVisualStyleBackColor = true;
             this.BtUsuarios.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // BtREPORTE
+            // BtAdministracion
             // 
-            this.BtREPORTE.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtREPORTE.FlatAppearance.BorderSize = 0;
-            this.BtREPORTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtREPORTE.ForeColor = System.Drawing.Color.White;
-            this.BtREPORTE.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.BtREPORTE.IconColor = System.Drawing.Color.White;
-            this.BtREPORTE.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtREPORTE.IconSize = 45;
-            this.BtREPORTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtREPORTE.Location = new System.Drawing.Point(0, 600);
-            this.BtREPORTE.Name = "BtREPORTE";
-            this.BtREPORTE.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.BtREPORTE.Size = new System.Drawing.Size(220, 62);
-            this.BtREPORTE.TabIndex = 4;
-            this.BtREPORTE.Text = "REPORTE";
-            this.BtREPORTE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtREPORTE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtREPORTE.UseVisualStyleBackColor = true;
-            this.BtREPORTE.Click += new System.EventHandler(this.iconButton3_Click);
+            this.BtAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtAdministracion.FlatAppearance.BorderSize = 0;
+            this.BtAdministracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtAdministracion.ForeColor = System.Drawing.Color.White;
+            this.BtAdministracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.BtAdministracion.IconColor = System.Drawing.Color.White;
+            this.BtAdministracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtAdministracion.IconSize = 45;
+            this.BtAdministracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtAdministracion.Location = new System.Drawing.Point(0, 398);
+            this.BtAdministracion.Name = "BtAdministracion";
+            this.BtAdministracion.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.BtAdministracion.Size = new System.Drawing.Size(203, 60);
+            this.BtAdministracion.TabIndex = 6;
+            this.BtAdministracion.Text = "Administracion";
+            this.BtAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtAdministracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtAdministracion.UseVisualStyleBackColor = true;
+            this.BtAdministracion.Click += new System.EventHandler(this.BtAdministracion_Click_1);
+            // 
+            // panelDesplegableHotel
+            // 
+            this.panelDesplegableHotel.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelDesplegableHotel.Controls.Add(this.BTtipodehabitaciones);
+            this.panelDesplegableHotel.Controls.Add(this.BTcrearHoteles);
+            this.panelDesplegableHotel.Controls.Add(this.BTregistrodeHabitaciones);
+            this.panelDesplegableHotel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDesplegableHotel.Location = new System.Drawing.Point(0, 200);
+            this.panelDesplegableHotel.Name = "panelDesplegableHotel";
+            this.panelDesplegableHotel.Size = new System.Drawing.Size(203, 198);
+            this.panelDesplegableHotel.TabIndex = 4;
+            // 
+            // BTtipodehabitaciones
+            // 
+            this.BTtipodehabitaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BTtipodehabitaciones.FlatAppearance.BorderSize = 0;
+            this.BTtipodehabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTtipodehabitaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BTtipodehabitaciones.ForeColor = System.Drawing.Color.White;
+            this.BTtipodehabitaciones.IconChar = FontAwesome.Sharp.IconChar.Tag;
+            this.BTtipodehabitaciones.IconColor = System.Drawing.Color.White;
+            this.BTtipodehabitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BTtipodehabitaciones.IconSize = 45;
+            this.BTtipodehabitaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTtipodehabitaciones.Location = new System.Drawing.Point(0, 126);
+            this.BTtipodehabitaciones.Name = "BTtipodehabitaciones";
+            this.BTtipodehabitaciones.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.BTtipodehabitaciones.Size = new System.Drawing.Size(203, 72);
+            this.BTtipodehabitaciones.TabIndex = 7;
+            this.BTtipodehabitaciones.Text = "Tipo De Habitaciones";
+            this.BTtipodehabitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTtipodehabitaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BTtipodehabitaciones.UseVisualStyleBackColor = true;
+            this.BTtipodehabitaciones.Click += new System.EventHandler(this.iconButton3_Click_1);
+            // 
+            // BTcrearHoteles
+            // 
+            this.BTcrearHoteles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BTcrearHoteles.FlatAppearance.BorderSize = 0;
+            this.BTcrearHoteles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTcrearHoteles.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BTcrearHoteles.ForeColor = System.Drawing.Color.White;
+            this.BTcrearHoteles.IconChar = FontAwesome.Sharp.IconChar.Suitcase;
+            this.BTcrearHoteles.IconColor = System.Drawing.Color.White;
+            this.BTcrearHoteles.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BTcrearHoteles.IconSize = 45;
+            this.BTcrearHoteles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTcrearHoteles.Location = new System.Drawing.Point(0, 66);
+            this.BTcrearHoteles.Name = "BTcrearHoteles";
+            this.BTcrearHoteles.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.BTcrearHoteles.Size = new System.Drawing.Size(203, 60);
+            this.BTcrearHoteles.TabIndex = 6;
+            this.BTcrearHoteles.Text = "Crear Hoteles ";
+            this.BTcrearHoteles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTcrearHoteles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BTcrearHoteles.UseVisualStyleBackColor = true;
+            this.BTcrearHoteles.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // BTregistrodeHabitaciones
+            // 
+            this.BTregistrodeHabitaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BTregistrodeHabitaciones.FlatAppearance.BorderSize = 0;
+            this.BTregistrodeHabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTregistrodeHabitaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BTregistrodeHabitaciones.ForeColor = System.Drawing.Color.White;
+            this.BTregistrodeHabitaciones.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
+            this.BTregistrodeHabitaciones.IconColor = System.Drawing.Color.White;
+            this.BTregistrodeHabitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BTregistrodeHabitaciones.IconSize = 45;
+            this.BTregistrodeHabitaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTregistrodeHabitaciones.Location = new System.Drawing.Point(0, 0);
+            this.BTregistrodeHabitaciones.Name = "BTregistrodeHabitaciones";
+            this.BTregistrodeHabitaciones.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.BTregistrodeHabitaciones.Size = new System.Drawing.Size(203, 66);
+            this.BTregistrodeHabitaciones.TabIndex = 5;
+            this.BTregistrodeHabitaciones.Text = "Registro de Habitaciones";
+            this.BTregistrodeHabitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTregistrodeHabitaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BTregistrodeHabitaciones.UseVisualStyleBackColor = true;
+            this.BTregistrodeHabitaciones.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // BtHotel
             // 
@@ -282,7 +435,7 @@
             // 
             // PnContenedor
             // 
-            this.PnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(174)))), ((int)(((byte)(249)))));
+            this.PnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.PnContenedor.Controls.Add(this.pictureBox1);
             this.PnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnContenedor.Location = new System.Drawing.Point(220, 84);
@@ -445,6 +598,7 @@
             this.Controls.Add(this.PnSombra);
             this.Controls.Add(this.PNSuperior);
             this.Controls.Add(this.PanelMenu);
+            this.IsMdiContainer = true;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
@@ -488,11 +642,11 @@
         private PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton BtAdministracion;
         private Panel panelDesplegableHotel;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BTtipodehabitaciones;
+        private FontAwesome.Sharp.IconButton BTcrearHoteles;
+        private FontAwesome.Sharp.IconButton BTregistrodeHabitaciones;
         private Panel PanelDesplegableAdministracion;
         private Panel panel1;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton BTbackup;
     }
 }

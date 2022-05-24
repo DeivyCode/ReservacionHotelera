@@ -9,10 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 
 namespace Hotel.UI
 {
-    public partial class Login : Form
+    public partial class Login : KryptonForm
     {
         private readonly IAdministracionRepositorio usuarioRepositorio;
         private readonly IHotelRepository hotelRepository;

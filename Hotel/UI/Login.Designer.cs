@@ -28,20 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnovisible = new System.Windows.Forms.Button();
-            this.btvisible = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.userTxt = new System.Windows.Forms.TextBox();
-            this.claveTxt = new System.Windows.Forms.TextBox();
-            this.userpasswd = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btCreate = new Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
+            this.txtPrecio = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -53,105 +51,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnovisible);
-            this.groupBox2.Controls.Add(this.btvisible);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.userTxt);
-            this.groupBox2.Controls.Add(this.claveTxt);
-            this.groupBox2.Controls.Add(this.userpasswd);
-            this.groupBox2.Controls.Add(this.username);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(110)))), ((int)(((byte)(182)))));
-            this.groupBox2.Location = new System.Drawing.Point(34, 81);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(260, 201);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Control de acceso";
-            // 
-            // btnovisible
-            // 
-            this.btnovisible.BackgroundImage = global::Hotel.Properties.Resources.visibilidad;
-            this.btnovisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnovisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnovisible.Location = new System.Drawing.Point(231, 89);
-            this.btnovisible.Name = "btnovisible";
-            this.btnovisible.Size = new System.Drawing.Size(23, 23);
-            this.btnovisible.TabIndex = 4;
-            this.btnovisible.UseVisualStyleBackColor = true;
-            this.btnovisible.Visible = false;
-            this.btnovisible.Click += new System.EventHandler(this.btnovisible_Click);
-            // 
-            // btvisible
-            // 
-            this.btvisible.BackgroundImage = global::Hotel.Properties.Resources.ver;
-            this.btvisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btvisible.Enabled = false;
-            this.btvisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btvisible.Location = new System.Drawing.Point(231, 89);
-            this.btvisible.Name = "btvisible";
-            this.btvisible.Size = new System.Drawing.Size(23, 23);
-            this.btvisible.TabIndex = 3;
-            this.btvisible.UseVisualStyleBackColor = true;
-            this.btvisible.Visible = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(21, 125);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(90, 19);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Recordarme";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(110)))), ((int)(((byte)(182)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(12, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Iniciar Session";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // userTxt
-            // 
-            this.userTxt.Location = new System.Drawing.Point(125, 46);
-            this.userTxt.Name = "userTxt";
-            this.userTxt.Size = new System.Drawing.Size(129, 23);
-            this.userTxt.TabIndex = 3;
-            // 
-            // claveTxt
-            // 
-            this.claveTxt.Location = new System.Drawing.Point(125, 89);
-            this.claveTxt.Name = "claveTxt";
-            this.claveTxt.Size = new System.Drawing.Size(129, 23);
-            this.claveTxt.TabIndex = 2;
-            // 
-            // userpasswd
-            // 
-            this.userpasswd.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.userpasswd.Location = new System.Drawing.Point(12, 84);
-            this.userpasswd.Name = "userpasswd";
-            this.userpasswd.Size = new System.Drawing.Size(117, 26);
-            this.userpasswd.TabIndex = 1;
-            this.userpasswd.Text = "Contraseña:";
-            // 
-            // username
-            // 
-            this.username.AutoSize = true;
-            this.username.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.username.Location = new System.Drawing.Point(12, 46);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(86, 25);
-            this.username.TabIndex = 0;
-            this.username.Text = "Usuario :";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hotel.Properties.Resources.Wyndham_Hotels;
@@ -162,33 +61,187 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // kryptonPalette1
             // 
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(318, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 27);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            this.kryptonPalette1.FormStyles.FormMain.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette1.FormStyles.FormMain.StateActive.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette1.FormStyles.FormMain.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette1.FormStyles.FormMain.StateActive.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.kryptonPalette1.FormStyles.FormMain.StateActive.Border.Rounding = 12F;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.Background.Color1 = System.Drawing.Color.White;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.Background.Color2 = System.Drawing.Color.White;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.Background.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.SystemColors.HotTrack;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.HeaderColumn.Content.Color2 = System.Drawing.SystemColors.HotTrack;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.HeaderRow.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonPalette1.GridStyles.GridCommon.StateCommon.HeaderRow.Content.Color2 = System.Drawing.Color.Black;
+            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
+            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 10, -1, -1);
+            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btCreate);
+            this.groupBox2.Controls.Add(this.kryptonLabel1);
+            this.groupBox2.Controls.Add(this.kryptonTextBox1);
+            this.groupBox2.Controls.Add(this.kryptonLabel11);
+            this.groupBox2.Controls.Add(this.txtPrecio);
+            this.groupBox2.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.groupBox2.Location = new System.Drawing.Point(12, 92);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(319, 227);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Control de acceso";
+            // 
+            // btCreate
+            // 
+            this.btCreate.Location = new System.Drawing.Point(22, 168);
+            this.btCreate.Name = "btCreate";
+            this.btCreate.OverrideDefault.Back.Color1 = System.Drawing.SystemColors.HotTrack;
+            this.btCreate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btCreate.OverrideDefault.Back.ColorAngle = 45F;
+            this.btCreate.OverrideDefault.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btCreate.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btCreate.OverrideDefault.Border.Rounding = 20F;
+            this.btCreate.OverrideDefault.Border.Width = 1;
+            this.btCreate.OverrideFocus.Back.Color1 = System.Drawing.SystemColors.HotTrack;
+            this.btCreate.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btCreate.OverrideFocus.Back.ColorAngle = 45F;
+            this.btCreate.OverrideFocus.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btCreate.OverrideFocus.Border.Color1 = System.Drawing.Color.Green;
+            this.btCreate.OverrideFocus.Border.Color2 = System.Drawing.Color.Green;
+            this.btCreate.OverrideFocus.Border.ColorAngle = 45F;
+            this.btCreate.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btCreate.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btCreate.OverrideFocus.Border.Rounding = 20F;
+            this.btCreate.OverrideFocus.Border.Width = 1;
+            this.btCreate.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btCreate.Size = new System.Drawing.Size(260, 35);
+            this.btCreate.StateCommon.Back.Color1 = System.Drawing.SystemColors.HotTrack;
+            this.btCreate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btCreate.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btCreate.StateCommon.Border.Color1 = System.Drawing.SystemColors.HotTrack;
+            this.btCreate.StateCommon.Border.Color2 = System.Drawing.SystemColors.HotTrack;
+            this.btCreate.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btCreate.StateCommon.Border.Rounding = 20F;
+            this.btCreate.StateCommon.Border.Width = 1;
+            this.btCreate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btCreate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btCreate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btCreate.StateNormal.Border.Color1 = System.Drawing.SystemColors.HotTrack;
+            this.btCreate.StateNormal.Border.Color2 = System.Drawing.SystemColors.HotTrack;
+            this.btCreate.StateNormal.Border.ColorAngle = 40F;
+            this.btCreate.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btCreate.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btCreate.StateNormal.Border.Rounding = 20F;
+            this.btCreate.StateNormal.Border.Width = 1;
+            this.btCreate.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btCreate.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btCreate.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btCreate.StateTracking.Border.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.btCreate.StateTracking.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.TopLeft;
+            this.btCreate.StateTracking.Border.Rounding = 20F;
+            this.btCreate.StateTracking.Border.Width = 1;
+            this.btCreate.TabIndex = 26;
+            this.btCreate.Values.Text = "Iniciar session";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(35, 88);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(78, 21);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel1.TabIndex = 22;
+            this.kryptonLabel1.Values.Text = "Contraseña";
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(22, 115);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.PasswordChar = '●';
+            this.kryptonTextBox1.Size = new System.Drawing.Size(281, 35);
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateCommon.Border.Rounding = 20F;
+            this.kryptonTextBox1.StateCommon.Border.Width = 1;
+            this.kryptonTextBox1.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateDisabled.Border.Rounding = 20F;
+            this.kryptonTextBox1.StateDisabled.Border.Width = 1;
+            this.kryptonTextBox1.TabIndex = 21;
+            this.kryptonTextBox1.UseSystemPasswordChar = true;
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(35, 19);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(56, 21);
+            this.kryptonLabel11.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.kryptonLabel11.TabIndex = 20;
+            this.kryptonLabel11.Values.Text = "Usuario";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(22, 46);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(281, 35);
+            this.txtPrecio.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPrecio.StateCommon.Border.Rounding = 20F;
+            this.txtPrecio.StateCommon.Border.Width = 1;
+            this.txtPrecio.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPrecio.StateDisabled.Border.Rounding = 20F;
+            this.txtPrecio.StateDisabled.Border.Width = 1;
+            this.txtPrecio.TabIndex = 19;
             // 
             // Login
             // 
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(343, 290);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(343, 321);
             this.Controls.Add(this.groupBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
+            this.Palette = this.kryptonPalette1;
+            this.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,16 +249,13 @@
         #endregion
 
         private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private TextBox userTxt;
-        private TextBox claveTxt;
-        private Label userpasswd;
-        private Label username;
         private PictureBox pictureBox1;
-        private Button button1;
-        private CheckBox checkBox1;
-        private Button button2;
-        private Button btnovisible;
-        private Button btvisible;
+        private Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private GroupBox groupBox2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private Krypton.Toolkit.KryptonTextBox txtPrecio;
+        private Krypton.Toolkit.KryptonButton btCreate;
     }
 }

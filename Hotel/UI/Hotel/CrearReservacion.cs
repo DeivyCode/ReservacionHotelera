@@ -20,6 +20,7 @@ namespace Hotel.UI.Hotel
         private ICollection<Usuarios> _usuarios;
         private ICollection<Habitacion> _habitaciones;
         private ICollection<Data.Models.Hotel> _hoteles;
+        private ICollection<TipoHabitacion> _tipoHabitaciones;
         private int _idHotel;
         private int _idHabitacion;
         private int _ClientId;
@@ -36,6 +37,7 @@ namespace Hotel.UI.Hotel
             _usuarios = _administracionRepositorio.GetUsuarios();
             _habitaciones = _hotelRepository.ObtenerHabitaciones();
             _hoteles = _hotelRepository.ObtenerHoteles();
+            _tipoHabitaciones = _hotelRepository.ObtenerTiposHabitacion();
             txtReservaId.Text = "0";
             CargarComboBox();
         }
@@ -43,12 +45,12 @@ namespace Hotel.UI.Hotel
         private void CargarComboBox()
         {
             CbClient.DataSource = _usuarios.Select(x => x.Nombres + " " + x.Apellidos).ToList();
-            CbHabitacion.DataSource = _habitaciones.Select(x => x.Nombre).ToList();
-            CbHotel.DataSource = _hoteles.Select(x => x.Nombre).ToList();
+            CbHabitacion.DataSource = _tipoHabitaciones.Select(x => x.Habitacion.Nombre).Distinct().ToList();
+            CbHotel.DataSource = _tipoHabitaciones.Select(x => x.Hotel.Nombre).Distinct().ToList();
 
             CbClient.SelectedItem = _usuarios.FirstOrDefault();
-            CbHabitacion.SelectedItem = _habitaciones.FirstOrDefault();
-            CbHotel.SelectedItem = _hoteles.FirstOrDefault();
+            CbHabitacion.SelectedItem = _tipoHabitaciones.Select(x => x.Habitacion.Nombre).FirstOrDefault();
+            CbHotel.SelectedItem = _tipoHabitaciones.Select(x => x.Habitacion.Nombre).FirstOrDefault();
 
 
         }

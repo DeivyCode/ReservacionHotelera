@@ -24,5 +24,7 @@ namespace Hotel.Data.Interfaces
 
         ICollection<Habitacion> ObtenerHabitaciones();
 
+        ICollection<TipoHabitacion> ObtenerTiposHabitacion();
+
     }
 }

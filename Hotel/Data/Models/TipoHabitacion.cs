@@ -24,9 +24,8 @@ namespace Hotel.Data.Models
         [Required]
         public Int16 NumHabitaciones { get; set; }
 
-        [NotMapped]
-        public virtual ICollection<Habitacion> Habitacion { get; set; }
-        [NotMapped]
+        public virtual Habitacion Habitacion { get; set; }
+  
         public virtual Hotel Hotel { get; set; }
 
         public Reserva Reserva { get; set; }

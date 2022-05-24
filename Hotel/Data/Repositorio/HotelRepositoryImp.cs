@@ -31,6 +31,14 @@ namespace Hotel.Data.Repositorio
             return context.Habitaciones.ToList();
         }
 
+        public ICollection<TipoHabitacion> ObtenerTiposHabitacion()
+        {
+            return context.TipoHabitacion
+                .Include(x => x.Habitacion)
+                .Include(x => x.Hotel).
+                ToList();
+        }
+
         public HotelRepositoryImp(HotelDbContext context)
         {
             this.context = context;

@@ -40,7 +40,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("IdAdministrador");
 
-                    b.ToTable("Administradores");
+                    b.ToTable("Administradores", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Categorias", b =>
@@ -61,7 +61,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("Categorias", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Habitacion", b =>
@@ -82,7 +82,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("IdHabitacion");
 
-                    b.ToTable("Habitaciones");
+                    b.ToTable("Habitaciones", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Hotel", b =>
@@ -130,7 +130,7 @@ namespace Hotel.Migrations
 
                     b.HasIndex("IdCategoria");
 
-                    b.ToTable("Hotel");
+                    b.ToTable("Hotel", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Reserva", b =>
@@ -181,7 +181,7 @@ namespace Hotel.Migrations
                     b.HasIndex("IdHotel", "IdHabitacion")
                         .IsUnique();
 
-                    b.ToTable("Reservaciones");
+                    b.ToTable("Reservaciones", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.TipoHabitacion", b =>
@@ -206,7 +206,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("IdHotel", "IdHabitacion");
 
-                    b.ToTable("TipoHabitacion");
+                    b.ToTable("TipoHabitacion", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Usuarios", b =>
@@ -245,7 +245,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("IdUsuario");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuarios", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Data.Models.Hotel", b =>

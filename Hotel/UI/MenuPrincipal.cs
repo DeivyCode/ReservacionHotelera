@@ -181,11 +181,11 @@ namespace Hotel.UI
 
 
         {
+            disableButton();
             var form = (Program.ServiceProvider.GetService(typeof(CrearUsuarios)) as CrearUsuarios);
             form.MdiParent = this;
             form.Show();
             OpenChildForm(form);
-            ActivateButton(sender, RGBcolors.color4);
             HideSubMenu();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -270,39 +270,40 @@ namespace Hotel.UI
 
         private void BTregistrodeHabitaciones_Click_1(object sender, EventArgs e)
         {
+            disableButton();
+
             var form = (Program.ServiceProvider.GetService(typeof(CrearHabitaciones)) as CrearHabitaciones);
             form.MdiParent = this;
             form.Show();
             OpenChildForm(form);
-            ActivateButton(sender, RGBcolors.color1);
             HideSubMenu();
 
         }
 
         private void BTcrearHoteles_Click(object sender, EventArgs e)
         {
+            disableButton();
             var form = (Program.ServiceProvider.GetService(typeof(ListadoHoteles)) as ListadoHoteles);
             form.MdiParent = this;
             form.Show();
             OpenChildForm(form);
-            ActivateButton(sender, RGBcolors.color1);
             HideSubMenu();
 
         }
 
         private void BTtipodehabitaciones_Click_1(object sender, EventArgs e)
         {
+            disableButton();
             var form = (Program.ServiceProvider.GetService(typeof(CrearTipoHabitacion)) as CrearTipoHabitacion);
             form.MdiParent = this;
             form.Show();
             OpenChildForm(form);
-            ActivateButton(sender, RGBcolors.color1);
             HideSubMenu();
         }
 
         private void iconButton4_Click_1(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBcolors.color4);
+            disableButton();
             HideSubMenu();
         }
     }

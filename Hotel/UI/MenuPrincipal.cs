@@ -59,7 +59,7 @@ namespace Hotel.UI
             public static Color color4 = Color.FromArgb(95, 77, 221);
         }
 
-    
+
 
         //metodos
         private void ActivateButton(object senderBtn, Color color)
@@ -170,8 +170,9 @@ namespace Hotel.UI
         private void BtAdministracion_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBcolors.color2);
+            ShowSubMenu(PanelDesplegableAdministracion);
         }
-        private void iconButton3_Click(object sender, EventArgs e)
+        private void BTtipodehabitaciones_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBcolors.color3);
             HideSubMenu();
@@ -186,10 +187,6 @@ namespace Hotel.UI
             OpenChildForm(form);
             ActivateButton(sender, RGBcolors.color4);
             HideSubMenu();
-
-           
-
-
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -247,11 +244,6 @@ namespace Hotel.UI
 
         }
 
-        private void BtAdministracion_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBcolors.color2);
-            ShowSubMenu(PanelDesplegableAdministracion);
-        }
         private void CustomizeDesing()
         {
             panelDesplegableHotel.Visible = false;
@@ -263,7 +255,7 @@ namespace Hotel.UI
             if (panelDesplegableHotel.Visible == true)
                 panelDesplegableHotel.Visible = false;
             if (PanelDesplegableAdministracion.Visible == true)
-                PanelDesplegableAdministracion.Visible= false;   
+                PanelDesplegableAdministracion.Visible = false;
         }
         private void ShowSubMenu(Panel submenu)
         {
@@ -276,7 +268,7 @@ namespace Hotel.UI
                 submenu.Visible = false;
         }
 
-        private void iconButton1_Click_1(object sender, EventArgs e)
+        private void BTregistrodeHabitaciones_Click_1(object sender, EventArgs e)
         {
             var form = (Program.ServiceProvider.GetService(typeof(CrearHabitaciones)) as CrearHabitaciones);
             form.MdiParent = this;
@@ -287,7 +279,7 @@ namespace Hotel.UI
 
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void BTcrearHoteles_Click(object sender, EventArgs e)
         {
             var form = (Program.ServiceProvider.GetService(typeof(ListadoHoteles)) as ListadoHoteles);
             form.MdiParent = this;
@@ -295,10 +287,10 @@ namespace Hotel.UI
             OpenChildForm(form);
             ActivateButton(sender, RGBcolors.color1);
             HideSubMenu();
-           
+
         }
 
-        private void iconButton3_Click_1(object sender, EventArgs e)
+        private void BTtipodehabitaciones_Click_1(object sender, EventArgs e)
         {
             var form = (Program.ServiceProvider.GetService(typeof(CrearTipoHabitacion)) as CrearTipoHabitacion);
             form.MdiParent = this;

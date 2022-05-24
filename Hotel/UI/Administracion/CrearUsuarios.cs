@@ -11,10 +11,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 
 namespace Hotel.UI.Administracion
 {
-    public partial class CrearUsuarios : MetroSetForm
+    public partial class CrearUsuarios : KryptonForm
     {
         private IAdministracionRepositorio administracion;
         public Acciones acciones;
@@ -34,7 +35,7 @@ namespace Hotel.UI.Administracion
                 if (!ValidarLimpiarCampos(limpiarCampos: false)) return false;
 
 
-                if (txtClave.Text.Trim().ToLower() != txtConfirmarClave.Text.Trim().ToLower())
+                if (!string.Equals(txtClave.Text.Trim(), txtConfirmarClave.Text.Trim(), StringComparison.CurrentCultureIgnoreCase))
                 {
                     txtClave.Focus();
                     MessageBox.Show("Las contraseñas no cooindicen, porfavor verifica tu contraseña");
@@ -141,6 +142,11 @@ namespace Hotel.UI.Administracion
             }
 
             //DialogResult = DialogResult.OK;
+        }
+
+        private void txtCapacidad_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

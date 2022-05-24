@@ -1,5 +1,5 @@
 ﻿namespace Hotel.UI
-{
+{ 
     partial class MenuPrincipal
     {
         /// <summary>

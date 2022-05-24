@@ -109,6 +109,7 @@
             // 
             // PanelDesplegableAdministracion
             // 
+            this.PanelDesplegableAdministracion.BackColor = System.Drawing.Color.SteelBlue;
             this.PanelDesplegableAdministracion.Controls.Add(this.panel1);
             this.PanelDesplegableAdministracion.Controls.Add(this.BTbackup);
             this.PanelDesplegableAdministracion.Controls.Add(this.BtUsuarios);
@@ -193,6 +194,7 @@
             // 
             // panelDesplegableHotel
             // 
+            this.panelDesplegableHotel.BackColor = System.Drawing.Color.SteelBlue;
             this.panelDesplegableHotel.Controls.Add(this.BTtipodehabitaciones);
             this.panelDesplegableHotel.Controls.Add(this.BTcrearHoteles);
             this.panelDesplegableHotel.Controls.Add(this.BTregistrodeHabitaciones);

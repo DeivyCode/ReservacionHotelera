@@ -61,5 +61,9 @@ namespace Hotel.UI.Administracion
             dataGridView1.Refresh();
 
         }
+
+       
+
+    
     }
 }

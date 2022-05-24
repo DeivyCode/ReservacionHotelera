@@ -69,7 +69,7 @@
             // PanelMenu
             // 
             this.PanelMenu.AutoScroll = true;
-            this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.PanelMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.PanelMenu.Controls.Add(this.BtREPORTE);
             this.PanelMenu.Controls.Add(this.PanelDesplegableAdministracion);
             this.PanelMenu.Controls.Add(this.BtAdministracion);
@@ -93,7 +93,7 @@
             this.BtREPORTE.IconChar = FontAwesome.Sharp.IconChar.File;
             this.BtREPORTE.IconColor = System.Drawing.Color.White;
             this.BtREPORTE.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtREPORTE.IconSize = 45;
+            this.BtREPORTE.IconSize = 30;
             this.BtREPORTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtREPORTE.Location = new System.Drawing.Point(0, 548);
             this.BtREPORTE.Name = "BtREPORTE";
@@ -135,6 +135,7 @@
             this.BTbackup.IconChar = FontAwesome.Sharp.IconChar.CloudUploadAlt;
             this.BTbackup.IconColor = System.Drawing.Color.White;
             this.BTbackup.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BTbackup.IconSize = 30;
             this.BTbackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTbackup.Location = new System.Drawing.Point(0, 67);
             this.BTbackup.Name = "BTbackup";
@@ -157,6 +158,7 @@
             this.BtUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
             this.BtUsuarios.IconColor = System.Drawing.Color.White;
             this.BtUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtUsuarios.IconSize = 30;
             this.BtUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtUsuarios.Location = new System.Drawing.Point(0, 0);
             this.BtUsuarios.Name = "BtUsuarios";
@@ -178,7 +180,7 @@
             this.BtAdministracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.BtAdministracion.IconColor = System.Drawing.Color.White;
             this.BtAdministracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtAdministracion.IconSize = 45;
+            this.BtAdministracion.IconSize = 30;
             this.BtAdministracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtAdministracion.Location = new System.Drawing.Point(0, 346);
             this.BtAdministracion.Name = "BtAdministracion";
@@ -212,7 +214,7 @@
             this.BTtipodehabitaciones.IconChar = FontAwesome.Sharp.IconChar.Tag;
             this.BTtipodehabitaciones.IconColor = System.Drawing.Color.White;
             this.BTtipodehabitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BTtipodehabitaciones.IconSize = 45;
+            this.BTtipodehabitaciones.IconSize = 30;
             this.BTtipodehabitaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTtipodehabitaciones.Location = new System.Drawing.Point(0, 60);
             this.BTtipodehabitaciones.Name = "BTtipodehabitaciones";
@@ -235,7 +237,7 @@
             this.BTcrearHoteles.IconChar = FontAwesome.Sharp.IconChar.Suitcase;
             this.BTcrearHoteles.IconColor = System.Drawing.Color.White;
             this.BTcrearHoteles.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BTcrearHoteles.IconSize = 45;
+            this.BTcrearHoteles.IconSize = 30;
             this.BTcrearHoteles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTcrearHoteles.Location = new System.Drawing.Point(0, 0);
             this.BTcrearHoteles.Name = "BTcrearHoteles";
@@ -257,7 +259,7 @@
             this.BtHotel.IconChar = FontAwesome.Sharp.IconChar.Bed;
             this.BtHotel.IconColor = System.Drawing.Color.White;
             this.BtHotel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtHotel.IconSize = 45;
+            this.BtHotel.IconSize = 30;
             this.BtHotel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtHotel.Location = new System.Drawing.Point(0, 140);
             this.BtHotel.Name = "BtHotel";
@@ -272,6 +274,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelLogo.Controls.Add(this.PtInicio);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -282,9 +285,9 @@
             // PtInicio
             // 
             this.PtInicio.Image = global::Hotel.Properties.Resources.Wyndham_Hotels;
-            this.PtInicio.Location = new System.Drawing.Point(5, 31);
+            this.PtInicio.Location = new System.Drawing.Point(22, 33);
             this.PtInicio.Name = "PtInicio";
-            this.PtInicio.Size = new System.Drawing.Size(211, 68);
+            this.PtInicio.Size = new System.Drawing.Size(173, 77);
             this.PtInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PtInicio.TabIndex = 2;
             this.PtInicio.TabStop = false;
@@ -292,7 +295,7 @@
             // 
             // PNSuperior
             // 
-            this.PNSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.PNSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.PNSuperior.Controls.Add(this.iconMaximizarformulario);
             this.PNSuperior.Controls.Add(this.iconMinimizar);
             this.PNSuperior.Controls.Add(this.iconCerrarFormulario);
@@ -380,7 +383,7 @@
             // 
             // iconhome
             // 
-            this.iconhome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.iconhome.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.iconhome.ForeColor = System.Drawing.Color.AliceBlue;
             this.iconhome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconhome.IconColor = System.Drawing.Color.AliceBlue;
@@ -393,7 +396,7 @@
             // 
             // PnSombra
             // 
-            this.PnSombra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.PnSombra.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.PnSombra.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnSombra.Location = new System.Drawing.Point(220, 75);
             this.PnSombra.Name = "PnSombra";

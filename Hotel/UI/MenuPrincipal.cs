@@ -183,7 +183,7 @@ namespace Hotel.UI
         {
             CerrarFormulariosHijos();
             disableButton();
-            var form = (Program.ServiceProvider.GetService(typeof(CrearUsuarios)) as CrearUsuarios);
+            var form = (Program.ServiceProvider.GetService(typeof(ListadoUsuarios)) as ListadoUsuarios);
             form.MdiParent = this;
             form.Show();
             OpenChildForm(form);

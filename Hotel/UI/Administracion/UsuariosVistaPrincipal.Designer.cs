@@ -366,15 +366,14 @@
             this.Controls.Add(this.kryptonHeader1);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.kryptonPanel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HeaderStyle = Krypton.Toolkit.HeaderStyle.Calendar;
-            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "ListadoUsuarios";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "Listado de Usuarios";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ListadoUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);

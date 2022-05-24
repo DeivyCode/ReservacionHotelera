@@ -45,7 +45,6 @@ namespace Hotel
             servicios.AddTransient<Login>();
             servicios.AddTransient<MenuPrincipal>();
             servicios.AddTransient<CrearUsuarios>();
-            servicios.AddTransient<MenuPrincipal>();
             servicios.AddTransient<ListadoUsuarios>();
             servicios.AddTransient<ListadoHoteles>();
             servicios.AddTransient<CrearHoteles>();

@@ -13,6 +13,7 @@ using Hotel.Comunes;
 using Hotel.Data.Interfaces;
 using Krypton.Toolkit;
 using Hotel.UI.Administracion;
+using Hotel.UI.Hotel;
 
 namespace Hotel.UI
 
@@ -24,6 +25,9 @@ namespace Hotel.UI
         private Panel leftborderBtn;
         private IconButton[] MyIconButton = new IconButton[5];
         private Form currentChildform;
+
+
+
 
 
 
@@ -41,9 +45,9 @@ namespace Hotel.UI
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            CustomizeDesing();
 
 
-            
 
         }
 
@@ -52,8 +56,10 @@ namespace Hotel.UI
             public static Color color1 = Color.FromArgb(172, 126, 241);
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(95,   77, 221);
+            public static Color color4 = Color.FromArgb(95, 77, 221);
         }
+
+    
 
         //metodos
         private void ActivateButton(object senderBtn, Color color)
@@ -73,7 +79,7 @@ namespace Hotel.UI
 
                 //border
 
-                leftborderBtn.BackColor = color;    
+                leftborderBtn.BackColor = color;
                 leftborderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftborderBtn.Visible = true;
                 leftborderBtn.BringToFront();
@@ -87,7 +93,7 @@ namespace Hotel.UI
         }
         private void disableButton()
         {
-          if (currentBtn != null)
+            if (currentBtn != null)
 
             {
 
@@ -102,12 +108,12 @@ namespace Hotel.UI
         }
         private void OpenChildForm(Form childform)
         {
-          
-            
+
+
 
             childform.TopLevel = false;
             childform.FormBorderStyle = FormBorderStyle.None;
-            childform.Dock= DockStyle.Fill;
+            childform.Dock = DockStyle.Fill;
             PnContenedor.Controls.Add(childform);
             PnContenedor.Tag = childform;
             childform.BringToFront();
@@ -134,7 +140,7 @@ namespace Hotel.UI
                 item.IconFont = FontAwesome.Sharp.IconFont.Auto;
                 item.IconSize = 38;
                 item.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-                item.Location = new System.Drawing.Point(3, 6+(x*5));
+                item.Location = new System.Drawing.Point(3, 6 + (x * 5));
                 item.Name = $"iconButto{x}";
                 item.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
                 item.Size = new System.Drawing.Size(197, 43);
@@ -157,8 +163,9 @@ namespace Hotel.UI
         }
         private void BtHotel_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBcolors.color1 );
-            
+            ActivateButton(sender, RGBcolors.color1);
+            ShowSubMenu(panelDesplegableHotel);
+
         }
         private void BtAdministracion_Click(object sender, EventArgs e)
         {
@@ -167,33 +174,32 @@ namespace Hotel.UI
         private void iconButton3_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBcolors.color3);
+            HideSubMenu();
         }
         private void iconButton4_Click(object sender, EventArgs e)
 
 
         {
-            var form =  (Program.ServiceProvider.GetService(typeof(CrearUsuarios)) as CrearUsuarios);
+            var form = (Program.ServiceProvider.GetService(typeof(CrearUsuarios)) as CrearUsuarios);
             form.MdiParent = this;
             form.Show();
             OpenChildForm(form);
-
-
-            
             ActivateButton(sender, RGBcolors.color4);
+            HideSubMenu();
 
-      
+
 
 
         }
         private void pictureBox1_Click(object sender, EventArgs e)
-        { 
+        {
         }
         private void PanelMenu_Paint(object sender, PaintEventArgs e)
         {
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-         
+
             reset();
         }
         private void reset()
@@ -210,8 +216,6 @@ namespace Hotel.UI
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-
         private void PNSuperior_Paint(object sender, MouseEventArgs e)
 
         {
@@ -224,13 +228,13 @@ namespace Hotel.UI
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
 
         }
 
         private void iconMaximizarformulario_Click(object sender, EventArgs e)
         {
-            if(WindowState == FormWindowState.Normal)
+            if (WindowState == FormWindowState.Normal)
                 WindowState = FormWindowState.Maximized;
             else
                 WindowState = FormWindowState.Normal;
@@ -245,7 +249,69 @@ namespace Hotel.UI
 
         private void BtAdministracion_Click_1(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBcolors.color2);
+            ShowSubMenu(PanelDesplegableAdministracion);
+        }
+        private void CustomizeDesing()
+        {
+            panelDesplegableHotel.Visible = false;
+            PanelDesplegableAdministracion.Visible = false;
 
+        }
+        private void HideSubMenu()
+        {
+            if (panelDesplegableHotel.Visible == true)
+                panelDesplegableHotel.Visible = false;
+            if (PanelDesplegableAdministracion.Visible == true)
+                PanelDesplegableAdministracion.Visible= false;   
+        }
+        private void ShowSubMenu(Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                HideSubMenu();
+                submenu.Visible = true;
+            }
+            else
+                submenu.Visible = false;
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            var form = (Program.ServiceProvider.GetService(typeof(CrearHabitaciones)) as CrearHabitaciones);
+            form.MdiParent = this;
+            form.Show();
+            OpenChildForm(form);
+            ActivateButton(sender, RGBcolors.color1);
+            HideSubMenu();
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            var form = (Program.ServiceProvider.GetService(typeof(ListadoHoteles)) as ListadoHoteles);
+            form.MdiParent = this;
+            form.Show();
+            OpenChildForm(form);
+            ActivateButton(sender, RGBcolors.color1);
+            HideSubMenu();
+           
+        }
+
+        private void iconButton3_Click_1(object sender, EventArgs e)
+        {
+            var form = (Program.ServiceProvider.GetService(typeof(CrearTipoHabitacion)) as CrearTipoHabitacion);
+            form.MdiParent = this;
+            form.Show();
+            OpenChildForm(form);
+            ActivateButton(sender, RGBcolors.color1);
+            HideSubMenu();
+        }
+
+        private void iconButton4_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBcolors.color4);
+            HideSubMenu();
         }
     }
 }

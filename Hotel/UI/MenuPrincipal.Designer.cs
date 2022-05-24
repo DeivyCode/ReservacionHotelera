@@ -416,7 +416,7 @@
             // 
             // PnContenedor
             // 
-            this.PnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(174)))), ((int)(((byte)(249)))));
+            this.PnContenedor.BackColor = System.Drawing.Color.SteelBlue;
             this.PnContenedor.Controls.Add(this.pictureBox1);
             this.PnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnContenedor.Location = new System.Drawing.Point(220, 84);

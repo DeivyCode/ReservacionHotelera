@@ -127,6 +127,7 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.CueHint.Color1 = System.Drawing.Color.Black;
             this.txtCodigo.CueHint.CueHintText = "Usuario";
             this.txtCodigo.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
@@ -294,6 +295,7 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCorreo.CueHint.Color1 = System.Drawing.Color.Black;
             this.txtCorreo.CueHint.CueHintText = "Correo";
             this.txtCorreo.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
@@ -353,6 +355,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.CueHint.Color1 = System.Drawing.Color.Black;
             this.txtNombre.CueHint.CueHintText = "Nombre";
             this.txtNombre.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
@@ -452,14 +455,15 @@
             // 
             // CrearUsuarios
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(654, 240);
-            this.Controls.Add(this.ckIsActive);
-            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtConfirmarClave);
-            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.ckIsActive);
             this.Controls.Add(this.ckIsAdmin);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.btCreate);

@@ -1,20 +1,10 @@
 ﻿using Hotel.Data.Interfaces;
-using Hotel.Data.Models;
-using MetroSet_UI.Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Hotel.Comunes;
+using Krypton.Toolkit;
 
 namespace Hotel.UI.Administracion
 {
-    public partial class ListadoUsuarios : MetroSetForm
+    public partial class ListadoUsuarios : KryptonForm
     {
         private readonly IAdministracionRepositorio _administracion;
         private readonly CrearUsuarios _crearUsuario;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hotel.Data.Interfaces;
 using Hotel.Data.Models;
+using Hotel.Data.Repositorio;
 using Krypton.Toolkit;
 
 namespace Hotel.UI.Hotel

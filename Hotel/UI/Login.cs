@@ -93,5 +93,10 @@ namespace Hotel.UI
             };
 
         }
+
+        private void btCreate_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
     }
 }

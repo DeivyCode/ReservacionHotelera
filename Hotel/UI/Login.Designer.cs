@@ -171,6 +171,7 @@
             this.btCreate.StateTracking.Border.Width = 1;
             this.btCreate.TabIndex = 26;
             this.btCreate.Values.Text = "Iniciar session";
+            this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
             // kryptonLabel1
             // 

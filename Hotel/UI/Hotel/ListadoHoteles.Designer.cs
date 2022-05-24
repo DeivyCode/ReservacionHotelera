@@ -51,8 +51,6 @@
             // 
             // kryptonDataGridView1
             // 
-            this.kryptonDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.kryptonDataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -69,11 +67,11 @@
             this.kryptonDataGridView1.GridStyles.StyleDataCells = Krypton.Toolkit.GridStyle.Custom1;
             this.kryptonDataGridView1.GridStyles.StyleRow = Krypton.Toolkit.GridStyle.Custom1;
             this.kryptonDataGridView1.HideOuterBorders = true;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(-5, 114);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(-5, 182);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.kryptonDataGridView1.RowTemplate.Height = 25;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1080, 458);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(915, 685);
             this.kryptonDataGridView1.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
             this.kryptonDataGridView1.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.SystemColors.HotTrack;
             this.kryptonDataGridView1.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.SystemColors.HotTrack;
@@ -173,7 +171,7 @@
             // 
             // btCreate
             // 
-            this.btCreate.Location = new System.Drawing.Point(801, 33);
+            this.btCreate.Location = new System.Drawing.Point(616, 71);
             this.btCreate.Name = "btCreate";
             this.btCreate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
             this.btCreate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
@@ -234,7 +232,7 @@
             // 
             // btEditar
             // 
-            this.btEditar.Location = new System.Drawing.Point(942, 33);
+            this.btEditar.Location = new System.Drawing.Point(759, 71);
             this.btEditar.Name = "btEditar";
             this.btEditar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
             this.btEditar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
@@ -351,17 +349,17 @@
             // 
             // ListadoHoteles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1072, 584);
+            this.ClientSize = new System.Drawing.Size(902, 652);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.kryptonDataGridView1);
             this.Controls.Add(this.btEditar);
             this.Controls.Add(this.btCreate);
-            this.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

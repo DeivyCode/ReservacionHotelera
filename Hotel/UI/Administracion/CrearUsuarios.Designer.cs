@@ -32,16 +32,16 @@
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.metroSetTabControl1 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
-            this.txtNombreHabitacion = new Krypton.Toolkit.KryptonTextBox();
-            this.ckIsActive = new Krypton.Toolkit.KryptonCheckBox();
+            this.txtCodigo = new Krypton.Toolkit.KryptonTextBox();
+            this.ckIsAdmin = new Krypton.Toolkit.KryptonCheckBox();
             this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             this.btCreate = new Krypton.Toolkit.KryptonButton();
-            this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox3 = new Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox4 = new Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox5 = new Krypton.Toolkit.KryptonTextBox();
-            this.kryptonCheckBox1 = new Krypton.Toolkit.KryptonCheckBox();
+            this.txtCorreo = new Krypton.Toolkit.KryptonTextBox();
+            this.txtConfirmarClave = new Krypton.Toolkit.KryptonTextBox();
+            this.txtNombre = new Krypton.Toolkit.KryptonTextBox();
+            this.txtApellido = new Krypton.Toolkit.KryptonTextBox();
+            this.txtClave = new Krypton.Toolkit.KryptonTextBox();
+            this.ckIsActive = new Krypton.Toolkit.KryptonCheckBox();
             this.SuspendLayout();
             // 
             // metroSetControlBox1
@@ -125,48 +125,48 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 10, -1, -1);
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             // 
-            // txtNombreHabitacion
+            // txtCodigo
             // 
-            this.txtNombreHabitacion.CueHint.Color1 = System.Drawing.Color.Black;
-            this.txtNombreHabitacion.CueHint.CueHintText = "Usuario";
-            this.txtNombreHabitacion.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.txtNombreHabitacion.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.txtNombreHabitacion.Location = new System.Drawing.Point(17, 12);
-            this.txtNombreHabitacion.Name = "txtNombreHabitacion";
-            this.txtNombreHabitacion.Palette = this.kryptonPalette1;
-            this.txtNombreHabitacion.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.txtNombreHabitacion.Size = new System.Drawing.Size(295, 35);
-            this.txtNombreHabitacion.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCodigo.CueHint.Color1 = System.Drawing.Color.Black;
+            this.txtCodigo.CueHint.CueHintText = "Usuario";
+            this.txtCodigo.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigo.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.txtCodigo.Location = new System.Drawing.Point(17, 12);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Palette = this.kryptonPalette1;
+            this.txtCodigo.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.txtCodigo.Size = new System.Drawing.Size(295, 43);
+            this.txtCodigo.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNombreHabitacion.StateActive.Border.Rounding = 20F;
-            this.txtNombreHabitacion.StateActive.Border.Width = 1;
-            this.txtNombreHabitacion.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtNombreHabitacion.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCodigo.StateActive.Border.Rounding = 20F;
+            this.txtCodigo.StateActive.Border.Width = 1;
+            this.txtCodigo.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtCodigo.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNombreHabitacion.StateCommon.Border.Rounding = 20F;
-            this.txtNombreHabitacion.StateCommon.Border.Width = 1;
-            this.txtNombreHabitacion.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCodigo.StateCommon.Border.Rounding = 20F;
+            this.txtCodigo.StateCommon.Border.Width = 1;
+            this.txtCodigo.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNombreHabitacion.StateNormal.Border.Rounding = 20F;
-            this.txtNombreHabitacion.StateNormal.Border.Width = 1;
-            this.txtNombreHabitacion.TabIndex = 14;
+            this.txtCodigo.StateNormal.Border.Rounding = 20F;
+            this.txtCodigo.StateNormal.Border.Width = 1;
+            this.txtCodigo.TabIndex = 14;
             // 
-            // ckIsActive
+            // ckIsAdmin
             // 
-            this.ckIsActive.LabelStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
-            this.ckIsActive.Location = new System.Drawing.Point(17, 200);
-            this.ckIsActive.Name = "ckIsActive";
-            this.ckIsActive.Size = new System.Drawing.Size(108, 21);
-            this.ckIsActive.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.ckIsActive.TabIndex = 18;
-            this.ckIsActive.Values.Text = "Administrador";
+            this.ckIsAdmin.LabelStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
+            this.ckIsAdmin.Location = new System.Drawing.Point(17, 200);
+            this.ckIsAdmin.Name = "ckIsAdmin";
+            this.ckIsAdmin.Size = new System.Drawing.Size(108, 21);
+            this.ckIsAdmin.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.ckIsAdmin.TabIndex = 18;
+            this.ckIsAdmin.Values.Text = "Administrador";
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(473, 200);
+            this.kryptonButton1.Location = new System.Drawing.Point(524, 200);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.SystemColors.ActiveCaption;
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.SystemColors.ActiveCaption;
@@ -227,10 +227,11 @@
             this.kryptonButton1.StateTracking.Border.Width = 1;
             this.kryptonButton1.TabIndex = 17;
             this.kryptonButton1.Values.Text = "Cancelar";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // btCreate
             // 
-            this.btCreate.Location = new System.Drawing.Point(349, 200);
+            this.btCreate.Location = new System.Drawing.Point(390, 200);
             this.btCreate.Name = "btCreate";
             this.btCreate.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
             this.btCreate.OverrideDefault.Back.Color2 = System.Drawing.Color.Green;
@@ -289,179 +290,181 @@
             this.btCreate.StateTracking.Border.Width = 1;
             this.btCreate.TabIndex = 16;
             this.btCreate.Values.Text = "Guardar";
+            this.btCreate.Click += new System.EventHandler(this.btAceptar_Click);
             // 
-            // kryptonTextBox1
+            // txtCorreo
             // 
-            this.kryptonTextBox1.CueHint.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.CueHint.CueHintText = "Correo";
-            this.kryptonTextBox1.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonTextBox1.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.kryptonTextBox1.Location = new System.Drawing.Point(350, 12);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Palette = this.kryptonPalette1;
-            this.kryptonTextBox1.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox1.Size = new System.Drawing.Size(295, 35);
-            this.kryptonTextBox1.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCorreo.CueHint.Color1 = System.Drawing.Color.Black;
+            this.txtCorreo.CueHint.CueHintText = "Correo";
+            this.txtCorreo.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.txtCorreo.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.txtCorreo.Location = new System.Drawing.Point(350, 12);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Palette = this.kryptonPalette1;
+            this.txtCorreo.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.txtCorreo.Size = new System.Drawing.Size(295, 43);
+            this.txtCorreo.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateActive.Border.Rounding = 20F;
-            this.kryptonTextBox1.StateActive.Border.Width = 1;
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCorreo.StateActive.Border.Rounding = 20F;
+            this.txtCorreo.StateActive.Border.Width = 1;
+            this.txtCorreo.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtCorreo.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 20F;
-            this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCorreo.StateCommon.Border.Rounding = 20F;
+            this.txtCorreo.StateCommon.Border.Width = 1;
+            this.txtCorreo.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateNormal.Border.Rounding = 20F;
-            this.kryptonTextBox1.StateNormal.Border.Width = 1;
-            this.kryptonTextBox1.TabIndex = 19;
+            this.txtCorreo.StateNormal.Border.Rounding = 20F;
+            this.txtCorreo.StateNormal.Border.Width = 1;
+            this.txtCorreo.TabIndex = 19;
             // 
-            // kryptonTextBox2
+            // txtConfirmarClave
             // 
-            this.kryptonTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.kryptonTextBox2.CueHint.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox2.CueHint.CueHintText = "Confirmar Clave";
-            this.kryptonTextBox2.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonTextBox2.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.kryptonTextBox2.Location = new System.Drawing.Point(350, 140);
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Palette = this.kryptonPalette1;
-            this.kryptonTextBox2.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox2.Size = new System.Drawing.Size(295, 35);
-            this.kryptonTextBox2.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtConfirmarClave.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConfirmarClave.CueHint.Color1 = System.Drawing.Color.Black;
+            this.txtConfirmarClave.CueHint.CueHintText = "Confirmar Clave";
+            this.txtConfirmarClave.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.txtConfirmarClave.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.txtConfirmarClave.Location = new System.Drawing.Point(350, 140);
+            this.txtConfirmarClave.Name = "txtConfirmarClave";
+            this.txtConfirmarClave.Palette = this.kryptonPalette1;
+            this.txtConfirmarClave.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.txtConfirmarClave.Size = new System.Drawing.Size(295, 43);
+            this.txtConfirmarClave.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateActive.Border.Rounding = 20F;
-            this.kryptonTextBox2.StateActive.Border.Width = 1;
-            this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtConfirmarClave.StateActive.Border.Rounding = 20F;
+            this.txtConfirmarClave.StateActive.Border.Width = 1;
+            this.txtConfirmarClave.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtConfirmarClave.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateCommon.Border.Rounding = 20F;
-            this.kryptonTextBox2.StateCommon.Border.Width = 1;
-            this.kryptonTextBox2.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtConfirmarClave.StateCommon.Border.Rounding = 20F;
+            this.txtConfirmarClave.StateCommon.Border.Width = 1;
+            this.txtConfirmarClave.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateNormal.Border.Rounding = 20F;
-            this.kryptonTextBox2.StateNormal.Border.Width = 1;
-            this.kryptonTextBox2.TabIndex = 20;
+            this.txtConfirmarClave.StateNormal.Border.Rounding = 20F;
+            this.txtConfirmarClave.StateNormal.Border.Width = 1;
+            this.txtConfirmarClave.TabIndex = 20;
             // 
-            // kryptonTextBox3
+            // txtNombre
             // 
-            this.kryptonTextBox3.CueHint.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox3.CueHint.CueHintText = "Nombre";
-            this.kryptonTextBox3.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonTextBox3.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.kryptonTextBox3.Location = new System.Drawing.Point(17, 74);
-            this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Palette = this.kryptonPalette1;
-            this.kryptonTextBox3.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox3.Size = new System.Drawing.Size(295, 35);
-            this.kryptonTextBox3.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtNombre.CueHint.Color1 = System.Drawing.Color.Black;
+            this.txtNombre.CueHint.CueHintText = "Nombre";
+            this.txtNombre.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.txtNombre.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.txtNombre.Location = new System.Drawing.Point(17, 74);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Palette = this.kryptonPalette1;
+            this.txtNombre.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.txtNombre.Size = new System.Drawing.Size(295, 43);
+            this.txtNombre.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateActive.Border.Rounding = 20F;
-            this.kryptonTextBox3.StateActive.Border.Width = 1;
-            this.kryptonTextBox3.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtNombre.StateActive.Border.Rounding = 20F;
+            this.txtNombre.StateActive.Border.Width = 1;
+            this.txtNombre.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtNombre.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateCommon.Border.Rounding = 20F;
-            this.kryptonTextBox3.StateCommon.Border.Width = 1;
-            this.kryptonTextBox3.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtNombre.StateCommon.Border.Rounding = 20F;
+            this.txtNombre.StateCommon.Border.Width = 1;
+            this.txtNombre.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateNormal.Border.Rounding = 20F;
-            this.kryptonTextBox3.StateNormal.Border.Width = 1;
-            this.kryptonTextBox3.TabIndex = 21;
+            this.txtNombre.StateNormal.Border.Rounding = 20F;
+            this.txtNombre.StateNormal.Border.Width = 1;
+            this.txtNombre.TabIndex = 21;
             // 
-            // kryptonTextBox4
+            // txtApellido
             // 
-            this.kryptonTextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.kryptonTextBox4.CueHint.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox4.CueHint.CueHintText = "Apellido";
-            this.kryptonTextBox4.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonTextBox4.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.kryptonTextBox4.Location = new System.Drawing.Point(350, 74);
-            this.kryptonTextBox4.Name = "kryptonTextBox4";
-            this.kryptonTextBox4.Palette = this.kryptonPalette1;
-            this.kryptonTextBox4.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox4.Size = new System.Drawing.Size(295, 35);
-            this.kryptonTextBox4.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtApellido.CueHint.Color1 = System.Drawing.Color.Black;
+            this.txtApellido.CueHint.CueHintText = "Apellido";
+            this.txtApellido.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.txtApellido.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.txtApellido.Location = new System.Drawing.Point(350, 74);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Palette = this.kryptonPalette1;
+            this.txtApellido.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.txtApellido.Size = new System.Drawing.Size(295, 43);
+            this.txtApellido.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox4.StateActive.Border.Rounding = 20F;
-            this.kryptonTextBox4.StateActive.Border.Width = 1;
-            this.kryptonTextBox4.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox4.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtApellido.StateActive.Border.Rounding = 20F;
+            this.txtApellido.StateActive.Border.Width = 1;
+            this.txtApellido.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtApellido.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox4.StateCommon.Border.Rounding = 20F;
-            this.kryptonTextBox4.StateCommon.Border.Width = 1;
-            this.kryptonTextBox4.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtApellido.StateCommon.Border.Rounding = 20F;
+            this.txtApellido.StateCommon.Border.Width = 1;
+            this.txtApellido.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox4.StateNormal.Border.Rounding = 20F;
-            this.kryptonTextBox4.StateNormal.Border.Width = 1;
-            this.kryptonTextBox4.TabIndex = 22;
+            this.txtApellido.StateNormal.Border.Rounding = 20F;
+            this.txtApellido.StateNormal.Border.Width = 1;
+            this.txtApellido.TabIndex = 22;
             // 
-            // kryptonTextBox5
+            // txtClave
             // 
-            this.kryptonTextBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.kryptonTextBox5.CueHint.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox5.CueHint.CueHintText = "Clave";
-            this.kryptonTextBox5.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonTextBox5.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.kryptonTextBox5.Location = new System.Drawing.Point(17, 140);
-            this.kryptonTextBox5.Name = "kryptonTextBox5";
-            this.kryptonTextBox5.Palette = this.kryptonPalette1;
-            this.kryptonTextBox5.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox5.Size = new System.Drawing.Size(295, 35);
-            this.kryptonTextBox5.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtClave.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtClave.CueHint.Color1 = System.Drawing.Color.Black;
+            this.txtClave.CueHint.CueHintText = "Clave";
+            this.txtClave.CueHint.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.txtClave.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.txtClave.Location = new System.Drawing.Point(17, 140);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Palette = this.kryptonPalette1;
+            this.txtClave.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.txtClave.Size = new System.Drawing.Size(295, 43);
+            this.txtClave.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox5.StateActive.Border.Rounding = 20F;
-            this.kryptonTextBox5.StateActive.Border.Width = 1;
-            this.kryptonTextBox5.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox5.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtClave.StateActive.Border.Rounding = 20F;
+            this.txtClave.StateActive.Border.Width = 1;
+            this.txtClave.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtClave.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox5.StateCommon.Border.Rounding = 20F;
-            this.kryptonTextBox5.StateCommon.Border.Width = 1;
-            this.kryptonTextBox5.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtClave.StateCommon.Border.Rounding = 20F;
+            this.txtClave.StateCommon.Border.Width = 1;
+            this.txtClave.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox5.StateNormal.Border.Rounding = 20F;
-            this.kryptonTextBox5.StateNormal.Border.Width = 1;
-            this.kryptonTextBox5.TabIndex = 23;
+            this.txtClave.StateNormal.Border.Rounding = 20F;
+            this.txtClave.StateNormal.Border.Width = 1;
+            this.txtClave.TabIndex = 23;
             // 
-            // kryptonCheckBox1
+            // ckIsActive
             // 
-            this.kryptonCheckBox1.LabelStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
-            this.kryptonCheckBox1.Location = new System.Drawing.Point(147, 200);
-            this.kryptonCheckBox1.Name = "kryptonCheckBox1";
-            this.kryptonCheckBox1.Size = new System.Drawing.Size(61, 21);
-            this.kryptonCheckBox1.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonCheckBox1.TabIndex = 24;
-            this.kryptonCheckBox1.Values.Text = "Activo";
+            this.ckIsActive.LabelStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
+            this.ckIsActive.Location = new System.Drawing.Point(147, 200);
+            this.ckIsActive.Name = "ckIsActive";
+            this.ckIsActive.Size = new System.Drawing.Size(61, 21);
+            this.ckIsActive.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.ckIsActive.TabIndex = 24;
+            this.ckIsActive.Values.Text = "Activo";
             // 
             // CrearUsuarios
             // 
-            this.ClientSize = new System.Drawing.Size(652, 240);
-            this.Controls.Add(this.kryptonCheckBox1);
-            this.Controls.Add(this.kryptonTextBox5);
-            this.Controls.Add(this.kryptonTextBox3);
-            this.Controls.Add(this.kryptonTextBox4);
-            this.Controls.Add(this.kryptonTextBox1);
-            this.Controls.Add(this.kryptonTextBox2);
-            this.Controls.Add(this.txtNombreHabitacion);
+            this.ClientSize = new System.Drawing.Size(654, 240);
             this.Controls.Add(this.ckIsActive);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtConfirmarClave);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.ckIsAdmin);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.btCreate);
             this.Font = new System.Drawing.Font("Ebrima", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HeaderStyle = Krypton.Toolkit.HeaderStyle.Calendar;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -482,15 +485,15 @@
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetTabControl metroSetTabControl1;
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private Krypton.Toolkit.KryptonTextBox txtNombreHabitacion;
-        private Krypton.Toolkit.KryptonCheckBox ckIsActive;
+        private Krypton.Toolkit.KryptonTextBox txtCodigo;
+        private Krypton.Toolkit.KryptonCheckBox ckIsAdmin;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonButton btCreate;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
-        private Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
+        private Krypton.Toolkit.KryptonTextBox txtCorreo;
+        private Krypton.Toolkit.KryptonTextBox txtConfirmarClave;
+        private Krypton.Toolkit.KryptonTextBox txtNombre;
+        private Krypton.Toolkit.KryptonTextBox txtApellido;
+        private Krypton.Toolkit.KryptonTextBox txtClave;
+        private Krypton.Toolkit.KryptonCheckBox ckIsActive;
     }
 }

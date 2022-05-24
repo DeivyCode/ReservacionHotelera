@@ -17,13 +17,13 @@ namespace Hotel.UI.Administracion
 {
     public partial class CrearUsuarios : KryptonForm
     {
-        private IAdministracionRepositorio administracion;
+        private readonly IAdministracionRepositorio _administracion;
         public Acciones acciones;
         public int idUsuario;
         public CrearUsuarios(IAdministracionRepositorio administracion)
         {
             InitializeComponent();
-            this.administracion = administracion;
+            this._administracion = administracion;
             this.acciones = Acciones.Crear;
         }
 
@@ -32,7 +32,7 @@ namespace Hotel.UI.Administracion
         {
             try
             {
-                if (!ValidarLimpiarCampos(limpiarCampos: false)) return false;
+                if (!Comunes.Comunes.ValidarCampos(this)) return false;
 
 
                 if (!string.Equals(txtClave.Text.Trim(), txtConfirmarClave.Text.Trim(), StringComparison.CurrentCultureIgnoreCase))
@@ -48,18 +48,18 @@ namespace Hotel.UI.Administracion
                     Apellidos = txtApellido.Text,
                     Clave = txtClave.Text,
                     Correo = txtCorreo.Text,
-                    IsActive = SwitchEstado.Switched,
-                    IsAdmin = SwitchAdm.Switched,
+                    IsActive = ckIsActive.Checked,
+                    IsAdmin = ckIsActive.Checked,
                     IdUsuario = accion == Acciones.Editar ? idUsuario : 0
 
                 };
                 if (accion == Acciones.Crear)
                 {
-                    if (!administracion.CrearUsuario(usuario)) return false;
+                    if (!_administracion.CrearUsuario(usuario)) return false;
                 }
                 else
                 {
-                    if (!administracion.EditarUsuario(usuario)) return false;
+                    if (!_administracion.EditarUsuario(usuario)) return false;
                 }
 
                 return true;
@@ -73,34 +73,6 @@ namespace Hotel.UI.Administracion
 
 
 
-        private bool ValidarLimpiarCampos(bool limpiarCampos)
-        {
-            try
-            {
-                for (var i = 0; i < tabPage1.Controls.Count; i++)
-                {
-                    if (tabPage1.Controls[i].GetType() == typeof(TextBox))
-                    {
-                        if (limpiarCampos)
-                        {
-                            tabPage1.Controls[i].Text = "";
-                            continue;
-                        }
-                        else if (String.IsNullOrEmpty(tabPage1.Controls[i].Text))
-                        {
-                            MessageBox.Show($@"El campo {tabPage1.Controls[i].Tag} require la entrada de un valor");
-                            tabPage1.Controls[i].Focus();
-                            return false;
-                        }
-                    }
-                }
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
@@ -119,7 +91,7 @@ namespace Hotel.UI.Administracion
             if (GuardarEditarUsuarios(accion: Acciones.Crear))
             {
                 MessageBox.Show("!!!Usuario creado Satisfactoriamente!!!");
-                ValidarLimpiarCampos(limpiarCampos: true);
+                Comunes.Comunes.ValidarCampos(this);
                 DialogResult = DialogResult.OK;
                 return;
             }
@@ -128,7 +100,7 @@ namespace Hotel.UI.Administracion
         private void CrearUsuarios_Load(object sender, EventArgs e)
         {
             if (acciones != Acciones.Editar) return;
-            var users = administracion.ObtenerUsuariosByCriteria(x => x.IdUsuario == idUsuario);
+            var users = _administracion.ObtenerUsuariosByCriteria(x => x.IdUsuario == idUsuario);
             foreach (var user in users)
             {
                 txtCodigo.Text = user.Usuario;
@@ -137,16 +109,16 @@ namespace Hotel.UI.Administracion
                 txtCorreo.Text = user.Correo;
                 txtClave.Text = user.Clave;
                 txtConfirmarClave.Text = user.Clave;
-                SwitchAdm.Switched = user.IsAdmin;
-                SwitchEstado.Switched = user.IsActive;
+                ckIsAdmin.Checked = user.IsAdmin;
+                ckIsActive.Checked = user.IsActive;
             }
 
-            //DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
         }
 
-        private void txtCapacidad_TextChanged(object sender, EventArgs e)
+        private void kryptonButton1_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

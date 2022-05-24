@@ -103,7 +103,7 @@ namespace Hotel.UI
         private void OpenChildForm(Form childform)
         {
           
-            if 
+            
 
             childform.TopLevel = false;
             childform.FormBorderStyle = FormBorderStyle.None;

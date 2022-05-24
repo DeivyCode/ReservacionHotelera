@@ -29,8 +29,16 @@
         private void InitializeComponent()
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.BtUsuarios = new FontAwesome.Sharp.IconButton();
             this.BtREPORTE = new FontAwesome.Sharp.IconButton();
+            this.PanelDesplegableAdministracion = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.BtUsuarios = new FontAwesome.Sharp.IconButton();
+            this.BtAdministracion = new FontAwesome.Sharp.IconButton();
+            this.panelDesplegableHotel = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.BtHotel = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.PtInicio = new System.Windows.Forms.PictureBox();
@@ -44,15 +52,9 @@
             this.PnSombra = new System.Windows.Forms.Panel();
             this.PnContenedor = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelDesplegableHotel = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.BtAdministracion = new FontAwesome.Sharp.IconButton();
-            this.PanelDesplegableAdministracion = new System.Windows.Forms.Panel();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
+            this.PanelDesplegableAdministracion.SuspendLayout();
+            this.panelDesplegableHotel.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).BeginInit();
             this.PNSuperior.SuspendLayout();
@@ -63,8 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconhome)).BeginInit();
             this.PnContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelDesplegableHotel.SuspendLayout();
-            this.PanelDesplegableAdministracion.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -81,30 +81,9 @@
             this.PanelMenu.ForeColor = System.Drawing.Color.Black;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(220, 775);
+            this.PanelMenu.Size = new System.Drawing.Size(220, 427);
             this.PanelMenu.TabIndex = 1;
             this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
-            // 
-            // BtUsuarios
-            // 
-            this.BtUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtUsuarios.FlatAppearance.BorderSize = 0;
-            this.BtUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtUsuarios.ForeColor = System.Drawing.Color.White;
-            this.BtUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.BtUsuarios.IconColor = System.Drawing.Color.White;
-            this.BtUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.BtUsuarios.Name = "BtUsuarios";
-            this.BtUsuarios.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.BtUsuarios.Size = new System.Drawing.Size(220, 67);
-            this.BtUsuarios.TabIndex = 5;
-            this.BtUsuarios.Text = "USUARIOS";
-            this.BtUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtUsuarios.UseVisualStyleBackColor = true;
-            this.BtUsuarios.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // BtREPORTE
             // 
@@ -120,13 +99,168 @@
             this.BtREPORTE.Location = new System.Drawing.Point(0, 600);
             this.BtREPORTE.Name = "BtREPORTE";
             this.BtREPORTE.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.BtREPORTE.Size = new System.Drawing.Size(220, 62);
+            this.BtREPORTE.Size = new System.Drawing.Size(203, 62);
             this.BtREPORTE.TabIndex = 4;
             this.BtREPORTE.Text = "REPORTE";
             this.BtREPORTE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtREPORTE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtREPORTE.UseVisualStyleBackColor = true;
             this.BtREPORTE.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // PanelDesplegableAdministracion
+            // 
+            this.PanelDesplegableAdministracion.Controls.Add(this.panel1);
+            this.PanelDesplegableAdministracion.Controls.Add(this.iconButton4);
+            this.PanelDesplegableAdministracion.Controls.Add(this.BtUsuarios);
+            this.PanelDesplegableAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelDesplegableAdministracion.Location = new System.Drawing.Point(0, 458);
+            this.PanelDesplegableAdministracion.Name = "PanelDesplegableAdministracion";
+            this.PanelDesplegableAdministracion.Size = new System.Drawing.Size(203, 142);
+            this.PanelDesplegableAdministracion.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(208, 205);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 4;
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.ForeColor = System.Drawing.Color.White;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.CloudUploadAlt;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(0, 67);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.iconButton4.Size = new System.Drawing.Size(203, 67);
+            this.iconButton4.TabIndex = 6;
+            this.iconButton4.Text = "Backup";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            // 
+            // BtUsuarios
+            // 
+            this.BtUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtUsuarios.FlatAppearance.BorderSize = 0;
+            this.BtUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtUsuarios.ForeColor = System.Drawing.Color.White;
+            this.BtUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.BtUsuarios.IconColor = System.Drawing.Color.White;
+            this.BtUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.BtUsuarios.Name = "BtUsuarios";
+            this.BtUsuarios.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.BtUsuarios.Size = new System.Drawing.Size(203, 67);
+            this.BtUsuarios.TabIndex = 5;
+            this.BtUsuarios.Text = "USUARIOS";
+            this.BtUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtUsuarios.UseVisualStyleBackColor = true;
+            this.BtUsuarios.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // BtAdministracion
+            // 
+            this.BtAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtAdministracion.FlatAppearance.BorderSize = 0;
+            this.BtAdministracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtAdministracion.ForeColor = System.Drawing.Color.White;
+            this.BtAdministracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.BtAdministracion.IconColor = System.Drawing.Color.White;
+            this.BtAdministracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtAdministracion.IconSize = 45;
+            this.BtAdministracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtAdministracion.Location = new System.Drawing.Point(0, 398);
+            this.BtAdministracion.Name = "BtAdministracion";
+            this.BtAdministracion.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.BtAdministracion.Size = new System.Drawing.Size(203, 60);
+            this.BtAdministracion.TabIndex = 6;
+            this.BtAdministracion.Text = "Administracion";
+            this.BtAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtAdministracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtAdministracion.UseVisualStyleBackColor = true;
+            this.BtAdministracion.Click += new System.EventHandler(this.BtAdministracion_Click_1);
+            // 
+            // panelDesplegableHotel
+            // 
+            this.panelDesplegableHotel.Controls.Add(this.iconButton3);
+            this.panelDesplegableHotel.Controls.Add(this.iconButton2);
+            this.panelDesplegableHotel.Controls.Add(this.iconButton1);
+            this.panelDesplegableHotel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDesplegableHotel.Location = new System.Drawing.Point(0, 200);
+            this.panelDesplegableHotel.Name = "panelDesplegableHotel";
+            this.panelDesplegableHotel.Size = new System.Drawing.Size(203, 198);
+            this.panelDesplegableHotel.TabIndex = 4;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Tag;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 45;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(0, 120);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.iconButton3.Size = new System.Drawing.Size(203, 60);
+            this.iconButton3.TabIndex = 7;
+            this.iconButton3.Text = "Tipo De Habitaciones";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Suitcase;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 45;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(0, 60);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.iconButton2.Size = new System.Drawing.Size(203, 60);
+            this.iconButton2.TabIndex = 6;
+            this.iconButton2.Text = "Crear Hoteles ";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 45;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(203, 60);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.Text = "Registro de Habitaciones";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // BtHotel
             // 
@@ -142,7 +276,7 @@
             this.BtHotel.Location = new System.Drawing.Point(0, 140);
             this.BtHotel.Name = "BtHotel";
             this.BtHotel.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.BtHotel.Size = new System.Drawing.Size(220, 60);
+            this.BtHotel.Size = new System.Drawing.Size(203, 60);
             this.BtHotel.TabIndex = 2;
             this.BtHotel.Text = "HOTEL";
             this.BtHotel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,7 +290,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 140);
+            this.panelLogo.Size = new System.Drawing.Size(203, 140);
             this.panelLogo.TabIndex = 2;
             // 
             // PtInicio
@@ -287,160 +421,26 @@
             this.PnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnContenedor.Location = new System.Drawing.Point(220, 84);
             this.PnContenedor.Name = "PnContenedor";
-            this.PnContenedor.Size = new System.Drawing.Size(918, 691);
+            this.PnContenedor.Size = new System.Drawing.Size(918, 343);
             this.PnContenedor.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Hotel.Properties.Resources.Wyndham_Hotels;
-            this.pictureBox1.Location = new System.Drawing.Point(318, 254);
+            this.pictureBox1.Location = new System.Drawing.Point(318, 108);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(211, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // panelDesplegableHotel
-            // 
-            this.panelDesplegableHotel.Controls.Add(this.iconButton3);
-            this.panelDesplegableHotel.Controls.Add(this.iconButton2);
-            this.panelDesplegableHotel.Controls.Add(this.iconButton1);
-            this.panelDesplegableHotel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDesplegableHotel.Location = new System.Drawing.Point(0, 200);
-            this.panelDesplegableHotel.Name = "panelDesplegableHotel";
-            this.panelDesplegableHotel.Size = new System.Drawing.Size(220, 198);
-            this.panelDesplegableHotel.TabIndex = 4;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 45;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(220, 60);
-            this.iconButton1.TabIndex = 5;
-            this.iconButton1.Text = "Registro de Habitaciones";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Suitcase;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 45;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 60);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(220, 60);
-            this.iconButton2.TabIndex = 6;
-            this.iconButton2.Text = "Crear Hoteles ";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Tag;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 45;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 120);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(220, 60);
-            this.iconButton3.TabIndex = 7;
-            this.iconButton3.Text = "Tipo De Habitaciones";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            // 
-            // BtAdministracion
-            // 
-            this.BtAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtAdministracion.FlatAppearance.BorderSize = 0;
-            this.BtAdministracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtAdministracion.ForeColor = System.Drawing.Color.White;
-            this.BtAdministracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.BtAdministracion.IconColor = System.Drawing.Color.White;
-            this.BtAdministracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtAdministracion.IconSize = 45;
-            this.BtAdministracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtAdministracion.Location = new System.Drawing.Point(0, 398);
-            this.BtAdministracion.Name = "BtAdministracion";
-            this.BtAdministracion.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.BtAdministracion.Size = new System.Drawing.Size(220, 60);
-            this.BtAdministracion.TabIndex = 6;
-            this.BtAdministracion.Text = "Administracion";
-            this.BtAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtAdministracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtAdministracion.UseVisualStyleBackColor = true;
-            this.BtAdministracion.Click += new System.EventHandler(this.BtAdministracion_Click_1);
-            // 
-            // PanelDesplegableAdministracion
-            // 
-            this.PanelDesplegableAdministracion.Controls.Add(this.panel1);
-            this.PanelDesplegableAdministracion.Controls.Add(this.iconButton4);
-            this.PanelDesplegableAdministracion.Controls.Add(this.BtUsuarios);
-            this.PanelDesplegableAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelDesplegableAdministracion.Location = new System.Drawing.Point(0, 458);
-            this.PanelDesplegableAdministracion.Name = "PanelDesplegableAdministracion";
-            this.PanelDesplegableAdministracion.Size = new System.Drawing.Size(220, 142);
-            this.PanelDesplegableAdministracion.TabIndex = 4;
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.CloudUploadAlt;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 67);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 20, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(220, 67);
-            this.iconButton4.TabIndex = 6;
-            this.iconButton4.Text = "Backup";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(208, 205);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 4;
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1138, 775);
+            this.ClientSize = new System.Drawing.Size(1138, 427);
             this.Controls.Add(this.PnContenedor);
             this.Controls.Add(this.PnSombra);
             this.Controls.Add(this.PNSuperior);
@@ -451,6 +451,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.PanelMenu.ResumeLayout(false);
+            this.PanelDesplegableAdministracion.ResumeLayout(false);
+            this.panelDesplegableHotel.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).EndInit();
             this.PNSuperior.ResumeLayout(false);
@@ -462,8 +464,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconhome)).EndInit();
             this.PnContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelDesplegableHotel.ResumeLayout(false);
-            this.PanelDesplegableAdministracion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

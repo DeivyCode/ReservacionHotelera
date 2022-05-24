@@ -298,6 +298,7 @@ namespace Hotel.UI
 
         }
 
+
         private void BTtipodehabitaciones_Click_1(object sender, EventArgs e)
         {
             CerrarFormulariosHijos();

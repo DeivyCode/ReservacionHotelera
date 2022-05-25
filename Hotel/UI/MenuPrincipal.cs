@@ -204,9 +204,9 @@ namespace Hotel.UI
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            CerrarFormulariosHijos();
-            HideSubMenu();
-            reset();
+          
+        
+           
         }
         private void reset()
 
@@ -329,6 +329,13 @@ namespace Hotel.UI
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
+        }
+
+        private void iconhome_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+            HideSubMenu();
+            reset();
         }
     }
 }

@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.LBnameUser = new System.Windows.Forms.Label();
             this.BtREPORTE = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.PanelDesplegableAdministracion = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTbackup = new FontAwesome.Sharp.IconButton();
@@ -40,30 +42,26 @@
             this.BTcrearHoteles = new FontAwesome.Sharp.IconButton();
             this.BtHotel = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.PtInicio = new System.Windows.Forms.PictureBox();
             this.PNSuperior = new System.Windows.Forms.Panel();
-            this.LBnameUser = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconMaximizarformulario = new FontAwesome.Sharp.IconPictureBox();
             this.iconMinimizar = new FontAwesome.Sharp.IconPictureBox();
             this.iconCerrarFormulario = new FontAwesome.Sharp.IconPictureBox();
             this.iconreseticonhome = new FontAwesome.Sharp.IconPictureBox();
-            this.lbTitulo = new System.Windows.Forms.Label();
-            this.iconhome = new FontAwesome.Sharp.IconPictureBox();
             this.PnSombra = new System.Windows.Forms.Panel();
             this.PnContenedor = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PtInicio = new System.Windows.Forms.PictureBox();
             this.PanelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.PanelDesplegableAdministracion.SuspendLayout();
             this.panelDesplegableHotel.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.PNSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizarformulario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrarFormulario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconreseticonhome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconhome)).BeginInit();
             this.PnContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).BeginInit();
@@ -73,7 +71,9 @@
             // 
             this.PanelMenu.AutoScroll = true;
             this.PanelMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PanelMenu.Controls.Add(this.LBnameUser);
             this.PanelMenu.Controls.Add(this.BtREPORTE);
+            this.PanelMenu.Controls.Add(this.iconPictureBox1);
             this.PanelMenu.Controls.Add(this.PanelDesplegableAdministracion);
             this.PanelMenu.Controls.Add(this.BtAdministracion);
             this.PanelMenu.Controls.Add(this.panelDesplegableHotel);
@@ -86,6 +86,16 @@
             this.PanelMenu.Size = new System.Drawing.Size(220, 749);
             this.PanelMenu.TabIndex = 1;
             this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
+            // 
+            // LBnameUser
+            // 
+            this.LBnameUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LBnameUser.AutoSize = true;
+            this.LBnameUser.ForeColor = System.Drawing.Color.AliceBlue;
+            this.LBnameUser.Location = new System.Drawing.Point(49, 714);
+            this.LBnameUser.Name = "LBnameUser";
+            this.LBnameUser.Size = new System.Drawing.Size(0, 15);
+            this.LBnameUser.TabIndex = 7;
             // 
             // BtREPORTE
             // 
@@ -108,6 +118,21 @@
             this.BtREPORTE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtREPORTE.UseVisualStyleBackColor = true;
             this.BtREPORTE.Click += new System.EventHandler(this.BTtipodehabitaciones_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Goldenrod;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 35;
+            this.iconPictureBox1.Location = new System.Drawing.Point(7, 702);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(36, 35);
+            this.iconPictureBox1.TabIndex = 6;
+            this.iconPictureBox1.TabStop = false;
             // 
             // PanelDesplegableAdministracion
             // 
@@ -278,7 +303,8 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelLogo.Controls.Add(this.PtInicio);
+            this.panelLogo.Controls.Add(this.iconhome);
+            this.panelLogo.Controls.Add(this.lbTitulo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -287,15 +313,12 @@
             // 
             // PNSuperior
             // 
-            this.PNSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PNSuperior.Controls.Add(this.LBnameUser);
-            this.PNSuperior.Controls.Add(this.iconPictureBox1);
+            this.PNSuperior.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PNSuperior.Controls.Add(this.PtInicio);
             this.PNSuperior.Controls.Add(this.iconMaximizarformulario);
             this.PNSuperior.Controls.Add(this.iconMinimizar);
             this.PNSuperior.Controls.Add(this.iconCerrarFormulario);
             this.PNSuperior.Controls.Add(this.iconreseticonhome);
-            this.PNSuperior.Controls.Add(this.lbTitulo);
-            this.PNSuperior.Controls.Add(this.iconhome);
             this.PNSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PNSuperior.Location = new System.Drawing.Point(220, 0);
             this.PNSuperior.Name = "PNSuperior";
@@ -303,35 +326,10 @@
             this.PNSuperior.TabIndex = 2;
             this.PNSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PNSuperior_MouseDown);
             // 
-            // LBnameUser
-            // 
-            this.LBnameUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LBnameUser.AutoSize = true;
-            this.LBnameUser.ForeColor = System.Drawing.Color.AliceBlue;
-            this.LBnameUser.Location = new System.Drawing.Point(790, 54);
-            this.LBnameUser.Name = "LBnameUser";
-            this.LBnameUser.Size = new System.Drawing.Size(0, 15);
-            this.LBnameUser.TabIndex = 7;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Goldenrod;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 35;
-            this.iconPictureBox1.Location = new System.Drawing.Point(752, 46);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(36, 35);
-            this.iconPictureBox1.TabIndex = 6;
-            this.iconPictureBox1.TabStop = false;
-            // 
             // iconMaximizarformulario
             // 
             this.iconMaximizarformulario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconMaximizarformulario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iconMaximizarformulario.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.iconMaximizarformulario.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconMaximizarformulario.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.iconMaximizarformulario.IconColor = System.Drawing.SystemColors.ControlText;
@@ -347,7 +345,7 @@
             // iconMinimizar
             // 
             this.iconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconMinimizar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iconMinimizar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.iconMinimizar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconMinimizar.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
             this.iconMinimizar.IconColor = System.Drawing.SystemColors.ControlText;
@@ -380,7 +378,7 @@
             // 
             this.iconreseticonhome.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.iconreseticonhome.ForeColor = System.Drawing.Color.AliceBlue;
-            this.iconreseticonhome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconreseticonhome.IconChar = FontAwesome.Sharp.IconChar.Bars;
             this.iconreseticonhome.IconColor = System.Drawing.Color.AliceBlue;
             this.iconreseticonhome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconreseticonhome.Location = new System.Drawing.Point(674, 38);
@@ -390,32 +388,9 @@
             this.iconreseticonhome.TabStop = false;
             this.iconreseticonhome.Visible = false;
             // 
-            // lbTitulo
-            // 
-            this.lbTitulo.AutoSize = true;
-            this.lbTitulo.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lbTitulo.Location = new System.Drawing.Point(65, 41);
-            this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(42, 15);
-            this.lbTitulo.TabIndex = 1;
-            this.lbTitulo.Text = "HOME";
-            // 
-            // iconhome
-            // 
-            this.iconhome.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.iconhome.ForeColor = System.Drawing.Color.AliceBlue;
-            this.iconhome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconhome.IconColor = System.Drawing.Color.AliceBlue;
-            this.iconhome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconhome.Location = new System.Drawing.Point(27, 33);
-            this.iconhome.Name = "iconhome";
-            this.iconhome.Size = new System.Drawing.Size(32, 32);
-            this.iconhome.TabIndex = 0;
-            this.iconhome.TabStop = false;
-            // 
             // PnSombra
             // 
-            this.PnSombra.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PnSombra.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PnSombra.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnSombra.Location = new System.Drawing.Point(220, 75);
             this.PnSombra.Name = "PnSombra";
@@ -471,17 +446,16 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.PanelMenu.ResumeLayout(false);
+            this.PanelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.PanelDesplegableAdministracion.ResumeLayout(false);
             this.panelDesplegableHotel.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.PNSuperior.ResumeLayout(false);
-            this.PNSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizarformulario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrarFormulario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconreseticonhome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconhome)).EndInit();
             this.PnContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).EndInit();

@@ -354,7 +354,7 @@
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.CueHint.CueHintText = "Buscar Hotel";
+            this.txtBusqueda.CueHint.CueHintText = "Buscar";
             this.txtBusqueda.CueHint.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBusqueda.CueHint.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtBusqueda.Location = new System.Drawing.Point(4, 31);
@@ -362,7 +362,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Palette = this.kryptonPalette1;
             this.txtBusqueda.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.txtBusqueda.Size = new System.Drawing.Size(223, 29);
+            this.txtBusqueda.Size = new System.Drawing.Size(344, 29);
             this.txtBusqueda.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtBusqueda.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.txtBusqueda.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));

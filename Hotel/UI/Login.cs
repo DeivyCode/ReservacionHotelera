@@ -97,6 +97,12 @@ namespace Hotel.UI
         private void btCreate_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
+            //MenuPrincipal LBnameUser = new MenuPrincipal();
+           // LBnameUser.Text = txtPrecio.Text;
+
+
+
+
         }
     }
 }

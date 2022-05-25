@@ -25,6 +25,7 @@ namespace Hotel.UI
         private Panel leftborderBtn;
         private IconButton[] MyIconButton = new IconButton[5];
         private Form currentChildform;
+        bool a ;
 
 
 
@@ -79,14 +80,17 @@ namespace Hotel.UI
 
                 //border
 
-                leftborderBtn.BackColor = color;
-                leftborderBtn.Location = new Point(0, currentBtn.Location.Y);
-                leftborderBtn.Visible = true;
-                leftborderBtn.BringToFront();
+                //leftborderBtn.BackColor = color;
+                //leftborderBtn.Location = new Point(0, currentBtn.Location.Y);
+                //leftborderBtn.Visible = true;
+                //leftborderBtn.BringToFront();
 
                 //icono de inicio
                 iconhome.IconChar = currentBtn.IconChar;
                 iconhome.IconColor = color;
+
+         
+
 
             }
 
@@ -98,7 +102,7 @@ namespace Hotel.UI
             {
 
 
-                currentBtn.BackColor = Color.FromArgb(2, 121, 186);
+                currentBtn.BackColor = Color.FromArgb(153, 180, 209);
                 currentBtn.ForeColor = Color.White;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.White;
@@ -169,8 +173,11 @@ namespace Hotel.UI
         }
         private void BtAdministracion_Click(object sender, EventArgs e)
         {
+            a = true;
             ActivateButton(sender, RGBcolors.color2);
             ShowSubMenu(PanelDesplegableAdministracion);
+
+           
         }
         private void BTtipodehabitaciones_Click(object sender, EventArgs e)
         {

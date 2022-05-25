@@ -94,5 +94,15 @@ namespace Hotel.UI.Hotel
             var height = 35 + kryptonDataGridView1.Rows.Cast<DataGridViewRow>().Sum(dr => dr.Height);
             kryptonDataGridView1.Height = height;
         }
+
+        private void txtBusqueda_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

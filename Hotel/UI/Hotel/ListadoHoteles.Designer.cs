@@ -376,6 +376,7 @@
             this.txtBusqueda.StateCommon.Content.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBusqueda.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtBusqueda.TabIndex = 4;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged_1);
             // 
             // kryptonPanel1
             // 
@@ -385,6 +386,7 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(937, 496);
             this.kryptonPanel1.TabIndex = 5;
+            this.kryptonPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonPanel1_Paint);
             // 
             // kryptonHeader1
             // 

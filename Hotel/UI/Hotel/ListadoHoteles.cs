@@ -97,5 +97,11 @@ namespace Hotel.UI.Hotel
             kryptonDataGridView1.Update();
             kryptonDataGridView1.Refresh();
         }
+
+        private void kryptonDataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            var height = 35 + kryptonDataGridView1.Rows.Cast<DataGridViewRow>().Sum(dr => dr.Height);
+            kryptonDataGridView1.Height = height;
+        }
     }
 }

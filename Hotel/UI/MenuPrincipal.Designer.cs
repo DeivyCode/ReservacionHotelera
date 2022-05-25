@@ -40,7 +40,6 @@
             this.BTcrearHoteles = new FontAwesome.Sharp.IconButton();
             this.BtHotel = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.PtInicio = new System.Windows.Forms.PictureBox();
             this.PNSuperior = new System.Windows.Forms.Panel();
             this.LBnameUser = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -53,11 +52,11 @@
             this.PnSombra = new System.Windows.Forms.Panel();
             this.PnContenedor = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PtInicio = new System.Windows.Forms.PictureBox();
             this.PanelMenu.SuspendLayout();
             this.PanelDesplegableAdministracion.SuspendLayout();
             this.panelDesplegableHotel.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).BeginInit();
             this.PNSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizarformulario)).BeginInit();
@@ -67,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconhome)).BeginInit();
             this.PnContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -285,17 +285,6 @@
             this.panelLogo.Size = new System.Drawing.Size(220, 140);
             this.panelLogo.TabIndex = 2;
             // 
-            // PtInicio
-            // 
-            this.PtInicio.Image = global::Hotel.Properties.Resources.Wyndham_Hotels;
-            this.PtInicio.Location = new System.Drawing.Point(22, 33);
-            this.PtInicio.Name = "PtInicio";
-            this.PtInicio.Size = new System.Drawing.Size(173, 77);
-            this.PtInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtInicio.TabIndex = 2;
-            this.PtInicio.TabStop = false;
-            this.PtInicio.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
             // PNSuperior
             // 
             this.PNSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -454,6 +443,17 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // PtInicio
+            // 
+            this.PtInicio.Image = global::Hotel.Properties.Resources.Wyndham_Hotels;
+            this.PtInicio.Location = new System.Drawing.Point(22, 33);
+            this.PtInicio.Name = "PtInicio";
+            this.PtInicio.Size = new System.Drawing.Size(173, 77);
+            this.PtInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtInicio.TabIndex = 2;
+            this.PtInicio.TabStop = false;
+            this.PtInicio.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -474,7 +474,6 @@
             this.PanelDesplegableAdministracion.ResumeLayout(false);
             this.panelDesplegableHotel.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).EndInit();
             this.PNSuperior.ResumeLayout(false);
             this.PNSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
@@ -485,6 +484,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconhome)).EndInit();
             this.PnContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -495,7 +495,6 @@
         private FontAwesome.Sharp.IconButton BtREPORTE;
         private FontAwesome.Sharp.IconButton BtHotel;
         private Panel panelLogo;
-        private PictureBox PtInicio;
         private Panel PNSuperior;
         private FontAwesome.Sharp.IconPictureBox iconhome;
         private Label label1;

@@ -362,6 +362,7 @@
             this.kryptonButton2.Values.Image = global::Hotel.Properties.Resources._8687589_ic_fluent_notepad_edit_regular_icon;
             this.kryptonButton2.Values.ImageTransparentColor = System.Drawing.Color.DodgerBlue;
             this.kryptonButton2.Values.Text = " Reservaciones";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton1
             // 

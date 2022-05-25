@@ -197,7 +197,7 @@
             // 
             // btCreate
             // 
-            this.btCreate.Location = new System.Drawing.Point(637, 14);
+            this.btCreate.Location = new System.Drawing.Point(624, 14);
             this.btCreate.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btCreate.Name = "btCreate";
             this.btCreate.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
@@ -266,7 +266,7 @@
             this.btCreate.StateTracking.Border.Width = 1;
             this.btCreate.TabIndex = 0;
             this.btCreate.Values.Image = global::Hotel.Properties.Resources.add_black;
-            this.btCreate.Values.Text = "Crear Hotel";
+            this.btCreate.Values.Text = "Crear";
             this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
             // btEditar
@@ -337,7 +337,7 @@
             this.btEditar.StateTracking.Border.Width = 1;
             this.btEditar.TabIndex = 1;
             this.btEditar.Values.Image = global::Hotel.Properties.Resources.edit_black;
-            this.btEditar.Values.Text = "Editar Hotel";
+            this.btEditar.Values.Text = "Editar";
             this.btEditar.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // buttonSpecAny1

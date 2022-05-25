@@ -26,5 +26,7 @@ namespace Hotel.Data.Interfaces
 
         ICollection<TipoHabitacion> ObtenerTiposHabitacion();
 
+        ICollection<Reserva> ObtenerReservaciones();
+
     }
 }

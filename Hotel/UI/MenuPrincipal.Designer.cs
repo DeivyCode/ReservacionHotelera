@@ -52,7 +52,7 @@
             this.PnSombra = new System.Windows.Forms.Panel();
             this.PnContenedor = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PtInicio = new System.Windows.Forms.PictureBox();
+            //this.PtInicio = new System.Windows.Forms.PictureBox();
             this.PanelMenu.SuspendLayout();
             this.PanelDesplegableAdministracion.SuspendLayout();
             this.panelDesplegableHotel.SuspendLayout();
@@ -66,7 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconhome)).BeginInit();
             this.PnContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.PtInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -278,7 +278,7 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelLogo.Controls.Add(this.PtInicio);
+            //this.panelLogo.Controls.Add(this.PtInicio);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -445,14 +445,14 @@
             // 
             // PtInicio
             // 
-            this.PtInicio.Image = global::Hotel.Properties.Resources.Wyndham_Hotels;
-            this.PtInicio.Location = new System.Drawing.Point(22, 33);
-            this.PtInicio.Name = "PtInicio";
-            this.PtInicio.Size = new System.Drawing.Size(173, 77);
-            this.PtInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtInicio.TabIndex = 2;
-            this.PtInicio.TabStop = false;
-            this.PtInicio.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            //this.PtInicio.Image = global::Hotel.Properties.Resources.Wyndham_Hotels;
+            //this.PtInicio.Location = new System.Drawing.Point(22, 33);
+            //this.PtInicio.Name = "PtInicio";
+            //this.PtInicio.Size = new System.Drawing.Size(173, 77);
+            //this.PtInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.PtInicio.TabIndex = 2;
+            //this.PtInicio.TabStop = false;
+            //this.PtInicio.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // MenuPrincipal
             // 
@@ -484,7 +484,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconhome)).EndInit();
             this.PnContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtInicio)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.PtInicio)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -43,6 +43,7 @@ namespace Hotel
             servicios.AddScoped<IAdministracionRepositorio, AdministracionRepositorioImp>();
             servicios.AddScoped<IHotelRepository, HotelRepositoryImp>();
             servicios.AddTransient<Login>();
+            servicios.AddTransient<MainMenu>();
             servicios.AddTransient<MenuPrincipal>();
             servicios.AddTransient<CrearUsuarios>();
             servicios.AddTransient<ListadoUsuarios>();
@@ -51,7 +52,7 @@ namespace Hotel
             servicios.AddTransient<CrearHabitaciones>();
             servicios.AddTransient<CrearTipoHabitacion>();
             servicios.AddTransient<CrearReservaciones>();
-            servicios.AddTransient<MainMenu>();
+            servicios.AddTransient<ListadoReservaciones>();
             ServiceProvider = servicios.BuildServiceProvider();
 
         }

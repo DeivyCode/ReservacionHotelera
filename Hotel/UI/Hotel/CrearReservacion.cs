@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Hotel.Data.Interfaces;
+﻿using Hotel.Data.Interfaces;
 using Hotel.Data.Models;
-using Hotel.Data.Repositorio;
 using Krypton.Toolkit;
 
 namespace Hotel.UI.Hotel
@@ -98,11 +88,12 @@ namespace Hotel.UI.Hotel
 
             if (!GuardarReservacion())
             {
-                MessageBox.Show($@"Error creando reservacion", "!!! ATENCION !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($@"Error creando reservacion {_hotelRepository?.MessageError}", "!!! ATENCION !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             MessageBox.Show("Reservacion creada satisfactoriamente!!!", "!!! ATENCION !!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult = DialogResult.OK;
         }
 
     }

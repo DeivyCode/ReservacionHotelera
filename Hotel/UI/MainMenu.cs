@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Hotel.UI.Administracion;
+﻿using Hotel.UI.Administracion;
 using Hotel.UI.Hotel;
 using Krypton.Toolkit;
 
@@ -17,10 +8,12 @@ namespace Hotel.UI
     {
         private readonly ListadoUsuarios _listadoUsuarios;
         private readonly ListadoHoteles _listadoHoteles;
-        public MainMenu(ListadoUsuarios listadoUsuarios, ListadoHoteles listadoHoteles)
+        private readonly ListadoReservaciones _listadoReservaciones;
+        public MainMenu(ListadoUsuarios listadoUsuarios, ListadoHoteles listadoHoteles, ListadoReservaciones listadoReservaciones)
         {
             _listadoUsuarios = listadoUsuarios;
             _listadoHoteles = listadoHoteles;
+            _listadoReservaciones = listadoReservaciones;
             InitializeComponent();
         }
 
@@ -52,6 +45,14 @@ namespace Hotel.UI
             childform.Show();
             LbTituloChildForm.Text = childform.Text;
 
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            _listadoReservaciones.MdiParent = this;
+            _listadoReservaciones.Size = PnContenedor.Size;
+            _listadoReservaciones.Show();
+            OpenChildForm(_listadoReservaciones);
         }
     }
 }

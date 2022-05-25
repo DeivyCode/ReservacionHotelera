@@ -2,12 +2,6 @@
 using Hotel.Data.Interfaces;
 using Hotel.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading.Tasks.Dataflow;
 
 namespace Hotel.Data.Repositorio
 {
@@ -37,6 +31,17 @@ namespace Hotel.Data.Repositorio
                 .Include(x => x.Habitacion)
                 .Include(x => x.Hotel).
                 ToList();
+        }
+
+        public ICollection<Reserva> ObtenerReservaciones()
+        {
+
+            return context.Reservaciones.Include(th => th.Habitaciones)
+                .Include(x => x.Usuarios)
+                .Include(ho => ho.Habitaciones.Hotel)
+                .Include(ha => ha.Habitaciones.Habitacion)
+                .AsNoTracking()
+                .ToList();
         }
 
         public HotelRepositoryImp(HotelDbContext context)
@@ -186,6 +191,16 @@ namespace Hotel.Data.Repositorio
             try
             {
                 if (model == null) return false;
+
+                //Verificar si ya existe una reservacion para esta habitacion
+
+                var tieneReserva = context.Reservaciones.FirstOrDefault(x => x.IdHabitacion == model.IdHabitacion);
+
+                if (tieneReserva != null)
+                {
+                    MessageError = @$"Ya existe una reservacion para esta habitacion con ID {model.IdHabitacion}";
+                    return false;
+                }
 
                 context.ChangeTracker.Clear();
                 context.Reservaciones.Add(model);

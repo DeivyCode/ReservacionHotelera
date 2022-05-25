@@ -29,22 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
-            this.btEditar = new Krypton.Toolkit.KryptonButton();
             this.btCreate = new Krypton.Toolkit.KryptonButton();
             this.txtBusqueda = new Krypton.Toolkit.KryptonTextBox();
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
+            this.dgvReservaciones = new Krypton.Toolkit.KryptonDataGridView();
             this.kryptonHeader1 = new Krypton.Toolkit.KryptonHeader();
-            this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
             this.IdReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreHotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Huesped = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fechasalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ocupacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreTomador = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +53,7 @@
             this.IdHotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -90,79 +89,9 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 10, -1, -1);
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             // 
-            // btEditar
-            // 
-            this.btEditar.Location = new System.Drawing.Point(787, 21);
-            this.btEditar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btEditar.Name = "btEditar";
-            this.btEditar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.OverrideDefault.Back.ColorAngle = 45F;
-            this.btEditar.OverrideDefault.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btEditar.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btEditar.OverrideDefault.Border.Rounding = 20F;
-            this.btEditar.OverrideDefault.Border.Width = 1;
-            this.btEditar.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(221)))));
-            this.btEditar.OverrideFocus.Back.ColorAngle = 45F;
-            this.btEditar.OverrideFocus.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btEditar.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(146)))), ((int)(((byte)(243)))));
-            this.btEditar.OverrideFocus.Border.ColorAngle = 45F;
-            this.btEditar.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btEditar.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btEditar.OverrideFocus.Border.Rounding = 20F;
-            this.btEditar.OverrideFocus.Border.Width = 1;
-            this.btEditar.Palette = this.kryptonPalette1;
-            this.btEditar.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.btEditar.Size = new System.Drawing.Size(138, 46);
-            this.btEditar.StateCommon.Back.Color1 = System.Drawing.SystemColors.HotTrack;
-            this.btEditar.StateCommon.Back.Color2 = System.Drawing.SystemColors.HotTrack;
-            this.btEditar.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btEditar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btEditar.StateCommon.Border.Rounding = 20F;
-            this.btEditar.StateCommon.Border.Width = 1;
-            this.btEditar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btEditar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btEditar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btEditar.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btEditar.StateNormal.Border.Rounding = 20F;
-            this.btEditar.StateNormal.Border.Width = 1;
-            this.btEditar.StateTracking.Back.Color1 = System.Drawing.SystemColors.MenuHighlight;
-            this.btEditar.StateTracking.Back.Color2 = System.Drawing.SystemColors.MenuHighlight;
-            this.btEditar.StateTracking.Back.ColorAngle = 40F;
-            this.btEditar.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            this.btEditar.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btEditar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEditar.StateTracking.Border.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            this.btEditar.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btEditar.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btEditar.StateTracking.Border.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.btEditar.StateTracking.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.TopLeft;
-            this.btEditar.StateTracking.Border.Rounding = 20F;
-            this.btEditar.StateTracking.Border.Width = 1;
-            this.btEditar.TabIndex = 3;
-            this.btEditar.Values.Image = global::Hotel.Properties.Resources.edit_black;
-            this.btEditar.Values.Text = "Editar Hotel";
-            // 
             // btCreate
             // 
-            this.btCreate.Location = new System.Drawing.Point(643, 21);
+            this.btCreate.Location = new System.Drawing.Point(708, 21);
             this.btCreate.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btCreate.Name = "btCreate";
             this.btCreate.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
@@ -192,7 +121,7 @@
             this.btCreate.OverrideFocus.Border.Width = 1;
             this.btCreate.Palette = this.kryptonPalette1;
             this.btCreate.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.btCreate.Size = new System.Drawing.Size(140, 46);
+            this.btCreate.Size = new System.Drawing.Size(196, 46);
             this.btCreate.StateCommon.Back.Color1 = System.Drawing.Color.Green;
             this.btCreate.StateCommon.Back.Color2 = System.Drawing.Color.Green;
             this.btCreate.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -231,7 +160,8 @@
             this.btCreate.StateTracking.Border.Width = 1;
             this.btCreate.TabIndex = 2;
             this.btCreate.Values.Image = global::Hotel.Properties.Resources.add_black;
-            this.btCreate.Values.Text = "Crear Hotel";
+            this.btCreate.Values.Text = "Crear Reservacion";
+            this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
             // txtBusqueda
             // 
@@ -260,11 +190,43 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kryptonDataGridView1);
+            this.kryptonPanel1.Controls.Add(this.dgvReservaciones);
             this.kryptonPanel1.Location = new System.Drawing.Point(12, 83);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(927, 485);
             this.kryptonPanel1.TabIndex = 6;
+            // 
+            // dgvReservaciones
+            // 
+            this.dgvReservaciones.ColumnHeadersHeight = 40;
+            this.dgvReservaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdReserva,
+            this.NombreHotel,
+            this.NombreHabitacion,
+            this.Huesped,
+            this.FechaInicio,
+            this.FechaFin,
+            this.Precio,
+            this.Ocupacion,
+            this.NombreTomador,
+            this.ClientId,
+            this.Cantidad,
+            this.IdHabitacion,
+            this.IdHotel});
+            this.dgvReservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvReservaciones.Location = new System.Drawing.Point(0, 0);
+            this.dgvReservaciones.Name = "dgvReservaciones";
+            this.dgvReservaciones.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.dgvReservaciones.RowTemplate.Height = 25;
+            this.dgvReservaciones.Size = new System.Drawing.Size(927, 485);
+            this.dgvReservaciones.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.dgvReservaciones.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvReservaciones.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvReservaciones.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.White;
+            this.dgvReservaciones.StateCommon.HeaderColumn.Content.Color2 = System.Drawing.Color.White;
+            this.dgvReservaciones.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dgvReservaciones.TabIndex = 3;
+            this.dgvReservaciones.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvReservaciones_DataBindingComplete);
             // 
             // kryptonHeader1
             // 
@@ -277,45 +239,14 @@
             this.kryptonHeader1.Values.Heading = "Total de registros";
             this.kryptonHeader1.Values.Image = global::Hotel.Properties.Resources._8687730_ic_fluent_poll_regular_icon;
             // 
-            // kryptonDataGridView1
-            // 
-            this.kryptonDataGridView1.ColumnHeadersHeight = 40;
-            this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdReserva,
-            this.NombreHotel,
-            this.NombreHabitacion,
-            this.Huesped,
-            this.FechaEntrada,
-            this.Fechasalida,
-            this.Precio,
-            this.Ocupacion,
-            this.NombreTomador,
-            this.ClientId,
-            this.Cantidad,
-            this.IdHabitacion,
-            this.IdHotel});
-            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonDataGridView1.RowTemplate.Height = 25;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(927, 485);
-            this.kryptonDataGridView1.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.SystemColors.ActiveCaption;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.SystemColors.ActiveCaption;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Content.Color2 = System.Drawing.Color.White;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.kryptonDataGridView1.TabIndex = 3;
-            // 
             // IdReserva
             // 
             this.IdReserva.DataPropertyName = "IdReserva";
             this.IdReserva.FillWeight = 50F;
-            this.IdReserva.HeaderText = "# Reserva";
+            this.IdReserva.HeaderText = "#";
             this.IdReserva.Name = "IdReserva";
             this.IdReserva.ReadOnly = true;
-            this.IdReserva.Width = 80;
+            this.IdReserva.Width = 50;
             // 
             // NombreHotel
             // 
@@ -341,40 +272,40 @@
             this.Huesped.Name = "Huesped";
             this.Huesped.ReadOnly = true;
             // 
-            // FechaEntrada
+            // FechaInicio
             // 
-            this.FechaEntrada.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FechaEntrada.DataPropertyName = "FechaEntrada";
-            dataGridViewCellStyle13.Format = "g";
-            dataGridViewCellStyle13.NullValue = null;
-            this.FechaEntrada.DefaultCellStyle = dataGridViewCellStyle13;
-            this.FechaEntrada.HeaderText = "Fecha entrada";
-            this.FechaEntrada.Name = "FechaEntrada";
-            this.FechaEntrada.ReadOnly = true;
+            this.FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaInicio.DataPropertyName = "FechaInicio";
+            dataGridViewCellStyle4.Format = "g";
+            dataGridViewCellStyle4.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle4;
+            this.FechaInicio.HeaderText = "Fecha entrada";
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
             // 
-            // Fechasalida
+            // FechaFin
             // 
-            this.Fechasalida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fechasalida.DataPropertyName = "Fechasalida";
-            dataGridViewCellStyle14.Format = "g";
-            dataGridViewCellStyle14.NullValue = null;
-            this.Fechasalida.DefaultCellStyle = dataGridViewCellStyle14;
-            this.Fechasalida.HeaderText = "Fecha Salida";
-            this.Fechasalida.Name = "Fechasalida";
-            this.Fechasalida.ReadOnly = true;
+            this.FechaFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaFin.DataPropertyName = "FechaFin";
+            dataGridViewCellStyle5.Format = "g";
+            dataGridViewCellStyle5.NullValue = null;
+            this.FechaFin.DefaultCellStyle = dataGridViewCellStyle5;
+            this.FechaFin.HeaderText = "Fecha Salida";
+            this.FechaFin.Name = "FechaFin";
+            this.FechaFin.ReadOnly = true;
             // 
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "C6";
-            dataGridViewCellStyle15.NullValue = "0";
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = "0";
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
             this.Precio.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Precio.Width = 50;
+            this.Precio.Width = 80;
             // 
             // Ocupacion
             // 
@@ -383,6 +314,7 @@
             this.Ocupacion.HeaderText = "Ocupacion";
             this.Ocupacion.Name = "Ocupacion";
             this.Ocupacion.ReadOnly = true;
+            this.Ocupacion.Visible = false;
             // 
             // NombreTomador
             // 
@@ -394,6 +326,7 @@
             // 
             // ClientId
             // 
+            this.ClientId.DataPropertyName = "ClientId";
             this.ClientId.HeaderText = "ClientId";
             this.ClientId.Name = "ClientId";
             this.ClientId.ReadOnly = true;
@@ -425,22 +358,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(938, 604);
+            this.ClientSize = new System.Drawing.Size(955, 621);
             this.Controls.Add(this.kryptonHeader1);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.txtBusqueda);
-            this.Controls.Add(this.btEditar);
             this.Controls.Add(this.btCreate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.FormTitleAlign = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.HeaderStyle = Krypton.Toolkit.HeaderStyle.Calendar;
             this.Name = "ListadoReservaciones";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "Listado de Reservaciones";
+            this.Load += new System.EventHandler(this.ListadoReservaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,18 +384,17 @@
         #endregion
 
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private Krypton.Toolkit.KryptonButton btEditar;
         private Krypton.Toolkit.KryptonButton btCreate;
         private Krypton.Toolkit.KryptonTextBox txtBusqueda;
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private Krypton.Toolkit.KryptonHeader kryptonHeader1;
-        private Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private Krypton.Toolkit.KryptonDataGridView dgvReservaciones;
         private DataGridViewTextBoxColumn IdReserva;
         private DataGridViewTextBoxColumn NombreHotel;
         private DataGridViewTextBoxColumn NombreHabitacion;
         private DataGridViewTextBoxColumn Huesped;
-        private DataGridViewTextBoxColumn FechaEntrada;
-        private DataGridViewTextBoxColumn Fechasalida;
+        private DataGridViewTextBoxColumn FechaInicio;
+        private DataGridViewTextBoxColumn FechaFin;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Ocupacion;
         private DataGridViewTextBoxColumn NombreTomador;

@@ -73,6 +73,116 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8686821_ic_fluent_building_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8686821_ic_fluent_building_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687043_ic_fluent_conference_room_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687043_ic_fluent_conference_room_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687156_ic_fluent_earth_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687156_ic_fluent_earth_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687184_ic_fluent_content_view_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687184_ic_fluent_content_view_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687494_ic_fluent_grid_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687494_ic_fluent_grid_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687538_ic_fluent_person_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687538_ic_fluent_person_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687541_ic_fluent_people_team_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687541_ic_fluent_people_team_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687589_ic_fluent_notepad_edit_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687589_ic_fluent_notepad_edit_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687669_ic_fluent_people_community_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687669_ic_fluent_people_community_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687728_ic_fluent_notepad_person_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687728_ic_fluent_notepad_person_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8687730_ic_fluent_poll_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8687730_ic_fluent_poll_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _9024983_users_four_light_icon {
             get {
                 object obj = ResourceManager.GetObject("_9024983_users_four_light_icon", resourceCulture);
@@ -126,6 +236,26 @@ namespace Hotel.Properties {
         internal static System.Drawing.Bitmap _9042930_small_shop_alt_icon {
             get {
                 object obj = ResourceManager.GetObject("_9042930_small_shop_alt_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_black {
+            get {
+                object obj = ResourceManager.GetObject("add_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_black {
+            get {
+                object obj = ResourceManager.GetObject("edit_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

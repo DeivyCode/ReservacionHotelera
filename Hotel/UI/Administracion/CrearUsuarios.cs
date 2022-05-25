@@ -18,13 +18,12 @@ namespace Hotel.UI.Administracion
     public partial class CrearUsuarios : KryptonForm
     {
         private readonly IAdministracionRepositorio _administracion;
-        public Acciones acciones;
+        public Acciones Acciones { get; set; } = Acciones.Crear;
         public int idUsuario;
         public CrearUsuarios(IAdministracionRepositorio administracion)
         {
             InitializeComponent();
             this._administracion = administracion;
-            this.acciones = Acciones.Crear;
         }
 
 
@@ -76,7 +75,7 @@ namespace Hotel.UI.Administracion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if (acciones == Acciones.Editar)
+            if (Acciones == Acciones.Editar)
             {
                 if (!GuardarEditarUsuarios(accion: Acciones.Editar))
                 {
@@ -93,27 +92,28 @@ namespace Hotel.UI.Administracion
                 MessageBox.Show("!!!Usuario creado Satisfactoriamente!!!");
                 Comunes.Comunes.ValidarCampos(this);
                 DialogResult = DialogResult.OK;
-                return;
             }
         }
 
         private void CrearUsuarios_Load(object sender, EventArgs e)
         {
-            if (acciones != Acciones.Editar) return;
-            var users = _administracion.ObtenerUsuariosByCriteria(x => x.IdUsuario == idUsuario);
-            foreach (var user in users)
-            {
-                txtCodigo.Text = user.Usuario;
-                txtApellido.Text = user.Apellidos;
-                txtNombre.Text = user.Nombres;
-                txtCorreo.Text = user.Correo;
-                txtClave.Text = user.Clave;
-                txtConfirmarClave.Text = user.Clave;
-                ckIsAdmin.Checked = user.IsAdmin;
-                ckIsActive.Checked = user.IsActive;
-            }
 
-            DialogResult = DialogResult.OK;
+            if (this.Acciones == Acciones.Editar)
+            {
+                var users = _administracion.ObtenerUsuariosByCriteria(x => x.IdUsuario == idUsuario);
+                foreach (var user in users)
+                {
+                    txtCodigo.Text = user.Usuario;
+                    txtApellido.Text = user.Apellidos;
+                    txtNombre.Text = user.Nombres;
+                    txtCorreo.Text = user.Correo;
+                    txtClave.Text = user.Clave;
+                    txtConfirmarClave.Text = user.Clave;
+                    ckIsAdmin.Checked = user.IsAdmin;
+                    ckIsActive.Checked = user.IsActive;
+                }
+
+            }
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)

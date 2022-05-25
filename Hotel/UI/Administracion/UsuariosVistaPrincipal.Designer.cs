@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             this.dgvUsuarios = new Krypton.Toolkit.KryptonDataGridView();
@@ -44,9 +44,9 @@
             this.IsAdmin = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
             this.kryptonHeader1 = new Krypton.Toolkit.KryptonHeader();
             this.kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            this.txtBusqueda = new Krypton.Toolkit.KryptonTextBox();
             this.btEdit = new Krypton.Toolkit.KryptonButton();
             this.btCreate_Click = new Krypton.Toolkit.KryptonButton();
-            this.txtBusqueda = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -184,9 +184,9 @@
             // IsActive
             // 
             this.IsActive.DataPropertyName = "IsActive";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.NullValue = false;
-            this.IsActive.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            this.IsActive.DefaultCellStyle = dataGridViewCellStyle1;
             this.IsActive.FalseValue = null;
             this.IsActive.HeaderText = "Estado";
             this.IsActive.IndeterminateValue = null;
@@ -197,9 +197,9 @@
             // IsAdmin
             // 
             this.IsAdmin.DataPropertyName = "IsAdmin";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.NullValue = false;
-            this.IsAdmin.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = false;
+            this.IsAdmin.DefaultCellStyle = dataGridViewCellStyle2;
             this.IsAdmin.FalseValue = null;
             this.IsAdmin.HeaderText = "Administrador";
             this.IsAdmin.IndeterminateValue = null;
@@ -232,12 +232,36 @@
             this.kryptonPanel2.StateCommon.Color2 = System.Drawing.Color.White;
             this.kryptonPanel2.TabIndex = 18;
             // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.CueHint.CueHintText = "Buscar";
+            this.txtBusqueda.CueHint.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBusqueda.CueHint.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtBusqueda.Location = new System.Drawing.Point(0, 35);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Palette = this.kryptonPalette1;
+            this.txtBusqueda.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.txtBusqueda.Size = new System.Drawing.Size(287, 29);
+            this.txtBusqueda.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtBusqueda.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.txtBusqueda.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.txtBusqueda.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtBusqueda.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtBusqueda.StateCommon.Border.Rounding = 8F;
+            this.txtBusqueda.StateCommon.Border.Width = 1;
+            this.txtBusqueda.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.txtBusqueda.StateCommon.Content.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBusqueda.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtBusqueda.TabIndex = 5;
+            // 
             // btEdit
             // 
             this.btEdit.Location = new System.Drawing.Point(792, 19);
             this.btEdit.Name = "btEdit";
-            this.btEdit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEdit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btEdit.OverrideDefault.Back.Color1 = System.Drawing.Color.DodgerBlue;
+            this.btEdit.OverrideDefault.Back.Color2 = System.Drawing.Color.DodgerBlue;
             this.btEdit.OverrideDefault.Back.ColorAngle = 45F;
             this.btEdit.OverrideDefault.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btEdit.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -245,12 +269,12 @@
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btEdit.OverrideDefault.Border.Rounding = 20F;
             this.btEdit.OverrideDefault.Border.Width = 1;
-            this.btEdit.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEdit.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(221)))));
+            this.btEdit.OverrideFocus.Back.Color1 = System.Drawing.Color.DodgerBlue;
+            this.btEdit.OverrideFocus.Back.Color2 = System.Drawing.Color.DodgerBlue;
             this.btEdit.OverrideFocus.Back.ColorAngle = 45F;
             this.btEdit.OverrideFocus.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btEdit.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btEdit.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(146)))), ((int)(((byte)(243)))));
+            this.btEdit.OverrideFocus.Border.Color1 = System.Drawing.Color.DodgerBlue;
+            this.btEdit.OverrideFocus.Border.Color2 = System.Drawing.Color.DodgerBlue;
             this.btEdit.OverrideFocus.Border.ColorAngle = 45F;
             this.btEdit.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -261,8 +285,8 @@
             this.btEdit.Palette = this.kryptonPalette1;
             this.btEdit.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             this.btEdit.Size = new System.Drawing.Size(144, 45);
-            this.btEdit.StateCommon.Back.Color1 = System.Drawing.SystemColors.HotTrack;
-            this.btEdit.StateCommon.Back.Color2 = System.Drawing.SystemColors.HotTrack;
+            this.btEdit.StateCommon.Back.Color1 = System.Drawing.Color.DodgerBlue;
+            this.btEdit.StateCommon.Back.Color2 = System.Drawing.Color.DodgerBlue;
             this.btEdit.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btEdit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
             this.btEdit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
@@ -281,8 +305,12 @@
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btEdit.StateNormal.Border.Rounding = 20F;
             this.btEdit.StateNormal.Border.Width = 1;
+            this.btEdit.StateTracking.Back.Color1 = System.Drawing.SystemColors.HotTrack;
+            this.btEdit.StateTracking.Back.Color2 = System.Drawing.SystemColors.HotTrack;
+            this.btEdit.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             this.btEdit.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
             this.btEdit.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btEdit.StateTracking.Border.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             this.btEdit.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -299,22 +327,24 @@
             // 
             this.btCreate_Click.Location = new System.Drawing.Point(647, 19);
             this.btCreate_Click.Name = "btCreate_Click";
-            this.btCreate_Click.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btCreate_Click.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btCreate_Click.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
+            this.btCreate_Click.OverrideDefault.Back.Color2 = System.Drawing.Color.Green;
             this.btCreate_Click.OverrideDefault.Back.ColorAngle = 45F;
+            this.btCreate_Click.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             this.btCreate_Click.OverrideDefault.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btCreate_Click.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btCreate_Click.OverrideDefault.Border.Rounding = 20F;
             this.btCreate_Click.OverrideDefault.Border.Width = 1;
-            this.btCreate_Click.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btCreate_Click.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(221)))));
+            this.btCreate_Click.OverrideFocus.Back.Color1 = System.Drawing.Color.Green;
+            this.btCreate_Click.OverrideFocus.Back.Color2 = System.Drawing.Color.Green;
             this.btCreate_Click.OverrideFocus.Back.ColorAngle = 45F;
             this.btCreate_Click.OverrideFocus.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btCreate_Click.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btCreate_Click.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(146)))), ((int)(((byte)(243)))));
+            this.btCreate_Click.OverrideFocus.Border.Color1 = System.Drawing.Color.Green;
+            this.btCreate_Click.OverrideFocus.Border.Color2 = System.Drawing.Color.Green;
             this.btCreate_Click.OverrideFocus.Border.ColorAngle = 45F;
+            this.btCreate_Click.OverrideFocus.Border.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             this.btCreate_Click.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -344,41 +374,25 @@
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btCreate_Click.StateNormal.Border.Rounding = 20F;
             this.btCreate_Click.StateNormal.Border.Width = 1;
+            this.btCreate_Click.StateTracking.Back.Color1 = System.Drawing.Color.DarkGreen;
+            this.btCreate_Click.StateTracking.Back.Color2 = System.Drawing.Color.DarkGreen;
+            this.btCreate_Click.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btCreate_Click.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btCreate_Click.StateTracking.Border.Color1 = System.Drawing.Color.DarkGreen;
+            this.btCreate_Click.StateTracking.Border.Color2 = System.Drawing.Color.DarkGreen;
+            this.btCreate_Click.StateTracking.Border.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             this.btCreate_Click.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btCreate_Click.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btCreate_Click.StateTracking.Border.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.btCreate_Click.StateTracking.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.TopLeft;
-            this.btCreate_Click.StateTracking.Border.Rounding = 12F;
+            this.btCreate_Click.StateTracking.Border.Rounding = 20F;
             this.btCreate_Click.StateTracking.Border.Width = 1;
             this.btCreate_Click.TabIndex = 2;
             this.btCreate_Click.Values.Image = global::Hotel.Properties.Resources.add_black;
             this.btCreate_Click.Values.Text = "Crear Usuario";
             this.btCreate_Click.Click += new System.EventHandler(this.btCreate_Click_Click);
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.CueHint.CueHintText = "Buscar";
-            this.txtBusqueda.CueHint.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBusqueda.CueHint.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtBusqueda.Location = new System.Drawing.Point(0, 35);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Palette = this.kryptonPalette1;
-            this.txtBusqueda.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.txtBusqueda.Size = new System.Drawing.Size(287, 29);
-            this.txtBusqueda.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtBusqueda.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
-            this.txtBusqueda.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
-            this.txtBusqueda.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtBusqueda.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtBusqueda.StateCommon.Border.Rounding = 8F;
-            this.txtBusqueda.StateCommon.Border.Width = 1;
-            this.txtBusqueda.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.txtBusqueda.StateCommon.Content.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBusqueda.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtBusqueda.TabIndex = 5;
             // 
             // ListadoUsuarios
             // 

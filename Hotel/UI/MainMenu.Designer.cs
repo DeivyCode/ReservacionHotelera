@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
             this.s = new Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton5 = new Krypton.Toolkit.KryptonButton();
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
@@ -42,7 +43,6 @@
             this.LbTituloChildForm = new Krypton.Toolkit.KryptonLabel();
             this.PnContenedor = new Krypton.Toolkit.KryptonPanel();
             this.kryptonPanel3 = new Krypton.Toolkit.KryptonPanel();
-            this.kryptonButton5 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.s)).BeginInit();
             this.s.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -111,6 +111,60 @@
             this.s.StateCommon.Color1 = System.Drawing.Color.WhiteSmoke;
             this.s.StateCommon.Color2 = System.Drawing.Color.WhiteSmoke;
             this.s.TabIndex = 0;
+            // 
+            // kryptonButton5
+            // 
+            this.kryptonButton5.Location = new System.Drawing.Point(0, 211);
+            this.kryptonButton5.Name = "kryptonButton5";
+            this.kryptonButton5.OverrideDefault.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.OverrideDefault.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.OverrideDefault.Border.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.OverrideDefault.Border.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.kryptonButton5.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.kryptonButton5.OverrideFocus.Back.ColorAngle = 40F;
+            this.kryptonButton5.OverrideFocus.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.kryptonButton5.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.kryptonButton5.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.kryptonButton5.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.OverrideFocus.Border.Rounding = 12F;
+            this.kryptonButton5.OverrideFocus.Border.Width = 1;
+            this.kryptonButton5.Palette = this.kryptonPalette1;
+            this.kryptonButton5.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonButton5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kryptonButton5.Size = new System.Drawing.Size(182, 42);
+            this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.StateCommon.Border.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.StateCommon.Border.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.StateCommon.Border.Rounding = 12F;
+            this.kryptonButton5.StateCommon.Border.Width = 1;
+            this.kryptonButton5.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-30, -1, -1, -1);
+            this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.kryptonButton5.StatePressed.Content.Image.ImageColorMap = System.Drawing.Color.DodgerBlue;
+            this.kryptonButton5.StatePressed.Content.Image.ImageColorTo = System.Drawing.Color.DodgerBlue;
+            this.kryptonButton5.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.kryptonButton5.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.kryptonButton5.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.kryptonButton5.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.kryptonButton5.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.kryptonButton5.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.StateTracking.Border.Rounding = 12F;
+            this.kryptonButton5.StateTracking.Border.Width = 1;
+            this.kryptonButton5.TabIndex = 7;
+            this.kryptonButton5.Values.Image = global::Hotel.Properties.Resources._8687184_ic_fluent_content_view_regular_icon;
+            this.kryptonButton5.Values.ImageTransparentColor = System.Drawing.Color.DodgerBlue;
+            this.kryptonButton5.Values.Text = "Tipo Habitaciones";
             // 
             // kryptonLabel3
             // 
@@ -400,60 +454,6 @@
             this.kryptonPanel3.StateCommon.Color2 = System.Drawing.Color.White;
             this.kryptonPanel3.TabIndex = 0;
             // 
-            // kryptonButton5
-            // 
-            this.kryptonButton5.Location = new System.Drawing.Point(0, 211);
-            this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.OverrideDefault.Back.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton5.OverrideDefault.Back.Color2 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton5.OverrideDefault.Border.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton5.OverrideDefault.Border.Color2 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton5.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.OverrideFocus.Back.ColorAngle = 40F;
-            this.kryptonButton5.OverrideFocus.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            this.kryptonButton5.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.OverrideFocus.Border.Rounding = 12F;
-            this.kryptonButton5.OverrideFocus.Border.Width = 1;
-            this.kryptonButton5.Palette = this.kryptonPalette1;
-            this.kryptonButton5.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kryptonButton5.Size = new System.Drawing.Size(182, 42);
-            this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton5.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton5.StateCommon.Border.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton5.StateCommon.Border.Color2 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton5.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateCommon.Border.Rounding = 12F;
-            this.kryptonButton5.StateCommon.Border.Width = 1;
-            this.kryptonButton5.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-30, -1, -1, -1);
-            this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.kryptonButton5.StatePressed.Content.Image.ImageColorMap = System.Drawing.Color.DodgerBlue;
-            this.kryptonButton5.StatePressed.Content.Image.ImageColorTo = System.Drawing.Color.DodgerBlue;
-            this.kryptonButton5.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            this.kryptonButton5.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateTracking.Border.Rounding = 12F;
-            this.kryptonButton5.StateTracking.Border.Width = 1;
-            this.kryptonButton5.TabIndex = 7;
-            this.kryptonButton5.Values.Image = global::Hotel.Properties.Resources._8687184_ic_fluent_content_view_regular_icon;
-            this.kryptonButton5.Values.ImageTransparentColor = System.Drawing.Color.DodgerBlue;
-            this.kryptonButton5.Values.Text = "Tipo Habitaciones";
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -466,6 +466,7 @@
             this.Controls.Add(this.kryptonPanel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "MainMenu";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;

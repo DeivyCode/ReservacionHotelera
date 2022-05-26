@@ -19,11 +19,9 @@ namespace Hotel.Data.Repositorio
 
         public bool AutentificarUsuario(Usuarios usuario)
         {
-            var user = context.Usuarios.
-                Where(x => x.Clave == usuario.Clave.Trim().ToLower() && x.Usuario == usuario.Usuario.Trim().ToLower())
-                .FirstOrDefault();
-            if (user == null) return false;
-            return true;
+            var user = context.Usuarios
+                .FirstOrDefault(x => x.Clave == usuario.Clave.Trim().ToLower() && x.Usuario == usuario.Usuario.Trim().ToLower());
+            return user != null;
         }
 
         public bool BorrarUsuario(int id)
@@ -31,7 +29,7 @@ namespace Hotel.Data.Repositorio
             if (id == 0) return false;
 
             using var transaction = context.Database.BeginTransaction();
-            var userExits = context.Usuarios.Where(x => x.IdUsuario == id).FirstOrDefault();
+            var userExits = context.Usuarios.FirstOrDefault(x => x.IdUsuario == id);
 
             if (userExits == null) return false;
 

@@ -10,12 +10,14 @@ namespace Hotel.UI
         private readonly ListadoHoteles _listadoHoteles;
         private readonly ListadoReservaciones _listadoReservaciones;
         private readonly ListadoTipoHabitaciones _listadoTipoHabitaciones;
-        public MainMenu(ListadoUsuarios listadoUsuarios, ListadoHoteles listadoHoteles, ListadoReservaciones listadoReservaciones, ListadoTipoHabitaciones listadoTipoHabitaciones)
+        private readonly Login _login;
+        public MainMenu(ListadoUsuarios listadoUsuarios, ListadoHoteles listadoHoteles, ListadoReservaciones listadoReservaciones, ListadoTipoHabitaciones listadoTipoHabitaciones, Login login)
         {
             _listadoUsuarios = listadoUsuarios;
             _listadoHoteles = listadoHoteles;
             _listadoReservaciones = listadoReservaciones;
             _listadoTipoHabitaciones = listadoTipoHabitaciones;
+            _login = login;
             InitializeComponent();
         }
 
@@ -58,6 +60,11 @@ namespace Hotel.UI
         private void kryptonButton5_Click(object sender, EventArgs e)
         {
             InitialzieMdiForm(_listadoTipoHabitaciones);
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            LbLoggedUser.Text = $"Logeado\n {_login.LoggedUser}";
         }
     }
 }

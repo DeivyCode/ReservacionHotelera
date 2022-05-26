@@ -21,7 +21,7 @@ namespace Hotel.UI.Administracion
         {
             try
             {
-                if (!Comunes.Comunes.ValidarCampos(this)) return false;
+                if (!Comunes.Comunes.ValidarLimpiarCampos(this)) return false;
 
 
                 if (!string.Equals(txtClave.Text.Trim(), txtConfirmarClave.Text.Trim(), StringComparison.CurrentCultureIgnoreCase))
@@ -80,7 +80,6 @@ namespace Hotel.UI.Administracion
             if (GuardarEditarUsuarios(accion: Acciones.Crear))
             {
                 MessageBox.Show("!!!Usuario creado Satisfactoriamente!!!");
-                Comunes.Comunes.ValidarCampos(this);
                 DialogResult = DialogResult.OK;
             }
         }

@@ -28,6 +28,7 @@ namespace Hotel.UI.Hotel
                 x.Provincia,
                 x.Localidad,
             }).ToList();
+            kryptonHeader1.Values.Description = $@"{data.Count}";
         }
 
         private void ListadoHoteles_Load(object sender, EventArgs e)

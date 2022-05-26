@@ -48,7 +48,7 @@ namespace Hotel.UI.Hotel
 
         private bool GuardarReservacion()
         {
-            if (!Comunes.Comunes.ValidarCampos(this)) return false;
+            if (!Comunes.Comunes.ValidarLimpiarCampos(this)) return false;
 
             var reserva = new Reserva
             {
@@ -93,6 +93,7 @@ namespace Hotel.UI.Hotel
             }
 
             MessageBox.Show("Reservacion creada satisfactoriamente!!!", "!!! ATENCION !!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Comunes.Comunes.ValidarLimpiarCampos(this, true);
             DialogResult = DialogResult.OK;
         }
 

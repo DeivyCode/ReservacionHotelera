@@ -165,6 +165,7 @@
             this.kryptonButton5.Values.Image = global::Hotel.Properties.Resources._8687184_ic_fluent_content_view_regular_icon;
             this.kryptonButton5.Values.ImageTransparentColor = System.Drawing.Color.DodgerBlue;
             this.kryptonButton5.Values.Text = "Tipo Habitaciones";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // kryptonLabel3
             // 

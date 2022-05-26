@@ -9,30 +9,15 @@ namespace Hotel.UI
         private readonly ListadoUsuarios _listadoUsuarios;
         private readonly ListadoHoteles _listadoHoteles;
         private readonly ListadoReservaciones _listadoReservaciones;
-        public MainMenu(ListadoUsuarios listadoUsuarios, ListadoHoteles listadoHoteles, ListadoReservaciones listadoReservaciones)
+        private readonly ListadoTipoHabitaciones _listadoTipoHabitaciones;
+        public MainMenu(ListadoUsuarios listadoUsuarios, ListadoHoteles listadoHoteles, ListadoReservaciones listadoReservaciones, ListadoTipoHabitaciones listadoTipoHabitaciones)
         {
             _listadoUsuarios = listadoUsuarios;
             _listadoHoteles = listadoHoteles;
             _listadoReservaciones = listadoReservaciones;
+            _listadoTipoHabitaciones = listadoTipoHabitaciones;
             InitializeComponent();
         }
-
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-            _listadoHoteles.MdiParent = this;
-            _listadoHoteles.Size = PnContenedor.Size;
-            _listadoHoteles.Show();
-            OpenChildForm(_listadoHoteles);
-        }
-
-        private void kryptonButton4_Click(object sender, EventArgs e)
-        {
-            _listadoUsuarios.MdiParent = this;
-            _listadoUsuarios.Size = PnContenedor.Size;
-            _listadoUsuarios.Show();
-            OpenChildForm(_listadoUsuarios);
-        }
-
 
         private void OpenChildForm(Form childform)
         {
@@ -47,12 +32,32 @@ namespace Hotel.UI
 
         }
 
+        private void InitialzieMdiForm(Form mdiChildren)
+        {
+            mdiChildren.MdiParent = this;
+            mdiChildren.Size = PnContenedor.Size;
+            mdiChildren.Show();
+            OpenChildForm(mdiChildren);
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            InitialzieMdiForm(_listadoHoteles);
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            InitialzieMdiForm(_listadoUsuarios);
+        }
+
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            _listadoReservaciones.MdiParent = this;
-            _listadoReservaciones.Size = PnContenedor.Size;
-            _listadoReservaciones.Show();
-            OpenChildForm(_listadoReservaciones);
+            InitialzieMdiForm(_listadoReservaciones);
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            InitialzieMdiForm(_listadoTipoHabitaciones);
         }
     }
 }

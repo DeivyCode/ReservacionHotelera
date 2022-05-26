@@ -23,10 +23,10 @@ namespace Hotel
             ConfigurarServicios();
 
             // Verficar Autentificacion del usuario
-            var loginForm = ServiceProvider.GetRequiredService<MainMenu>();
+            var loginForm = ServiceProvider.GetRequiredService<Login>();
 
             if (loginForm.ShowDialog() == DialogResult.OK)
-                Application.Run(ServiceProvider.GetRequiredService<MenuPrincipal>());
+                Application.Run(ServiceProvider.GetRequiredService<MainMenu>());
             else
                 Application.Exit();
 
@@ -53,6 +53,7 @@ namespace Hotel
             servicios.AddTransient<CrearTipoHabitacion>();
             servicios.AddTransient<CrearReservaciones>();
             servicios.AddTransient<ListadoReservaciones>();
+            servicios.AddTransient<ListadoTipoHabitaciones>();
             ServiceProvider = servicios.BuildServiceProvider();
 
         }

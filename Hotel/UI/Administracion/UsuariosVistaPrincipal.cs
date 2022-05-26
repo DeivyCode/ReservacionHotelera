@@ -15,9 +15,16 @@ namespace Hotel.UI.Administracion
             this._crearUsuario = crearUsuario;
         }
 
+
+        private void CargarDatos()
+        {
+            var data = _administracion.GetUsuarios();
+            dgvUsuarios.DataSource = data;
+            kryptonHeader1.Values.Description = $@"{data.Count}";
+        }
         private void ListadoUsuarios_Load(object sender, EventArgs e)
         {
-            dgvUsuarios.DataSource = _administracion.GetUsuarios();
+            CargarDatos();
 
         }
         private void dgvUsuarios_DataBindingComplete_1(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -31,7 +38,7 @@ namespace Hotel.UI.Administracion
             _crearUsuario.Acciones = Acciones.Crear;
             _crearUsuario.ShowDialog();
             if (_crearUsuario.DialogResult != DialogResult.OK) return;
-            dgvUsuarios.DataSource = _administracion.GetUsuarios();
+            CargarDatos();
             dgvUsuarios.Update();
             dgvUsuarios.Refresh();
         }
@@ -45,7 +52,7 @@ namespace Hotel.UI.Administracion
             _crearUsuario.idUsuario = (int)rows.Cells["IdUsuario"].Value;
             _crearUsuario.ShowDialog();
             if (_crearUsuario.DialogResult != DialogResult.OK) return;
-            dgvUsuarios.DataSource = _administracion.GetUsuarios();
+            CargarDatos();
             dgvUsuarios.Update();
             dgvUsuarios.Refresh();
         }

@@ -10,8 +10,8 @@ namespace Hotel.UI.Hotel
     {
         private readonly IHotelRepository _hotelRepository;
         public Acciones Acciones { get; set; } = Acciones.Crear;
-        private int _idHotel;
-        private int _idHabitacion;
+        public int IdHotel { get; set; }
+        public int IdHabitacion { get; set; }
         private ICollection<Data.Models.Hotel> _hotelList;
         private ICollection<Habitacion> _habitacionesList;
         public CrearTipoHabitacion(IHotelRepository hotelRepository)
@@ -35,19 +35,13 @@ namespace Hotel.UI.Hotel
             }
 
             MessageBox.Show(@"Tipo de habitacion creado satisfactoriamente", "!!!ATENCION!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Comunes.Comunes.ValidarLimpiarCampos(this, true);
             DialogResult = DialogResult.OK;
         }
 
         private void CrearTipoHabitacion_Load(object sender, EventArgs e)
         {
-            _habitacionesList = _hotelRepository.ObtenerHabitaciones();
-            _hotelList = _hotelRepository.ObtenerHoteles();
-
-            CbHabitaciones.DataSource = _habitacionesList.Select(x => x.Nombre).ToList();
-            CbHoteles.DataSource = _hotelList.Select(x => x.Nombre).ToList();
-
-            CbHabitaciones.SelectedItem = _habitacionesList.FirstOrDefault();
-            CbHoteles.SelectedItem = _hotelList.FirstOrDefault();
+            CargarDatos();
         }
 
         private bool CrearEditarTipoHabitacion(Acciones acciones)
@@ -55,12 +49,12 @@ namespace Hotel.UI.Hotel
 
             try
             {
-                if (!Comunes.Comunes.ValidarCampos(this)) return false;
+                if (!Comunes.Comunes.ValidarLimpiarCampos(this)) return false;
 
                 var model = new TipoHabitacion
                 {
-                    IdHabitacion = _idHabitacion,
-                    IdHotel = _idHotel,
+                    IdHabitacion = IdHabitacion,
+                    IdHotel = IdHotel,
                     Descripcion = txtDescripcion.Text,
                     NumHabitaciones = Convert.ToInt16(txtNumeroHabitaciones.Text),
                     Precio = decimal.Parse(txtPrecio.Text),
@@ -77,21 +71,53 @@ namespace Hotel.UI.Hotel
 
         private void CbHoteles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _idHotel = _hotelList.Where(x => x.Nombre == CbHoteles.SelectedItem.ToString())
+            IdHotel = _hotelList.Where(x => x.Nombre == CbHoteles.SelectedItem.ToString())
                                  .Select(x => x.IdHotel)
                                  .FirstOrDefault();
         }
 
         private void CbHabitaciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _idHabitacion = _habitacionesList.Where(x => x.Nombre == CbHabitaciones.SelectedItem.ToString())
+            IdHabitacion = _habitacionesList.Where(x => x.Nombre == CbHabitaciones.SelectedItem.ToString())
                 .Select(x => x.IdHabitacion)
                 .FirstOrDefault();
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+
             Close();
+        }
+
+        private void CargarDatos()
+        {
+            _habitacionesList = _hotelRepository.ObtenerHabitaciones();
+            _hotelList = _hotelRepository.ObtenerHoteles();
+
+            CbHabitaciones.DataSource = _habitacionesList.Select(x => x.Nombre).ToList();
+            CbHoteles.DataSource = _hotelList.Select(x => x.Nombre).ToList();
+
+            if (Acciones == Acciones.Editar)
+            {
+                var selectedRecord = _hotelRepository.ObtenerTiposHabitacion().FirstOrDefault(x => x.IdHotel == IdHotel && x.IdHabitacion == IdHabitacion);
+
+                CbHabitaciones.SelectedItem = selectedRecord.Habitacion.Nombre;
+                CbHoteles.SelectedItem = selectedRecord.Hotel.Nombre;
+                txtDescripcion.Text = selectedRecord.Descripcion;
+                txtNumeroHabitaciones.Text = $@"{selectedRecord.NumHabitaciones}";
+                txtPrecio.Text = $@"{selectedRecord.Precio}";
+            }
+            else
+            {
+                CbHabitaciones.SelectedItem = _habitacionesList.FirstOrDefault();
+                CbHoteles.SelectedItem = _hotelList.FirstOrDefault();
+            }
+
+        }
+
+        private void CrearTipoHabitacion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Comunes.Comunes.ValidarLimpiarCampos(this, true);
         }
     }
 }

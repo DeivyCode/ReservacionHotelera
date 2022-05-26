@@ -44,7 +44,7 @@ namespace Hotel.UI.Hotel
                 x.NombreTomador,
                 x.ClientId,
             }).ToList();
-
+            kryptonHeader1.Values.Description = $@"{data.Count}";
             return data;
         }
 

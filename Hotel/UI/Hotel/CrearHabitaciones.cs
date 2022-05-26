@@ -19,7 +19,7 @@ namespace Hotel.UI.Hotel
         private void btCreate_Click(object sender, EventArgs e)
         {
 
-            if (!Comunes.Comunes.ValidarCampos(this)) return;
+            if (!Comunes.Comunes.ValidarLimpiarCampos(this)) return;
 
             var habitacion = new Habitacion
             {
@@ -35,6 +35,7 @@ namespace Hotel.UI.Hotel
 
             MessageBox.Show("Habitacion Creada satisfactoriamente!!!");
             DialogResult = DialogResult.OK;
+            Comunes.Comunes.ValidarLimpiarCampos(this, true);
         }
 
         private void CrearHabitaciones_Load(object sender, EventArgs e)

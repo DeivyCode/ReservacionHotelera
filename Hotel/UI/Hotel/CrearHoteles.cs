@@ -57,7 +57,7 @@ namespace Hotel.UI.Hotel
         {
             try
             {
-                if (!Comunes.Comunes.ValidarCampos(this)) return false;
+                if (!Comunes.Comunes.ValidarLimpiarCampos(this)) return false;
                 var hotel = new Data.Models.Hotel
                 {
                     Nombre = txtNombreHotel.Text,
@@ -97,7 +97,9 @@ namespace Hotel.UI.Hotel
             }
 
             MessageBox.Show("!!Hotel creado satisfactoriamente!!");
+            Comunes.Comunes.ValidarLimpiarCampos(this, true);
             DialogResult = DialogResult.OK;
+
         }
 
         private void btCreate_Click(object sender, EventArgs e)

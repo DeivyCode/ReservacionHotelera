@@ -14,11 +14,20 @@ namespace Hotel.Comunes
         /// espefificamente los de tipo KryptonTextBox
         /// </summary>
         /// <param name="form"></param>
+        /// <param name="limpiarCampos"></param>
         /// <returns>bool</returns>
-        public static bool ValidarCampos(Form form)
+        public static bool ValidarLimpiarCampos(Form form, bool limpiarCampos = false)
         {
             for (var i = 0; i < form.Controls.Count; i++)
             {
+                if (limpiarCampos)
+                {
+                    if (form.Controls[i].GetType() == typeof(KryptonTextBox))
+                    {
+                        form.Controls[i].Text = string.Empty;
+                        continue;
+                    }
+                }
                 if (form.Controls[i].GetType() != typeof(KryptonTextBox)) continue;
 
                 if (!string.IsNullOrEmpty(form.Controls[i].Text)) continue;

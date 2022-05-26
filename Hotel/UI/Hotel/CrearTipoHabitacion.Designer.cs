@@ -423,6 +423,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.StateCommon.Header.Content.ShortText.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Text = "Crear Tipos de habitacion";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CrearTipoHabitacion_FormClosed);
             this.Load += new System.EventHandler(this.CrearTipoHabitacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CbHoteles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CbHabitaciones)).EndInit();

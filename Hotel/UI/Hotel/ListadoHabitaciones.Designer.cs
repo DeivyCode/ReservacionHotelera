@@ -1,6 +1,6 @@
 ﻿namespace Hotel.UI.Hotel
 {
-    partial class Listado_de_Habitaciones
+    partial class ListadoHabitaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
+            this.dgvHabitaciones = new Krypton.Toolkit.KryptonDataGridView();
+            this.IdHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Capacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBusqueda = new Krypton.Toolkit.KryptonTextBox();
             this.btEditar = new Krypton.Toolkit.KryptonButton();
             this.btCreate = new Krypton.Toolkit.KryptonButton();
+            this.kryptonHeader1 = new Krypton.Toolkit.KryptonHeader();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -75,41 +79,70 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kryptonDataGridView1);
-            this.kryptonPanel1.Location = new System.Drawing.Point(-2, 108);
+            this.kryptonPanel1.Controls.Add(this.dgvHabitaciones);
+            this.kryptonPanel1.Location = new System.Drawing.Point(13, 73);
             this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(937, 496);
+            this.kryptonPanel1.Size = new System.Drawing.Size(922, 486);
             this.kryptonPanel1.TabIndex = 9;
             // 
-            // kryptonDataGridView1
+            // dgvHabitaciones
             // 
-            this.kryptonDataGridView1.ColumnHeadersHeight = 40;
-            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonDataGridView1.RowTemplate.Height = 25;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(937, 496);
-            this.kryptonDataGridView1.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.SystemColors.ActiveCaption;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.SystemColors.ActiveCaption;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Content.Color2 = System.Drawing.Color.White;
-            this.kryptonDataGridView1.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.kryptonDataGridView1.TabIndex = 2;
+            this.dgvHabitaciones.ColumnHeadersHeight = 40;
+            this.dgvHabitaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdHabitacion,
+            this.Nombre,
+            this.Capacidad});
+            this.dgvHabitaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHabitaciones.Location = new System.Drawing.Point(0, 0);
+            this.dgvHabitaciones.Name = "dgvHabitaciones";
+            this.dgvHabitaciones.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.dgvHabitaciones.RowTemplate.Height = 25;
+            this.dgvHabitaciones.Size = new System.Drawing.Size(922, 486);
+            this.dgvHabitaciones.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.dgvHabitaciones.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvHabitaciones.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvHabitaciones.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.White;
+            this.dgvHabitaciones.StateCommon.HeaderColumn.Content.Color2 = System.Drawing.Color.White;
+            this.dgvHabitaciones.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dgvHabitaciones.TabIndex = 2;
+            this.dgvHabitaciones.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvHabitaciones_DataBindingComplete);
+            // 
+            // IdHabitacion
+            // 
+            this.IdHabitacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdHabitacion.DataPropertyName = "IdHabitacion";
+            this.IdHabitacion.HeaderText = "No. Habitacion";
+            this.IdHabitacion.Name = "IdHabitacion";
+            this.IdHabitacion.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Capacidad
+            // 
+            this.Capacidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Capacidad.DataPropertyName = "Capacidad";
+            this.Capacidad.HeaderText = "Capacidad";
+            this.Capacidad.Name = "Capacidad";
+            this.Capacidad.ReadOnly = true;
             // 
             // txtBusqueda
             // 
             this.txtBusqueda.CueHint.CueHintText = "Buscar Habitaciones";
             this.txtBusqueda.CueHint.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBusqueda.CueHint.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtBusqueda.Location = new System.Drawing.Point(10, 66);
+            this.txtBusqueda.Location = new System.Drawing.Point(13, 31);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Palette = this.kryptonPalette1;
             this.txtBusqueda.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.txtBusqueda.Size = new System.Drawing.Size(223, 29);
+            this.txtBusqueda.Size = new System.Drawing.Size(344, 29);
             this.txtBusqueda.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtBusqueda.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.txtBusqueda.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
@@ -127,7 +160,7 @@
             // 
             // btEditar
             // 
-            this.btEditar.Location = new System.Drawing.Point(692, 58);
+            this.btEditar.Location = new System.Drawing.Point(781, 14);
             this.btEditar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btEditar.Name = "btEditar";
             this.btEditar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
@@ -154,7 +187,7 @@
             this.btEditar.OverrideFocus.Border.Width = 1;
             this.btEditar.Palette = this.kryptonPalette1;
             this.btEditar.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.btEditar.Size = new System.Drawing.Size(133, 46);
+            this.btEditar.Size = new System.Drawing.Size(149, 46);
             this.btEditar.StateCommon.Back.Color1 = System.Drawing.SystemColors.HotTrack;
             this.btEditar.StateCommon.Back.Color2 = System.Drawing.SystemColors.HotTrack;
             this.btEditar.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -194,10 +227,11 @@
             this.btEditar.TabIndex = 7;
             this.btEditar.Values.Image = global::Hotel.Properties.Resources.edit_black;
             this.btEditar.Values.Text = "Editar";
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btCreate
             // 
-            this.btCreate.Location = new System.Drawing.Point(531, 58);
+            this.btCreate.Location = new System.Drawing.Point(624, 14);
             this.btCreate.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btCreate.Name = "btCreate";
             this.btCreate.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
@@ -227,7 +261,7 @@
             this.btCreate.OverrideFocus.Border.Width = 1;
             this.btCreate.Palette = this.kryptonPalette1;
             this.btCreate.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.btCreate.Size = new System.Drawing.Size(133, 46);
+            this.btCreate.Size = new System.Drawing.Size(149, 46);
             this.btCreate.StateCommon.Back.Color1 = System.Drawing.Color.Green;
             this.btCreate.StateCommon.Back.Color2 = System.Drawing.Color.Green;
             this.btCreate.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -269,26 +303,39 @@
             this.btCreate.Values.Text = "Crear";
             this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
-            // Listado_de_Habitaciones
+            // kryptonHeader1
+            // 
+            this.kryptonHeader1.Location = new System.Drawing.Point(13, 564);
+            this.kryptonHeader1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.kryptonHeader1.Name = "kryptonHeader1";
+            this.kryptonHeader1.Size = new System.Drawing.Size(212, 31);
+            this.kryptonHeader1.TabIndex = 7;
+            this.kryptonHeader1.Values.Description = "10";
+            this.kryptonHeader1.Values.Heading = "Total de registros";
+            this.kryptonHeader1.Values.Image = global::Hotel.Properties.Resources._8687730_ic_fluent_poll_regular_icon;
+            // 
+            // ListadoHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(926, 457);
+            this.ClientSize = new System.Drawing.Size(938, 604);
+            this.Controls.Add(this.kryptonHeader1);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.btEditar);
             this.Controls.Add(this.btCreate);
+            this.HeaderStyle = Krypton.Toolkit.HeaderStyle.Calendar;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Listado_de_Habitaciones";
+            this.Name = "ListadoHabitaciones";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "Listado de Habitaciones";
             this.Load += new System.EventHandler(this.Listado_de_Habitaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,9 +345,13 @@
 
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private Krypton.Toolkit.KryptonDataGridView dgvHabitaciones;
         private Krypton.Toolkit.KryptonTextBox txtBusqueda;
         private Krypton.Toolkit.KryptonButton btEditar;
         private Krypton.Toolkit.KryptonButton btCreate;
+        private Krypton.Toolkit.KryptonHeader kryptonHeader1;
+        private DataGridViewTextBoxColumn IdHabitacion;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Capacidad;
     }
 }

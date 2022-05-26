@@ -1,10 +1,5 @@
 ﻿using Hotel.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hotel.Data
 {
@@ -47,6 +42,7 @@ namespace Hotel.Data
             // Llave primaria Compuesta
             modelBuilder.Entity<TipoHabitacion>()
                 .HasKey(e => new { e.IdHotel, e.IdHabitacion });
+            new DatabaseInitializer(modelBuilder).SeedDatabase();
         }
     }
 }

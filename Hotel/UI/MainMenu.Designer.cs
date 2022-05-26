@@ -32,7 +32,7 @@
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
             this.s = new Krypton.Toolkit.KryptonPanel();
             this.kryptonButton5 = new Krypton.Toolkit.KryptonButton();
-            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.LbLoggedUser = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonButton4 = new Krypton.Toolkit.KryptonButton();
@@ -97,7 +97,7 @@
             // s
             // 
             this.s.Controls.Add(this.kryptonButton5);
-            this.s.Controls.Add(this.kryptonLabel3);
+            this.s.Controls.Add(this.LbLoggedUser);
             this.s.Controls.Add(this.kryptonLabel2);
             this.s.Controls.Add(this.kryptonLabel1);
             this.s.Controls.Add(this.kryptonButton4);
@@ -167,15 +167,15 @@
             this.kryptonButton5.Values.Text = "Tipo Habitaciones";
             this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
-            // kryptonLabel3
+            // LbLoggedUser
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(0, 640);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(95, 39);
-            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.kryptonLabel3.TabIndex = 6;
-            this.kryptonLabel3.Values.Image = global::Hotel.Properties.Resources._8687538_ic_fluent_person_regular_icon;
-            this.kryptonLabel3.Values.Text = "Logeado \r\nAdmin\r\n";
+            this.LbLoggedUser.Location = new System.Drawing.Point(0, 640);
+            this.LbLoggedUser.Name = "LbLoggedUser";
+            this.LbLoggedUser.Size = new System.Drawing.Size(95, 39);
+            this.LbLoggedUser.StateCommon.ShortText.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.LbLoggedUser.TabIndex = 6;
+            this.LbLoggedUser.Values.Image = global::Hotel.Properties.Resources._8687538_ic_fluent_person_regular_icon;
+            this.LbLoggedUser.Values.Text = "Logeado \r\nAdmin\r\n";
             // 
             // kryptonLabel2
             // 
@@ -307,6 +307,7 @@
             this.kryptonButton3.Values.Image = global::Hotel.Properties.Resources._8687043_ic_fluent_conference_room_regular_icon;
             this.kryptonButton3.Values.ImageTransparentColor = System.Drawing.Color.DodgerBlue;
             this.kryptonButton3.Values.Text = " Habitaciones";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // kryptonButton2
             // 
@@ -473,6 +474,7 @@
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.s)).EndInit();
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
@@ -496,7 +498,7 @@
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel LbLoggedUser;
         private Krypton.Toolkit.KryptonPanel PnContenedor;
         private Krypton.Toolkit.KryptonPanel kryptonPanel3;
         private Krypton.Toolkit.KryptonLabel LbTituloChildForm;

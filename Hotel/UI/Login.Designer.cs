@@ -35,9 +35,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btCreate = new Krypton.Toolkit.KryptonButton();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            this.txtContraseña = new Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
-            this.txtPrecio = new Krypton.Toolkit.KryptonTextBox();
+            this.txtCodigoUsuario = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -98,9 +98,9 @@
             // 
             this.groupBox2.Controls.Add(this.btCreate);
             this.groupBox2.Controls.Add(this.kryptonLabel1);
-            this.groupBox2.Controls.Add(this.kryptonTextBox1);
+            this.groupBox2.Controls.Add(this.txtContraseña);
             this.groupBox2.Controls.Add(this.kryptonLabel11);
-            this.groupBox2.Controls.Add(this.txtPrecio);
+            this.groupBox2.Controls.Add(this.txtCodigoUsuario);
             this.groupBox2.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.groupBox2.Location = new System.Drawing.Point(12, 92);
@@ -182,24 +182,24 @@
             this.kryptonLabel1.TabIndex = 22;
             this.kryptonLabel1.Values.Text = "Contraseña";
             // 
-            // kryptonTextBox1
+            // txtContraseña
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(22, 115);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.PasswordChar = '●';
-            this.kryptonTextBox1.Size = new System.Drawing.Size(281, 35);
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtContraseña.Location = new System.Drawing.Point(22, 115);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '●';
+            this.txtContraseña.Size = new System.Drawing.Size(281, 35);
+            this.txtContraseña.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 20F;
-            this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtContraseña.StateCommon.Border.Rounding = 20F;
+            this.txtContraseña.StateCommon.Border.Width = 1;
+            this.txtContraseña.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateDisabled.Border.Rounding = 20F;
-            this.kryptonTextBox1.StateDisabled.Border.Width = 1;
-            this.kryptonTextBox1.TabIndex = 21;
-            this.kryptonTextBox1.UseSystemPasswordChar = true;
+            this.txtContraseña.StateDisabled.Border.Rounding = 20F;
+            this.txtContraseña.StateDisabled.Border.Width = 1;
+            this.txtContraseña.TabIndex = 21;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // kryptonLabel11
             // 
@@ -210,22 +210,22 @@
             this.kryptonLabel11.TabIndex = 20;
             this.kryptonLabel11.Values.Text = "Usuario";
             // 
-            // txtPrecio
+            // txtCodigoUsuario
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(22, 46);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(281, 35);
-            this.txtPrecio.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCodigoUsuario.Location = new System.Drawing.Point(22, 46);
+            this.txtCodigoUsuario.Name = "txtCodigoUsuario";
+            this.txtCodigoUsuario.Size = new System.Drawing.Size(281, 35);
+            this.txtCodigoUsuario.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPrecio.StateCommon.Border.Rounding = 20F;
-            this.txtPrecio.StateCommon.Border.Width = 1;
-            this.txtPrecio.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCodigoUsuario.StateCommon.Border.Rounding = 20F;
+            this.txtCodigoUsuario.StateCommon.Border.Width = 1;
+            this.txtCodigoUsuario.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPrecio.StateDisabled.Border.Rounding = 20F;
-            this.txtPrecio.StateDisabled.Border.Width = 1;
-            this.txtPrecio.TabIndex = 19;
+            this.txtCodigoUsuario.StateDisabled.Border.Rounding = 20F;
+            this.txtCodigoUsuario.StateDisabled.Border.Width = 1;
+            this.txtCodigoUsuario.TabIndex = 19;
             // 
             // Login
             // 
@@ -254,9 +254,9 @@
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private GroupBox groupBox2;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonTextBox txtContraseña;
         private Krypton.Toolkit.KryptonLabel kryptonLabel11;
-        private Krypton.Toolkit.KryptonTextBox txtPrecio;
+        private Krypton.Toolkit.KryptonTextBox txtCodigoUsuario;
         private Krypton.Toolkit.KryptonButton btCreate;
     }
 }

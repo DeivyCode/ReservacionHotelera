@@ -16,6 +16,14 @@ namespace Hotel.UI.Hotel
             InitializeComponent();
         }
 
+        private void CargarInputs()
+        {
+            var habitacion = _hotelRepository.ObtenerHabitaciones().FirstOrDefault(x => x.IdHabitacion == IdHabitacion);
+            txtCapacidad.Text = $@"{habitacion!.Capacidad}";
+            txtNombreHabitacion.Text = $@"{habitacion.Nombre}";
+        }
+
+
         private void btCreate_Click(object sender, EventArgs e)
         {
 
@@ -27,20 +35,22 @@ namespace Hotel.UI.Hotel
                 Capacidad = short.Parse(txtCapacidad.Text),
                 IdHabitacion = Acciones == Acciones.Editar ? IdHabitacion : 0
             };
+
             if (!_hotelRepository.CrearEditarHabitacion(model: habitacion, acciones: Acciones))
             {
                 MessageBox.Show($@"Error creando habitacion {_hotelRepository.MessageError}");
                 return;
             }
 
-            MessageBox.Show("Habitacion Creada satisfactoriamente!!!");
             DialogResult = DialogResult.OK;
+            MessageBox.Show("Habitacion Creada satisfactoriamente!!!");
             Comunes.Comunes.ValidarLimpiarCampos(this, true);
         }
 
         private void CrearHabitaciones_Load(object sender, EventArgs e)
         {
-
+            if (Acciones == Acciones.Editar)
+                CargarInputs();
         }
     }
 }

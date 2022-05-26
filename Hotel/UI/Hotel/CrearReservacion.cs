@@ -97,5 +97,9 @@ namespace Hotel.UI.Hotel
             DialogResult = DialogResult.OK;
         }
 
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

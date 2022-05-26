@@ -307,6 +307,7 @@
             this.kryptonButton3.Values.Image = global::Hotel.Properties.Resources._8687043_ic_fluent_conference_room_regular_icon;
             this.kryptonButton3.Values.ImageTransparentColor = System.Drawing.Color.DodgerBlue;
             this.kryptonButton3.Values.Text = " Habitaciones";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // kryptonButton2
             // 

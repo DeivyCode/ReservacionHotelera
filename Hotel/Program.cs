@@ -22,6 +22,11 @@ namespace Hotel
 
             ConfigurarServicios();
 
+
+            using var hotelContext = new HotelDbContext();
+            Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions
+                .Migrate(hotelContext.Database);
+
             // Verficar Autentificacion del usuario
             var loginForm = ServiceProvider.GetRequiredService<Login>();
 
@@ -29,11 +34,6 @@ namespace Hotel
                 Application.Run(ServiceProvider.GetRequiredService<MainMenu>());
             else
                 Application.Exit();
-
-
-            using var hotelContext = new HotelDbContext();
-            Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions
-                .Migrate(hotelContext.Database);
         }
 
         static void ConfigurarServicios()
@@ -54,6 +54,7 @@ namespace Hotel
             servicios.AddTransient<CrearReservaciones>();
             servicios.AddTransient<ListadoReservaciones>();
             servicios.AddTransient<ListadoTipoHabitaciones>();
+            servicios.AddTransient<ListadoHabitaciones>();
             ServiceProvider = servicios.BuildServiceProvider();
 
         }

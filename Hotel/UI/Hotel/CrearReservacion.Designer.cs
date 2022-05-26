@@ -484,6 +484,7 @@
             this.kryptonButton1.StateTracking.Border.Width = 1;
             this.kryptonButton1.TabIndex = 26;
             this.kryptonButton1.Values.Text = "Cancelar";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // btCreate
             // 

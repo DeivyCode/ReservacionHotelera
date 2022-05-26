@@ -25,17 +25,22 @@ namespace Hotel.UI.Hotel
 
         private void CrearHoteles_Load(object sender, EventArgs e)
         {
-            if (Acciones == Acciones.Editar)
-            {
-                CargarDataInputs();
-            }
+
+            cbCategoria.SelectedIndexChanged += CbCategoria_SelectedIndexChanged;
+            cbAdministradores.SelectedIndexChanged += CbAdministradores_SelectedIndexChanged;
 
             _categorias = _administracion.ObtenerCategorias(x => x.IsActive == true);
             _administradores = _administracion.ObtenerAdministradores(x => x.IsActive == true);
             cbCategoria.DataSource = _categorias.Select(x => x.CategoriaNombre).ToList();
             cbAdministradores.DataSource = _administradores.Select(x => x.NombreAdministrador).ToList();
-            cbCategoria.SelectedIndexChanged += CbCategoria_SelectedIndexChanged;
-            cbAdministradores.SelectedIndexChanged += CbAdministradores_SelectedIndexChanged;
+            cbCategoria.SelectedItem = _categorias.Select(x => x.CategoriaNombre).FirstOrDefault();
+            cbAdministradores.SelectedItem = _administradores.Select(x => x.NombreAdministrador).FirstOrDefault();
+
+            if (Acciones == Acciones.Editar)
+            {
+                CargarDataInputs();
+            }
+
         }
 
         private void CbAdministradores_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,8 +92,10 @@ namespace Hotel.UI.Hotel
             txtLocalidad.Text = hotel.Localidad;
             txtNombreHotel.Text = hotel.Nombre;
             txtProvincia.Text = hotel.Provincia;
+            cbAdministradores.SelectedItem = _administradores.FirstOrDefault(x => x.IdAdministrador == hotel.IdAdministrador)?.NombreAdministrador;
+            cbCategoria.SelectedItem = _categorias.FirstOrDefault(x => x.Id == hotel.IdCategoria)?.CategoriaNombre;
         }
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void kryptonButton3_Click(object sender, EventArgs e)
         {
             if (!CrearEditarHotel(acciones: this.Acciones))
             {
@@ -99,13 +106,11 @@ namespace Hotel.UI.Hotel
             MessageBox.Show("!!Hotel creado satisfactoriamente!!");
             Comunes.Comunes.ValidarLimpiarCampos(this, true);
             DialogResult = DialogResult.OK;
-
         }
 
-        private void btCreate_Click(object sender, EventArgs e)
+        private void kryptonButton2_Click(object sender, EventArgs e)
         {
             Close();
-
         }
     }
 }
